@@ -11,8 +11,5 @@ body{
     list-style-type: none;
     font-family: 'Poppins', sans-serif;
 }
-#root {
-  width: 100vw;
-  height: 100vh;
-  padding: 15vh 13vh;
-}
+
+

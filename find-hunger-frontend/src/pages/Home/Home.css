@@ -1,3 +1,8 @@
+#root {
+    width: 100vw;
+    height: 100vh;
+    padding: 15vh 13vh;
+  }
 
 .container-home {
     background-color:  #F6F5F5;
