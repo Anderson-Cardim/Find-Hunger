@@ -1,0 +1,77 @@
+
+.cotainer-header {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.cotainer-header button {
+    padding: 10px;
+    border-radius: 120px;
+    width: 90px;
+    border: 0;
+
+}
+
+.div-container-hearder {
+    padding: 10px;
+}
+
+.button-inicio {
+    background-color:  #FF4900;
+    border: 0;
+    color:#FFFFFF ;
+}
+
+.container-voltar {
+    font-weight: 500;
+    width: 130px;
+    border: 0;
+    border-radius: 30px;
+    background-color: #D9D9D996;
+    height: 35px;
+    color: #FF4900;
+}
+
+.container-button {
+    padding-left: 40px;
+}
+
+.container-email input{
+    border-radius: 49px;
+    width: 250px;
+    height: 30px;
+    background-color:#D9D9D996;
+    color: #282828;
+    border: 0;
+    padding-left: 50px;
+}
+
+.container-email {
+    padding: 10px;
+}
+
+.container-cadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-cadastro h2 {
+    color: #FF4900;
+}
+
+.container-form {
+    padding-top: 30px;
+}
+
+.button-cad {
+    color:  #fff;
+    font-weight: 500;
+    width: 130px;
+    border: 0;
+    border-radius: 30px;
+    background-color: #FF4900;
+    height: 35px;
+    margin-top: 20px;
+}
