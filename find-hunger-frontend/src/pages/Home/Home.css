@@ -5,14 +5,14 @@
   }
 
 .container-home {
-    background-color:  #F6F5F5;
+    background-color: var(--branco);
     display: flex;
     height: 100%;
     border-radius: 8px;
 }
 
 .container-find-hunger {
-    background-color: #FF4900;
+    background-color: var(--laranja);
     border-radius: 8px;
     width: 40%;
     display: flex;
@@ -23,30 +23,30 @@
 }
 
 .container-find-hunger h3{
-    color:#FFF;
+    color: var(--branco);
     font-size: 23px;
 
 }
 
 .container-find-hunger p{
-    color:#FFF;
+    color: var(--branco);
     font-size: 10px;
     padding-top: 25px;
     padding-bottom: 40px;
 }
 
 .button-cad {
-    color:  #FF4900;
+    color: var(--laranja);
     font-weight: 500;
     width: 130px;
     border: 0;
     border-radius: 30px;
-    background-color: #FFF;
+    background-color: var(--branco);
     height: 35px;
 }
 
 .container-login {
-    background-color: #F6F5F5;
+    background-color: var(--branco);
     width: 100%;
 }
 
@@ -59,7 +59,7 @@
 }
 
 .title-container-login {
-    color:  #FF4900;
+    color:  var(--laranja);
     font-size: 23px;
 }
 
@@ -77,18 +77,18 @@
     width: 250px;
     height: 30px;
     padding-left: 50px;
-    background-color: #D9D9D9;
-    color: #282828;
+    background-color: var(--branco);
+    color: var(--preto-claro);
     border: 0;
 }
 
 .button-open {
-    background-color:  #FF4900;
+    background-color:  var(--laranja);
     font-weight: 500;
     width: 130px;
     border: 0;
     border-radius: 30px;
-    color: #FFF;
+    color: var(--branco);
     height: 35px;
 }
 

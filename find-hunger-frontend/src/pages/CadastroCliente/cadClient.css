@@ -18,9 +18,9 @@
 }
 
 .button-inicio {
-    background-color:  #FF4900;
+    background-color: var(--laranja);
     border: 0;
-    color:#FFFFFF ;
+    color:var(--branco) ;
 }
 
 .container-voltar {
@@ -28,9 +28,9 @@
     width: 130px;
     border: 0;
     border-radius: 30px;
-    background-color: #D9D9D996;
+    background-color: var(--cinza);
     height: 35px;
-    color: #FF4900;
+    color: var(--laranja);
 }
 
 .container-button {
@@ -41,8 +41,8 @@
     border-radius: 49px;
     width: 250px;
     height: 30px;
-    background-color:#D9D9D996;
-    color: #282828;
+    background-color:var(--cinza);
+    color: var(--preto-claro);
     border: 0;
     padding-left: 50px;
 }
@@ -58,7 +58,7 @@
 }
 
 .container-cadastro h2 {
-    color: #FF4900;
+    color: var(--laranja);
 }
 
 .container-form {
@@ -66,12 +66,12 @@
 }
 
 .button-cad {
-    color:  #fff;
+    color:  var(--branco);
     font-weight: 500;
     width: 130px;
     border: 0;
     border-radius: 30px;
-    background-color: #FF4900;
+    background-color: var(--laranja);
     height: 35px;
     margin-top: 20px;
 }
