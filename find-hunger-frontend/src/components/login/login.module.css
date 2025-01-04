@@ -1,0 +1,104 @@
+
+
+.container {
+    width: 420px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    padding: 20px;
+}
+
+.container h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.InputBox {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.InputBox input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.InputBox input::placeholder {
+    color: #ffffff;
+} 
+
+.InputBox i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.rememberForgot {
+    display: flex;
+    justify-content: space-between;
+    margin: -15px 0 15px;
+}
+
+.rememberForgot label input {
+    accent-color: #fff;
+    margin-right: 5px;
+}
+
+.rememberForgot a {
+    text-decoration: none;
+    color:#fff ;
+}
+
+.rememberForgot a:hover {
+    text-decoration: underline;
+}
+
+.login {
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    margin-top: 20px;
+}
+
+.login:hover {
+    background-color:transparent ;
+    border: 2px solid rgba(255,255,255, .2);
+    color: #fff;
+    transition: 0.5s;
+}
+
+.registerLink {
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.registerLink a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.registerLink a:hover {
+    text-decoration: underline;
+}

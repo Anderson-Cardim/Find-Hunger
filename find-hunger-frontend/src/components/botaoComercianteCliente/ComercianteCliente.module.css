@@ -1,0 +1,29 @@
+.containerComerciante {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%;
+    background-color: var(--branco-cinza);
+}
+
+.containerNome p {
+    color:var(--preto);
+}
+
+.containerNome {
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.containerNome:hover {
+    transition: 0.1s;
+    border: 2px solid var(--laranja);
+    background-color: var(--laranja);
+}
+
+img {
+    width: 130px;
+    height: 130px;
+    margin-top: 30px;
+}

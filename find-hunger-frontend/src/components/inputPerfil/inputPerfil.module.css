@@ -1,0 +1,8 @@
+.botao {
+    width: 120px;
+    height: 45px;
+    border-radius: 120px;
+    background-color:var(--azul-marinho) ;
+    color: var(--branco);
+    padding-left: 10px;
+}

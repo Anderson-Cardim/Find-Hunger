@@ -1,11 +1,14 @@
 import "./bemVindo.css"
 
+import { ComercianteCliente } from "../../components/botaoComercianteCliente/ComercianteCliente";
+import { BotaoVoltar } from "../../components/botaoVoltar/voltar";
+import client from "../../assets/client 1.png"
+import market from "../../assets/market 1.png"
+
 export function BemVindo() {
     return (
         <div className="container-principal">
-            <div className="container-button">
-                <button className="container-voltar">Voltar</button>
-            </div>
+            <BotaoVoltar/>
 
             <div className="container-title">
                 <h1 >Olá, seja muito bem-vindo ao </h1>
@@ -14,23 +17,15 @@ export function BemVindo() {
             </div>
 
             <div className="container-comerciante-cliente">
-                
-                
-                <div className="container-nome">
-                    <div className="container-comerciante">
-                        <img src="" alt="" />
-                    </div>
-                    <p>Comerciante</p>
-                </div>
-
+                <ComercianteCliente
+                    title="Comerciante"
+                    img={market}                   
+                />
                 <h1>Ou</h1>
-                <div className="container-nome">
-                    <div className="container-cliente">
-                        <img src="" alt="" />
-                    </div>
-                    <p>Cliente</p>
-                </div>
-
+                <ComercianteCliente
+                    title="Cliente"
+                    img={client}
+                />
             </div>
         </div>
     )

@@ -1,0 +1,13 @@
+.containerVoltar {
+    font-weight: 500;
+    width: 130px;
+    border: 0;
+    border-radius: 30px;
+    background-color:var(--cinza);
+    height: 35px;
+    color: var(--laranja);
+}
+
+.containerBotao {
+    padding: 20px 20px 0 20px;
+}

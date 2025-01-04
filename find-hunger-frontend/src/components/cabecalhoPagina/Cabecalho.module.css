@@ -1,0 +1,23 @@
+.cotainerHeader {
+    padding: 20px 20px 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.cotainerHeader button {
+    padding: 10px;
+    border-radius: 120px;
+    width: 90px;
+    border: 0;
+
+}
+
+.divContainerHearder {
+    padding: 10px;
+}
+
+.buttonInicio {
+    background-color: var(--laranja);
+    border: 0;
+    color:var(--branco) ;
+}

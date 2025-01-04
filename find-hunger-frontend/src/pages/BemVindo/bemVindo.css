@@ -5,23 +5,16 @@
 
 
 .container-principal {
-
-}
-
-.container-button {
-
-}
-
-.container-button .container-voltar {
-
+    width: 100vw;
+    height: 100vh;
 }
 
 .container-button h1{
-    color: #FF4900;
+    color: var(--laranja);
 }
 
 .container-button h4{
-    color: #000;
+    color: var(--preto);
 }
 
 .container-comerciante-cliente {
@@ -29,14 +22,6 @@
     justify-content: center;
     text-align: center;
     padding-top: 45px;
-}
-
-.container-comerciante {
-    width: 200px; 
-    height: 200px; 
-    border-radius: 50%;
-    background-color:#B8B8B8;
-
 }
 
 .container-title {
@@ -47,40 +32,18 @@
 }
 
 .container-title h1{
-    color:#FF4900;
+    color:var(--laranja);
+    padding-bottom: 20px;
 }
 
 .container-title h4 {
-    padding-top: 15px;
+    padding-top: 30px;
 }
-
-.container-cliente {
-    background: #FF4900;
-    width: 200px; 
-    height: 200px; 
-    border-radius: 50%;
-}
-
 
 .container-comerciante-cliente h1 {
     padding-top: 70px;
     padding: 70px 30px ;
 }
 
-.container-voltar {
-    font-weight: 500;
-    width: 130px;
-    border: 0;
-    border-radius: 30px;
-    background-color: #D9D9D996;
-    height: 35px;
-    color: #FF4900;
-}
 
-.container-button {
-    padding: 40px;
-}
 
-.container-nome p {
-    color: #000;
-}

@@ -1,13 +1,16 @@
-import { Input } from "../../components/Input";
+import { Input } from "../../components/Input/Input";
 import "./Home.css";
+import { User } from "phosphor-react";
+import { Lock } from "@phosphor-icons/react";
 
 export function Home() {
   return (
-    <div className="container-home">
+    <section className="container-home">
       <div className="container-find-hunger">
-        <h3>Bem-Vindo ao</h3>
-        <h3>FIND-HUNGER!</h3>
-        <p>Crie sua conta agora mesmo.</p>
+        <h2>
+          Bem-Vindo ao <br /> FIND-HUNGER!
+        </h2>
+        <h5>Crie sua conta agora mesmo.</h5>
         <button className="button-cad">Cadastro</button>
       </div>
 
@@ -16,38 +19,14 @@ export function Home() {
           <h3 className="title-container-login">Acesse sua conta</h3>
           <p className="subtitle-container-login">Preencha seus dados</p>
           <form className="container-form" action="">
-            <Input
-              altImagem=""
-              id="ctrl-email"
-              name="name"
-              placeholder="Email"
-              srcImagem=""
-            />
-            <Input
-              altImagem=""
-              id="ctrl-email"
-              name="name"
-              placeholder="Email"
-              srcImagem=""
-            />
-            {/* <div className="container-email">
-              <img src="" alt="" />
-              <input
-                id="ctrl-email"
-                name="name"
-                placeholder="Email"
-                type="email"
-              />
-            </div> */}
+            <div className="input-email-senha">
+              <div className="input-email">
+                <Input type="" placeholder="Email" icons={<User />} />
+              </div>
 
-            <div className="container-email">
-              <img src="" alt="" />
-              <input
-                id="ctrl-senha"
-                name="name"
-                placeholder="Senha"
-                type="email"
-              />
+              <div className="input-senha">
+                <Input type="" placeholder="Senha" icons={<Lock />} />
+              </div>
             </div>
           </form>
           <div className="div-button-open">
@@ -59,6 +38,6 @@ export function Home() {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

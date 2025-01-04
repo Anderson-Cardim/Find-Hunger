@@ -47,31 +47,25 @@
     padding-left: 50px;
 }
 
-.container-email {
-    padding: 5px;
-}
 
-.container-cadastro {
+.conteinerCadastro {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.container-cadastro h2 {
+.containerCadastro h2 {
     color: var(--laranja);
 }
 
-.container-form {
-    padding-top: 30px;
+.containerForm {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.button-cad {
-    color:  var(--branco);
-    font-weight: 500;
-    width: 130px;
-    border: 0;
-    border-radius: 30px;
-    background-color: var(--laranja);
-    height: 35px;
-    margin-top: 20px;
+.containerForm .InputInput {
+    margin: 5px 0;
 }

@@ -1,57 +1,37 @@
-import "./cadClient.css"
+import { BotaoVoltar } from "../../components/botaoVoltar/voltar";
+import { Cabecalho } from "../../components/cabecalhoPagina/Cabecalho";
+import { Input } from "../../components/Input/Input";
+import "./cadClient.css";
+import { User } from "phosphor-react";
+
 
 export function CadastroCliente() {
-    return (
-        <header className=""> 
-            <div className="cotainer-header"> 
-                <div className="div-container-hearder">
-                    <button className="button-inicio">Início</button>
-                </div>
-                <div className="div-container-hearder">
-                    <button>Buscar</button>
-                </div>
-                <div className="div-container-hearder">
-                    <button>Ofertas</button>
-                </div>
-                <div className="div-container-hearder">
-                    <button>Restaurante</button>
-                </div>
-                <div className="div-container-hearder">
-                    <button>Pedidos</button>
-                </div>
-            </div>
+  return (
+    <header>
+      <Cabecalho />
 
-            <div className="container-button">
-                <button className="container-voltar">Voltar</button>
-            </div>
+      <BotaoVoltar />
 
-            <div className="container-cadastro">
-                <h2>Cadastro do Cliente</h2>
-                <form className="container-form" action="">
-                    <div className="container-email">
-                        <img src="" alt="" />
-                        <input id="ctrl-email" name="name" placeholder="Nome Completo:" type="name" />
-                    </div>
-
-                    <div className="container-email">
-                        <img src="" alt="" />
-                        <input id="ctrl-senha" name="name" placeholder="E-mail:" type="email" />
-                    </div>
-                    <div className="container-email">
-                        <img src="" alt="" />
-                        <input id="ctrl-email" name="name" placeholder="Crie sua senha>>" type="password" />
-                    </div>
-
-                    <div className="container-email">
-                        <img src="" alt="" />
-                        <input id="ctrl-senha" name="name" placeholder="Confirmar senha>" type="password" />
-                    </div>
-                </form>
-                <button className="button-cad">Cadastre-se</button>
-            </div>
-        </header>
-
-       
-
-    )
+      <div className="containerCadastro">
+        <h2>Cadastro do Cliente</h2>
+        <form className="containerForm" action="">
+          <div className="InputInput">
+            <Input type="" placeholder="Nome completo:" icons={<User />} />
+          </div>
+          <div className="InputInput">
+            <Input type="" placeholder="Email:" icons={<User />} />
+          </div>
+          <div className="InputInput">
+            <Input type="" placeholder="Crie sua senha:" icons={<User />} />
+          </div>
+          <div className="InputInput">
+            <Input type="" placeholder="Confirmar senha" icons={<User />} />
+          </div>
+          <div className="InputInput">
+            <button className="buttonCad">Cadastre-se</button>
+          </div>
+        </form>
+      </div>
+    </header>
+  );
 }
