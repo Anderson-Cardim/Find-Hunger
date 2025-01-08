@@ -1,0 +1,57 @@
+.ContainerCabecalho {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 0 0;
+}
+
+.ButtonCabecalhoInicio {
+    padding: 0 10px;
+}
+.ButtonCabecalhoInicio button{
+    background-color: var(--laranja);
+    color: var(--branco);
+    padding: 10px;
+    border-radius: 120px;
+    width: 90px;
+    border: 0;
+
+}
+
+.ButtonCabecalhoLogin {
+    padding: 0 10px;
+}
+
+.ButtonCabecalhoLogin button{
+    color: var(--preto);
+    background-color: var(--branco);
+    padding: 10px;
+    border-radius: 120px;
+    width: 120px;
+    border: 0;
+}
+
+.ButtonCabecalhoProduto {
+    padding: 0 10px;
+}
+
+.ButtonCabecalhoProduto button{
+    color: var(--preto);
+    background-color: var(--branco);
+    padding: 10px;
+    border-radius: 120px;
+    width: 120px;
+    border: 0;
+}
+
+.ButtonCabecalhoCadastrar {
+    padding: 0 10px;
+}
+
+.ButtonCabecalhoCadastrar button{
+    background-color: var(--laranja);
+    color: var(--branco);
+    padding: 10px;
+    border-radius: 120px;
+    width: 160px;
+    border: 0;
+}

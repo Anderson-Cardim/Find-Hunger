@@ -2,23 +2,30 @@
 // import { BemVindo } from './pages/BemVindo'
 // import { CadastroCliente } from './pages/CadastroCliente'
 // import { CadastroComerciante } from './pages/CadastroComerciante'
-
+// import { InputPerfil } from './components/inputPerfil/inputPerfil'
 // import { Login } from "./components/login/login"
-
-import { CadProduto } from "./pages/cadastrarProdutos/cadProduto"
+// import { CorpoPerfil } from "./pages/corpoPerfil/CorpoPerfil"
+// import { PerfilComerciante } from "./pages/PerfilComerciante/PerfilComerciante"
+import { PerfilCliente } from "./pages/PerfilCliente/PerfilCliente"
+// import { CadProduto } from "./pages/cadastrarProdutos/cadProduto"
 // import { Cadastro } from "./components/botaoCadastro/Cadastro"
 // import { Home } from "./pages/Home"
+// import { CabecalhoPerfil } from './components/cabecaloPerfil/CabecalhoPerfil'
 
 function App() {
 
   return (
     <>
+    {<PerfilCliente/>}
+      {/* {<PerfilComerciante/>} */}
+      {/* {<CorpoPerfil/>} */}
       {/* <BemVindo /> */}
       {/* <CadastroCliente/> */}
-      
+      {/* {<CabecalhoPerfil/>} */}
+      {/* {<InputPerfil/>} */}
       {/* {<CadastroComerciante/>} */}
       {/* { <InputPerfil/> } */}
-      {<CadProduto/>}
+      {/* {<CadProduto/>} */}
       {/* {<Home/>} */}
       {/* { <Cadastro/> } */}
       {/* {<Login/>} */}

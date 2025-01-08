@@ -1,0 +1,73 @@
+.ContainerPerfil h1{
+    padding: 15px 0 0 100px;
+}
+
+.ContainerPerfil h3{
+    padding: 0 0 0 120px;
+}
+
+.ContainerPerfil hr {
+    width: 200px;
+    margin-left: 100px;
+    margin-top: 20px;
+    color: var(--laranja);
+}
+
+.PerfilImagem {
+    padding: 15px 0 0 135px;
+}
+
+.PerfilCorpor {
+    width: 100%;
+}
+
+.Input {
+    padding-left: 100px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    width: 360px;
+}
+
+.InputInput {
+    display: flex; 
+    flex-direction: column;
+    padding-left: 100px;
+}
+
+.Botoes {
+    display: flex;
+}
+
+.ContainerSalvar button{
+    padding: auto;
+    width: 12vw;
+    height: 7vh;
+    background-color: var(--laranja);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    color: var(--branco);
+}
+
+.ContainerSalvar {
+    padding-top: 25px;
+}
+
+.ContainerAlterarSenha button{
+    padding: auto;
+    width: 15vw;
+    height: 7vh;
+    background-color: var(--laranja);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 30px;
+    outline: none;
+    font-size: 16px;
+    color: var(--branco);
+}
+
+.ContainerAlterarSenha {
+    width: 145px;
+    padding-top: 25px;
+}

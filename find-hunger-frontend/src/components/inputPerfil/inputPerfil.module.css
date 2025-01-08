@@ -1,8 +1,31 @@
-.botao {
-    width: 120px;
-    height: 45px;
-    border-radius: 120px;
-    background-color:var(--azul-marinho) ;
-    color: var(--branco);
+
+.InputBox {
+    padding: 5px 0 0 0;
+    width: 265px;
+}
+
+.InputBox h5{
     padding-left: 10px;
 }
+
+
+.InputBox input {
+    background-color: var(--preto);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    outline: none;
+    font-size: 16px;
+    color: #282828;
+    padding: 10px 45px 10px 20px;
+}   
+
+.InputBox input::placeholder {
+    color: #282828;
+} 
+
+.InputBox input:hover {
+    transition: 0.1s;
+    border: 2px solid var(--laranja);
+}
+
+
