@@ -9,8 +9,10 @@
 // import { PerfilCliente } from "./pages/PerfilCliente/PerfilCliente"
 // import { CadProduto } from "./pages/cadastrarProdutos/cadProduto"
 // import { Cadastro } from "./components/botaoCadastro/Cadastro"
-import { Home } from "./pages/Home"
+// import { Home } from "./pages/Home"
 // import { CabecalhoPerfil } from './components/cabecaloPerfil/CabecalhoPerfil'
+
+import { TelaLogin } from "./pages/Login/TelaLogin"
 
 // import { ProdutosCadastrados } from "./pages/ProdutosCadastrados/ProdutosCadastrados"
 
@@ -18,6 +20,7 @@ function App() {
 
   return (
     <>
+    <TelaLogin/>
     {/* {<ProdutosCadastrados/>} */}
     {/* {<PerfilCliente/>} */}
       {/* {<PerfilComerciante/>} */}
@@ -29,9 +32,10 @@ function App() {
       {/* {<CadastroComerciante/>} */}
       {/* { <InputPerfil/> } */}
       {/* {<CadProduto/>} */}
-      {<Home/>}
+      {/* {<Home/>} */}
       {/* { <Cadastro/> } */}
       {/* {<Login/>} */}
+
     </>
   )
 }

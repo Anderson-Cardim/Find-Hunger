@@ -27,10 +27,8 @@ export function Login() {
                 </div>
 
                 <button className={styles.login} type='submit'>Login</button>
-
-                <div className={styles.registerLink}>
-                    <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
-                </div>
+                <button className={styles.login} type='submit'>Cadastre-se</button>
+                
             </form>
         </div>
     )
