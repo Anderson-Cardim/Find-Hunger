@@ -24,8 +24,5 @@ body{
     font-family: 'Poppins', sans-serif;
     width: 100vw;
     height: 100vh;
-    border-right: 8px solid var(--laranja);
-    border-bottom: 8px solid var(--laranja);
 }
-
 
