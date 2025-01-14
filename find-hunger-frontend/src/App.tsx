@@ -11,14 +11,22 @@
 // import { Cadastro } from "./components/botaoCadastro/Cadastro"
 // import { Home } from "./pages/Home"
 // import { CabecalhoPerfil } from './components/cabecaloPerfil/CabecalhoPerfil'
+
+import { TelaLogin } from './pages/Login/TelaLogin'
+
 import { Step1 } from './pages/Step1/Step1'
+
 // import { ProdutosCadastrados } from "./pages/ProdutosCadastrados/ProdutosCadastrados"
 
 function App() {
 
   return (
     <>
+    <TelaLogin/>
+
     <Step1/>
+
+
     {/* {<ProdutosCadastrados/>} */}
     {/* {<PerfilCliente/>} */}
       {/* {<PerfilComerciante/>} */}
@@ -33,6 +41,7 @@ function App() {
       {/* {<Home/>} */}
       {/* { <Cadastro/> } */}
       {/* {<Login/>} */}
+
     </>
   )
 }

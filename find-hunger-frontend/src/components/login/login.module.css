@@ -1,13 +1,14 @@
 
 
 .container {
-    width: 420px;
-    background-color: transparent;
+    width: 340px;
+    background-color: var(--laranja);
     border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 10px;
+    border-radius: 15px;
     color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     padding: 20px;
+    height: 540px;
 }
 
 .container h1 {
@@ -25,7 +26,7 @@
 .InputBox input {
     width: 100%;
     height: 100%;
-    background-color: transparent;
+    background-color: var(--laranja-claro);
     border: 2px solid rgba(255, 255, 255, .2);
     border-radius: 40px;
     outline: none;
