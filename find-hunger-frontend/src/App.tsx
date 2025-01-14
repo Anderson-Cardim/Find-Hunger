@@ -6,17 +6,17 @@
 // import { Login } from "./components/login/login"
 // import { CorpoPerfil } from "./pages/corpoPerfil/CorpoPerfil"
 // import { PerfilComerciante } from "./pages/PerfilComerciante/PerfilComerciante"
-import { PerfilCliente } from "./pages/PerfilCliente/PerfilCliente"
+// import { PerfilCliente } from "./pages/PerfilCliente/PerfilCliente"
 // import { CadProduto } from "./pages/cadastrarProdutos/cadProduto"
 // import { Cadastro } from "./components/botaoCadastro/Cadastro"
-// import { Home } from "./pages/Home"
+import { Home } from "./pages/Home"
 // import { CabecalhoPerfil } from './components/cabecaloPerfil/CabecalhoPerfil'
 
 function App() {
 
   return (
     <>
-    {<PerfilCliente/>}
+    {/* {<PerfilCliente/>} */}
       {/* {<PerfilComerciante/>} */}
       {/* {<CorpoPerfil/>} */}
       {/* <BemVindo /> */}
@@ -26,12 +26,11 @@ function App() {
       {/* {<CadastroComerciante/>} */}
       {/* { <InputPerfil/> } */}
       {/* {<CadProduto/>} */}
-      {/* {<Home/>} */}
+      {<Home/>}
       {/* { <Cadastro/> } */}
       {/* {<Login/>} */}
     </>
   )
 }
-
 
 export default App
