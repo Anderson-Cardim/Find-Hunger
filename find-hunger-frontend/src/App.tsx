@@ -9,13 +9,17 @@
 // import { PerfilCliente } from "./pages/PerfilCliente/PerfilCliente"
 // import { CadProduto } from "./pages/cadastrarProdutos/cadProduto"
 // import { Cadastro } from "./components/botaoCadastro/Cadastro"
-import { Home } from "./pages/Home"
+// import { Home } from "./pages/Home"
 // import { CabecalhoPerfil } from './components/cabecaloPerfil/CabecalhoPerfil'
+import { Step1 } from './pages/Step1/Step1'
+// import { ProdutosCadastrados } from "./pages/ProdutosCadastrados/ProdutosCadastrados"
 
 function App() {
 
   return (
     <>
+    <Step1/>
+    {/* {<ProdutosCadastrados/>} */}
     {/* {<PerfilCliente/>} */}
       {/* {<PerfilComerciante/>} */}
       {/* {<CorpoPerfil/>} */}
@@ -26,7 +30,7 @@ function App() {
       {/* {<CadastroComerciante/>} */}
       {/* { <InputPerfil/> } */}
       {/* {<CadProduto/>} */}
-      {<Home/>}
+      {/* {<Home/>} */}
       {/* { <Cadastro/> } */}
       {/* {<Login/>} */}
     </>

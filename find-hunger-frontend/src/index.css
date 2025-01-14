@@ -9,6 +9,7 @@
 
 :root {
     --laranja: #FF4900;
+    --laranja-claro: #FF7900;
     --preto-claro: #282828;
     --branco: #FFF;
     --branco-cinza: #D9D9D9;
@@ -24,8 +25,5 @@ body{
     font-family: 'Poppins', sans-serif;
     width: 100vw;
     height: 100vh;
-    border-right: 8px solid var(--laranja);
-    border-bottom: 8px solid var(--laranja);
 }
-
 

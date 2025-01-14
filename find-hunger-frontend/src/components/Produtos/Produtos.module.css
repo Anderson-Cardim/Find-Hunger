@@ -1,0 +1,35 @@
+.ContainerImagem {
+    width: 50%;
+    height: 130px;
+}
+
+.ContainerImagem img{
+    background-size: cover;
+    width: 200px;
+    height: 130px;
+}
+
+.ContainerProdutos {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+    background-color: var(--cinza);
+    height: 140px;
+    width: 400px;
+    border-radius: 30px;
+}
+
+.ContainerConteudo {
+    width: 50%;
+    height: 130px;
+    padding-top: 1vh;
+    font-weight: 400;
+}
+
+.ContainerConteudo h5 {
+    width: 150px;
+}
+
+.subTitulos {
+    padding-left: 1vh;
+}
