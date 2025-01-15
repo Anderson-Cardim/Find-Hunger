@@ -15,6 +15,7 @@
 import { TelaLogin } from './pages/Login/TelaLogin'
 
 import { Step1 } from './pages/Step1/Step1'
+import { Step2 } from './pages/Step2/Step2'
 
 // import { ProdutosCadastrados } from "./pages/ProdutosCadastrados/ProdutosCadastrados"
 
@@ -24,8 +25,9 @@ function App() {
     <>
     {/* <TelaLogin/> */}
 
-    <Step1/>
+    {/* <Step1/> */}
 
+    <Step2 />
 
     {/* {<ProdutosCadastrados/>} */}
     {/* {<PerfilCliente/>} */}
