@@ -1,47 +1,52 @@
-import "./cadClient.css";
+import styles from './cadClient.module.css'
 import { Input } from "../../components/Input/Input";
-import { Cadastro } from "../../components/botaoCadastro/Cadastro";
-import { Cabecalho } from "../../components/cabecalhoPagina/Cabecalho";
-import { BotaoVoltar } from "../../components/botaoVoltar/voltar";
 import { User } from "phosphor-react";
 import { Storefront } from "phosphor-react";
-import { Envelope } from "phosphor-react";
-import { MapPin } from "phosphor-react";
 import { Phone } from "phosphor-react";
-
-
-
+import { EnvelopeSimple } from "phosphor-react";
+import { Lock } from "phosphor-react";
+import {TrademarkRegistered} from "phosphor-react";
 
 export function CadastroComerciante() {
   return (
-    <header className="">
-      <Cabecalho />
-      <BotaoVoltar />
-
-      <div className="conteinerCadastro">
-        <h2>Cadastro do Comeciante</h2>
-        <form className="containerForm" action="">
-          <div className="InputInput">
-            <Input type="" placeholder="Nome Completo:" icons={<User />} />
+    <header className={styles.ContainerClient}>
+      
+      <div className={styles.containerCadastro}>
+        <div className={styles.containerH2}>
+          <h2>Cadastro</h2>
+          <h2>Comerciante</h2>
+        </div>
+        <form className={styles.containerForm} action="">
+          <div className={styles.InputInput}>
+            <Input type="" placeholder="Nome completo:" icons={<User />} />
           </div>
-          <div className="InputInput">
-            <Input className="InputInput" type="" placeholder="Nome do estabelecimento:" icons={<Storefront/>} />
-
+          <div className={styles.InputInput}>
+            <Input type="" placeholder="Estabelecimento:" icons={<Storefront />} />
           </div>
-          <div className="InputInput">
-            <Input className="InputInput" type="" placeholder="CPF ou CNPJ:" icons={<User />} />
+          <div className={styles.InputInput}>
+            <Input type="" placeholder="Email:" icons={<EnvelopeSimple />} />
           </div>
-          <div className="InputInput">
-            <Input className="InputInput" type="" placeholder="Número de telefone:" icons={<Phone />} />
+          <div className={styles.InputInput}>
+            <Input type="" placeholder="CPF ou CNPJ:" icons={<TrademarkRegistered />} />
           </div>
-          <div className="InputInput">
-            <Input className="InputInput" type="" placeholder="E-mail:" icons={<Envelope/>} />
+          <div className={styles.InputInput}>
+            <Input type="" placeholder="Telefone:" icons={<Phone />} />
           </div>
-          <div className="InputInput">
-            <Input className="InputInput" type="" placeholder="Ativar localização" icons={<MapPin/>} />
+          <div className={styles.InputInput}>
+            <Input type='password' placeholder="Crie sua senha:" icons={<Lock />} />
           </div>
-            <Cadastro />
+          <div className={styles.InputInput}>
+            <Input type='password' placeholder="Confirmar senha" icons={<Lock />} />
+          </div>
         </form>
+      </div>
+      <div className={styles.containerBotoes}>
+        <div className={styles.containerCadastrar}>
+          <button>Cadastrar</button>
+        </div>
+        <div className={styles.containerVoltar}>
+          <button>Voltar</button>
+        </div>
       </div>
     </header>
   );
