@@ -1,0 +1,14 @@
+.cabecalho {
+  height: 120px;
+  border-radius: 10px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.386);
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+}
+
+.imagemLogo {
+  width: 100px;
+  height: 100px;
+  margin-top: auto;
+}
