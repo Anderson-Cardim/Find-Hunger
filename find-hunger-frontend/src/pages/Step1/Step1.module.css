@@ -1,0 +1,88 @@
+.cabecalho {
+  text-align: center;
+  padding-top: 12vh;
+}
+
+.titulo {
+  font-size: 36px;
+  padding-bottom: 4vh;
+}
+
+.subTitulo {
+  font-weight: 500;
+}
+
+.ContainerComercianteCliente {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.DivImagemCliente {
+  width: 110px;
+  margin-right: 5vw;
+}
+
+.ImagemCliente {
+  background: var(--cinza);
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paragrafoCliente {
+  font-weight: 500;
+}
+
+.paragrafoProfissional {
+  font-weight: 500;
+  color: var(--laranja-claro);
+}
+
+.DivImagemDoProfissional {
+  width: 110px;
+  margin-left: 5vw;
+}
+
+.ImagemProfissional {
+  background: var(--laranja-claro);
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 75px;
+  height: 75px;
+}
+
+.Botoes {
+  margin-top: 26vh;
+  text-align: center;
+}
+
+.BotaoProximo {
+  width: 75vw;
+  height: 40px;
+  margin-bottom: 2vw;
+  background-color: var(--laranja-claro);
+  color: var(--branco);
+  border: none;
+  border-radius: 18px;
+  font-weight: 600;
+}
+
+.BotaoVoltar {
+  width: 75vw;
+  height: 40px;
+  border: none;
+  background-color: var(--branco);
+  font-weight: 600;
+}

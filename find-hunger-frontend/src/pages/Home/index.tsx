@@ -1,7 +1,7 @@
 import { Input } from "../../components/Input/Input";
 import "./Home.css";
 import { User } from "phosphor-react";
-import { Lock } from "@phosphor-icons/react";
+import { Lock } from "phosphor-react";
 
 export function Home() {
   return (
