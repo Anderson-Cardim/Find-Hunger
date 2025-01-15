@@ -1,7 +1,7 @@
 // import { Home } from './pages/Home'
 // import { BemVindo } from './pages/BemVindo'
 // import { CadastroCliente } from './pages/CadastroCliente'
-// import { CadastroComerciante } from './pages/CadastroComerciante'
+import { CadastroComerciante } from './pages/CadastroComerciante'
 // import { InputPerfil } from './components/inputPerfil/inputPerfil'
 // import { Login } from "./components/login/login"
 // import { CorpoPerfil } from "./pages/corpoPerfil/CorpoPerfil"
@@ -29,7 +29,7 @@ function App() {
       {/* <CadastroCliente/> */}
       {/* {<CabecalhoPerfil/>} */}
       {/* {<InputPerfil/>} */}
-      {/* {<CadastroComerciante/>} */}
+      {<CadastroComerciante/>}
       {/* { <InputPerfil/> } */}
       {/* {<CadProduto/>} */}
       {/* {<Home/>} */}
