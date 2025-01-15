@@ -5,6 +5,7 @@ import { InputPesquisar } from '../../components/InputPesquisar/InputPesquisar'
 import ImagemPrincipalBanner from '../../assets/BannerPrincipal1-temporario.png'
 
 import styles from './Step2.module.css'
+import { Carrosel } from '../../components/Carrossel1/Carrosel'
 
 export function Step2() {
   return (
@@ -13,6 +14,7 @@ export function Step2() {
       <main className={styles.corpo}>
         <InputPesquisar />
         <BannerPrincipal img={ImagemPrincipalBanner}/>
+        <Carrosel /> 
       </main>
       <FooterPrincipal />
     </>

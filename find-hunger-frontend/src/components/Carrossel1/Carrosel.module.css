@@ -1,0 +1,29 @@
+.divSlides {
+  width: 100%;
+  height: 120px;
+  display: flex;
+}
+
+.titulo {
+  margin-left: 5vw;
+  margin-top: 2.5vh;
+  margin-bottom: 1vh;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.divIcon {
+  display: flex;
+  justify-content: center;
+  width: 95px;
+  height: 95px;
+}
+
+.paragrafoCarrosel {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.paragrafoEspecial {
+  padding-left: 4vw;
+}
