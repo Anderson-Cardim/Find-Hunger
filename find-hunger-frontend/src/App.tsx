@@ -1,6 +1,6 @@
 // import { Home } from './pages/Home'
 // import { BemVindo } from './pages/BemVindo'
-// import { CadastroCliente } from './pages/CadastroCliente'
+import { CadastroCliente } from './pages/CadastroCliente'
 // import { CadastroComerciante } from './pages/CadastroComerciante'
 // import { InputPerfil } from './components/inputPerfil/inputPerfil'
 // import { Login } from "./components/login/login"
@@ -12,7 +12,7 @@
 // import { Home } from "./pages/Home"
 // import { CabecalhoPerfil } from './components/cabecaloPerfil/CabecalhoPerfil'
 
-import { TelaLogin } from "./pages/Login/TelaLogin"
+// import { TelaLogin } from "./pages/Login/TelaLogin"
 
 // import { ProdutosCadastrados } from "./pages/ProdutosCadastrados/ProdutosCadastrados"
 
@@ -20,13 +20,13 @@ function App() {
 
   return (
     <>
-    <TelaLogin/>
+    {/* <TelaLogin/> */}
     {/* {<ProdutosCadastrados/>} */}
     {/* {<PerfilCliente/>} */}
       {/* {<PerfilComerciante/>} */}
       {/* {<CorpoPerfil/>} */}
       {/* <BemVindo /> */}
-      {/* <CadastroCliente/> */}
+      <CadastroCliente/>
       {/* {<CabecalhoPerfil/>} */}
       {/* {<InputPerfil/>} */}
       {/* {<CadastroComerciante/>} */}

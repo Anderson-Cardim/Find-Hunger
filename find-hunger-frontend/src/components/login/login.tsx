@@ -1,6 +1,6 @@
 import styles from './login.module.css'
 import { User } from 'phosphor-react'
-import { Lock } from '@phosphor-icons/react'
+import { Lock } from 'phosphor-react'
 
 
 export function Login() {
