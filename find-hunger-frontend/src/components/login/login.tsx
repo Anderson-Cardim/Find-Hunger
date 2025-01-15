@@ -6,7 +6,7 @@ import { Lock } from 'phosphor-react'
 export function Login() {
     return(
         <div className={styles.container}>
-            <form action="">
+            <form action="/ComercianteCliente">
                 <h1>Login Find-Hunger</h1>
                 <div className={styles.InputBox}>
                     <input placeholder='Usuario' type='email'/>

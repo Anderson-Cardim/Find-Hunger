@@ -1,0 +1,15 @@
+.divBanner {
+  width: 90vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+img {
+  margin-top: 2vh;
+  width: 90vw;
+  height: 18vh;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}

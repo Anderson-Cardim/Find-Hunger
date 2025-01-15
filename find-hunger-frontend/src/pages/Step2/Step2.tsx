@@ -1,14 +1,19 @@
+import { BannerPrincipal } from '../../components/BannerPrincipal/BannerPrincipal'
 import { FooterPrincipal } from '../../components/FooterPrincipal/FooterPrincipal'
 import { HeaderPrincipal } from '../../components/HeaderPrincipal/HeaderPrincipal'
+import { InputPesquisar } from '../../components/InputPesquisar/InputPesquisar'
+import ImagemPrincipalBanner from '../../assets/BannerPrincipal1-temporario.png'
+
 import styles from './Step2.module.css'
 
 export function Step2() {
   return (
     <>
       <HeaderPrincipal />
-        <main className={styles.corpo}>
-          <input type="search" name="PesquisarServicos" id="PesquisarServicos" className={styles.PesquisarServicos} placeholder='Serviços ou Profissionais' />
-        </main>
+      <main className={styles.corpo}>
+        <InputPesquisar />
+        <BannerPrincipal img={ImagemPrincipalBanner}/>
+      </main>
       <FooterPrincipal />
     </>
   )
