@@ -1,6 +1,7 @@
 // import { Home } from './pages/Home'
 // import { BemVindo } from './pages/BemVindo'
 // import { CadastroCliente } from './pages/CadastroCliente'
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { CadastroComerciante } from './pages/CadastroComerciante'
 import { TelaLogin } from './pages/Login/TelaLogin'
@@ -10,6 +11,8 @@ import { CadastroCliente } from './pages/CadastroCliente'
 import { HeaderPrincipal } from './components/HeaderPrincipal/HeaderPrincipal'
 import { FooterPrincipal } from './components/FooterPrincipal/FooterPrincipal'
 import { Step2 } from './pages/Step2/Step2'
+
+// import { CadastroComerciante } from './pages/CadastroComerciante'
 // import { InputPerfil } from './components/inputPerfil/inputPerfil'
 // import { Login } from "./components/login/login"
 // import { CorpoPerfil } from "./pages/corpoPerfil/CorpoPerfil"
