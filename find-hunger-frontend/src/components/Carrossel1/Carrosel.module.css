@@ -1,0 +1,49 @@
+.divSlides {
+  width: 100%;
+  height: 120px;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.titulo {
+  margin-left: 5vw;
+  margin-top: 2.5vh;
+  margin-bottom: 1vh;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.divSecIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* justify-content: center;
+  align-items: center;
+  width: 100px; */
+}
+
+.divIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  background-color: var(--laranja-claro);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.img {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.paragrafoCarrosel {
+  font-size: 16px;
+  font-weight: 500;
+}
