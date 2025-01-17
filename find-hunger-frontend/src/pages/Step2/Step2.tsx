@@ -3,9 +3,11 @@ import { FooterPrincipal } from '../../components/FooterPrincipal/FooterPrincipa
 import { HeaderPrincipal } from '../../components/HeaderPrincipal/HeaderPrincipal'
 import { InputPesquisar } from '../../components/InputPesquisar/InputPesquisar'
 import ImagemPrincipalBanner from '../../assets/BannerPrincipal1-temporario.png'
+import ImagemSecundariaBanner from '../../assets/BannerPrincipal2.png'
 
 import styles from './Step2.module.css'
 import { Carrosel } from '../../components/Carrossel1/Carrosel'
+import { ProfissionaisDestaque } from '../../components/ProfissionaisEmDestaque/ProfissionaisDestaque'
 
 export function Step2() {
   return (
@@ -13,8 +15,8 @@ export function Step2() {
       <HeaderPrincipal />
       <main className={styles.corpo}>
         <InputPesquisar />
-        <BannerPrincipal img={ImagemPrincipalBanner}/>
-        <Carrosel /> 
+        <BannerPrincipal img={ImagemPrincipalBanner} />
+        <Carrosel />
       </main>
       <FooterPrincipal />
     </>

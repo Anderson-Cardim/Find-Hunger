@@ -1,0 +1,5 @@
+.rodape {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+}

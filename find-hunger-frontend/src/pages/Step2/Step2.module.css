@@ -1,3 +1,10 @@
+body {
+  min-height: 100vh;
+}
+
 .corpo {
   background: var(--cinza);
+  display: flex; 
+  flex-direction: column;
+  flex: 1;
 }
