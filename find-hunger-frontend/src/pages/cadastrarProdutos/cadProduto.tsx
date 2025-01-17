@@ -1,15 +1,18 @@
 import styles from './cadProduto.module.css';
 import { HeaderPrincipal } from '../../components/HeaderPrincipal/HeaderPrincipal';
 import { Plus } from 'phosphor-react';
+import { FooterPrincipal }  from '../../components/FooterPrincipal/FooterPrincipal';
 
 export function CadProduto() {
   return (
     <>
-    <HeaderPrincipal/>
+    <header className={styles.ContainerHeader}>
+      <HeaderPrincipal/>
+    </header>
     <main className={styles.ContainerPrincipal}>
       <div className={styles.containerCadastro}>
         <h3>Cadastre seu produto</h3>
-        <form className={styles.containerForm} action="">
+        <form className={`${styles.containerForm} ${styles.ContainerFinal}`} action="">
           <div className={styles.ContainerInput}>
             <div className={styles.ContainerTextoInput}>
               <p>Nome do produto</p>
@@ -79,7 +82,7 @@ export function CadProduto() {
               </div>
           </div>
               
-          <div className={styles.ContainerSecundario}>
+          <div className={ `${styles.ContainerSecundario} ${styles.ContainerTodasImagens}` }>
           <h2>Adicionar quantidade</h2>
             <div className={styles.ContainerInputsImagens}>
               <label className={styles.Picture}>
@@ -106,9 +109,16 @@ export function CadProduto() {
             </div>
           </div>
 
+          <div className={styles.ContainerFinalizar}>
+            <button>Finalizar</button>
+          </div>
+
         </form>
       </div>
     </main>
+      <footer className={styles.ContainerFooter}>
+        <FooterPrincipal/>
+      </footer>
     </>
   );
 }

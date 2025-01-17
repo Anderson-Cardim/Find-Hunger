@@ -6,6 +6,8 @@ import { CadastroCliente } from './pages/CadastroCliente'
 import { Step2 } from './pages/Step2/Step2'
 
 import { CadProduto } from './pages/cadastrarProdutos/cadProduto'
+import { FooterPrincipal } from './components/FooterPrincipal/FooterPrincipal';
+import { HeaderPrincipal } from './components/HeaderPrincipal/HeaderPrincipal';
 
 function App() {
 
@@ -19,6 +21,8 @@ function App() {
           <Route path='/CadastroComerciante' element={<CadastroComerciante />} />
           <Route path='/PaginaPrincipal' element={<Step2 />}/>
           <Route path='/CadProduto' element={<CadProduto />}/>
+          <Route path='/Footer' element={<FooterPrincipal/>}/>
+          <Route path='/Banner' element={<HeaderPrincipal/>}/>
         </Routes>
       </BrowserRouter>
     </>

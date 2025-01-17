@@ -1,4 +1,6 @@
 .divBanner {
+  position: sticky;
+  top: 0;
   width: 90vw;
   height: 22vh;
   display: flex;

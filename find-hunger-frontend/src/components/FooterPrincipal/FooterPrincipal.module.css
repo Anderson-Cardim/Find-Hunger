@@ -1,5 +1,30 @@
 .rodape {
-  display: flex;
-  position: fixed;
+  display: grid;
+  width: 100%;
+  max-width: 650px;
+  height: 60px;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: #fff;
+  position: fixed; 
   bottom: 0;
+}
+
+.rodape a {
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+}
+
+.rodape i {
+  font-size: 32px;
+  color: var(--preto);
+  transition: 1s;
+  position: relative;
+}
+
+.rodape i:hover {
+  transform: scale(1.2)rotateY(180deg);
+  color:var(--laranja);
 }
