@@ -1,0 +1,147 @@
+
+.containerCadastro {
+    background-color: var(--cinza);
+    padding-top: 20px;
+}
+.containerCadastro h3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.ContainerInput input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.ContainerTextoInput input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.ContainerInput {
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.ContainerTextoInput {
+    padding-left: 30px;
+}
+
+.ContainerLinha  {
+    width: 400px;
+    padding-left: 25px;
+}
+
+.ContainerLinhaLinha {
+    padding-left: 25px;
+}
+
+.ContainerSecundario {
+    padding-top: 25px;
+}
+
+.ContainerTabelaPreco {
+    padding-top: 10px;
+}
+
+.ContainerPerco {
+    display: flex;
+}
+
+.ContainerPagamento {
+    padding-top: 20px;
+}
+
+.ContainerQuantidade {
+    padding-top: 10px;
+}
+
+.ContainerSecundario h2 {
+    padding-left: 30px;
+
+}
+
+.ContainerImagens {
+    display: flex;
+}
+
+.PictureInput {
+    display: none;
+}
+
+.Picture {
+    width: 45vw;
+    height: 18vh;
+    aspect-ratio: 16/9;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    box-shadow: inset 0 0 0 2px var(--laranja);
+    /* border: 2px solid var(--laranja); */
+    cursor: pointer;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out, outline 300ms ease-in-out;
+    /* outline: 2px solid #fff; */
+}
+
+.Picture:hover {
+    color: #777;
+    background: #ccc;
+}
+
+.Picture:active {
+    border-color: turquoise;
+    color: turquoise;
+    background: #eee;
+}
+
+.Picture:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    color: #777;
+    outline: 2px solid black;
+}
+
+.PictureMenor {
+    width: 45vw;
+    height: 9vh;
+    aspect-ratio: 16/9;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    box-shadow: inset 0 0 0 2px var(--laranja);
+    /* border: 2px solid var(--laranja); */
+    cursor: pointer;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out, outline 300ms ease-in-out;
+    /* outline: 2px solid #fff; */
+}
+
+.ContainerInputsImagens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.ContainerGeralImagens h2{
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+.PictureImagem {
+    font-size: 14px;
+    color: var(--laranja);
+}
+
+.ContainerIconiTexto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
