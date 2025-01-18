@@ -6,6 +6,8 @@ import ImagemPrincipalBanner from '../../assets/BannerPrincipal1-temporario.png'
 
 import styles from './Step2.module.css'
 import { Carrosel } from '../../components/Carrossel1/Carrosel'
+import { ProfissionaisDestaque } from '../../components/ProfissionaisEmDestaque/ProfissionaisDestaque'
+import { MapaEmpresa } from '../../components/MapaEmpresa/MapaEmpresa'
 
 export function Step2() {
   return (
@@ -18,6 +20,7 @@ export function Step2() {
         <InputPesquisar />
         <BannerPrincipal img={ImagemPrincipalBanner} />
         <Carrosel />
+        <MapaEmpresa />
       </main>
       <footer>
         <FooterPrincipal />

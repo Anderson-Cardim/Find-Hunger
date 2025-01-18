@@ -7,12 +7,12 @@ section {
 .Search {
   display: flex;
   align-items:center ;
-  border: 1px solid #ccc;
+  border: 1px solid var(--branco-neutro);
   width: 90vw;
   margin: 20px auto;
   border-radius: 20px;
   padding: 5px 10px;
-  color: #4b4b4b;
+  color: var(--cinza-escuro);
   background-color: var(--branco);
 }
 
@@ -27,3 +27,4 @@ section {
 .Search label {
   height: 20px;
 }
+

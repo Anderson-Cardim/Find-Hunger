@@ -10,12 +10,15 @@
 :root {
     --laranja: #FF4900;
     --laranja-claro:#fa6e36;
+    --laranja-fraco: #FF7900;
     --preto-claro: #282828;
     --branco: #FFF;
     --branco-cinza: #D9D9D9;
     --cinza: #D9D9D996;
+    --cinza-escuro: #4b4b4b;
     --preto: #000;
     --branco-escuro: #F6F5F5;
+    --branco-neutro: #ccc;
     --azul-marinho:#03081F;
     --verde: #058733;
 }
