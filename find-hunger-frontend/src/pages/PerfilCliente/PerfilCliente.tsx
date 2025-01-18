@@ -2,6 +2,7 @@ import styles from './PerfilCliente.module.css'
 import { HeaderPrincipal } from '../../components/HeaderPrincipal/HeaderPrincipal'
 import { FooterPrincipal } from '../../components/FooterPrincipal/FooterPrincipal'
 import { Camera } from 'phosphor-react'
+import { ArrowFatLinesRight } from '@phosphor-icons/react'
 
 export function PerfilCliente() {
     return (
@@ -17,6 +18,65 @@ export function PerfilCliente() {
                         <i><Camera size={40} color="#ff4900" /></i>
                   </div>
                 </label>
+                <div className={styles.ContainerDivButtonSair}>
+                    <button>Sair <ArrowFatLinesRight size={20} /></button>
+                </div>
+
+                <div className={styles.ContainerDivButton}>
+                    <button>Chat</button>
+                </div>
+                <form action="">
+                    <div className={styles.ContainerInput}>
+                        <div className={styles.ContainerTextoInput}>
+                            <p>Nome do produto</p>
+                            <input type="text" placeholder='adicione aqui'/>
+                        </div>
+                        <div className={styles.ContainerLinha}>
+                            <hr />
+                        </div>
+                    </div>
+
+                    <div className={styles.ContainerInput}>
+                        <div className={styles.ContainerTextoInput}>
+                            <p>Nome do produto</p>
+                            <input type="text" placeholder='adicione aqui'/>
+                        </div>
+                        <div className={styles.ContainerLinha}>
+                            <hr />
+                        </div>
+                    </div>
+
+                    <div className={styles.ContainerInput}>
+                        <div className={styles.ContainerTextoInput}>
+                            <p>Descrição do produto seu produto</p>
+                            <input type="text" placeholder='Descrição do produto...'/>
+                        </div>
+                        <div className={styles.ContainerLinha}>
+                            <hr />
+                        </div>
+                    </div>
+
+                    <div className={styles.ContainerInput}>
+                        <div className={styles.ContainerTextoInput}>
+                            <p>Nome do produto</p>
+                            <input type="text" placeholder='adicione aqui'/>
+                        </div>
+                        <div className={styles.ContainerLinha}>
+                            <hr />
+                        </div>
+                    </div>
+                </form>
+
+                <div className={styles.ContainerButtons}>
+                    <div className={styles.ContainerAdicionarNovoProduto}>
+                        <button>Adicionar novo produto</button>
+                    </div>
+
+                    <div className={styles.ContainerSalvar}>
+                        <button>Salvar</button>
+                    </div>
+
+                </div>
             </main>
 
             <footer className={styles.ContainerFooter}>

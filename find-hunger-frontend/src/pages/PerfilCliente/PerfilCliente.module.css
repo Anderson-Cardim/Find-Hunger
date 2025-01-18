@@ -32,3 +32,81 @@ body {
 .PictureInput {
     display: none;
 }
+
+.ContainerDivButton button {
+    width: 70px;
+    height: 30px;
+    color: var(--branco);
+    background-color: var(--laranja);
+    border: none;
+    border-radius: 80px;
+}
+
+.ContainerDivButtonSair button{
+    width: 70px;
+    height: 30px;
+    color: var(--preto);
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ContainerInput input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.ContainerTextoInput input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.ContainerAdicionarNovoProduto button{
+    width: 85vw;
+    height: 40px;
+    background-color: transparent;
+    color: var(--laranja);
+    border: 2px solid var(--laranja);
+    border-radius: 8px;
+}
+
+.ContainerSalvar button{
+    width: 85vw;
+    height: 40px;
+    margin-bottom: 2vw;
+    background-color: var(--verde);
+    color: var(--branco);
+    border-radius: 18px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--verde);
+}
+
+.ContainerSalvar {
+    padding-top: 25px;
+}
+
+.ContainerButtons {
+    padding-top: 100px;
+}
+
+.ContainerInput {
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.ContainerTextoInput {
+    padding-left: 30px;
+}
+
+.ContainerLinha  {
+    width: 400px;
+    padding-left: 25px;
+}
