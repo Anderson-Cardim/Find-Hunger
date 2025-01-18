@@ -1,0 +1,34 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.ContainerMain {
+    flex: 1 1 0;
+    background-color: var(--cinza);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.Picture {
+    width: 28vw;
+    height: 12vh;
+    aspect-ratio: 16/9;
+    background: var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    box-shadow: inset 0 0 0 2px var(--laranja);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out, outline 300ms ease-in-out;
+}
+
+
+.PictureInput {
+    display: none;
+}

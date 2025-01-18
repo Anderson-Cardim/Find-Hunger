@@ -1,10 +1,19 @@
 body {
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  position: sticky;
+  top: 0;
 }
 
 .corpo {
-  background: var(--cinza);
-  display: flex; 
-  flex-direction: column;
-  flex: 1;
+  background-color: var(--cinza);
+  flex: 1 1 0;
+}
+
+footer { 
+  position: fixed; 
+  bottom: 0;
 }

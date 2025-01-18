@@ -87,12 +87,14 @@ export function CadProduto() {
             <div className={styles.ContainerInputsImagens}>
               <label className={styles.Picture}>
               <div className={styles.ContainerIconiTexto}>
+                    <input type="file" accept='imagem/*' className={styles.PictureInput}/>
                     <i><Plus size={22} color="#ff4900" /></i>
                     <span className={styles.PictureImagem}>Adiciona nova imagem</span>
                   </div>
               </label>
               <div>
                 <label className={styles.PictureMenor}>
+                <input type="file" accept='imagem/*' className={styles.PictureInput}/>
                 <div className={styles.ContainerIconiTexto}>
                     <i><Plus size={22} color="#ff4900" /></i>
                     <span className={styles.PictureImagem}>Adiciona nova imagem</span>

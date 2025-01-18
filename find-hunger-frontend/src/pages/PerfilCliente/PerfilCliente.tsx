@@ -1,60 +1,28 @@
-import './PerfilCliente.css'
-import { PerfilFoto } from "../../components/perfilFoto/PerfilFoto"
-import imagemPerfil from '../../assets/img mulher.svg'
-import { InputPerfil } from "../../components/inputPerfil/inputPerfil"
-import { CabecalhoPerfil02 } from "../../components/cabecalhoPerfil02/CabecalhoPerfi02l";
+import styles from './PerfilCliente.module.css'
+import { HeaderPrincipal } from '../../components/HeaderPrincipal/HeaderPrincipal'
+import { FooterPrincipal } from '../../components/FooterPrincipal/FooterPrincipal'
+import { Camera } from 'phosphor-react'
 
 export function PerfilCliente() {
     return (
-        <div className="ContainerPerfil">
-            <CabecalhoPerfil02/>
-            <div className="PerfilCorpor">
-                <h1>Meu Perfil</h1>
-                <h3>Dados do usuário</h3>
-                <hr />
-            </div>
-            <div className="PerfilImagem">
-                <PerfilFoto
-                   img={imagemPerfil}
-                />
-            </div>
+        <>
+        <body>
+            <header>
+                    <HeaderPrincipal/>
+            </header>
+            <main className={styles.ContainerMain}>
+                <label className={styles.Picture}>
+                    <input type="file" accept='imagem/*' className={styles.PictureInput}/>
+                    <div className={styles.ContainerIconiTexto}>
+                        <i><Camera size={40} color="#ff4900" /></i>
+                  </div>
+                </label>
+            </main>
 
-            <div className="Botoes">
-
-                <div className="Input">
-                    <InputPerfil
-                        type="email"
-                        placeholder="Ex:matheus@gmail.com"
-                        title="Login"
-                    />
-                    <InputPerfil
-                        type="string"
-                        placeholder="Ex: 40028922"
-                        title="Telefone"
-                    />
-                    <InputPerfil
-                        type="name"
-                        placeholder="Ex:Sonho Doce"
-                        title="Estabelecimento"
-                    />
-                    <div className="ContainerSalvar">
-                        <button>Salvar</button>
-                    </div>
-                </div>
-
-                <div className="InputInput">
-                    <div className="ContainerAlterarSenha">
-                        <button className='botoes'>Alterar Senha</button>
-                    </div>
-                    <InputPerfil
-                        type="string"
-                        placeholder="CPF/CNPJ"
-                        title="CPF/CNPJ"
-                    />
-
-                </div>
-            </div>
-
-            </div>
+            <footer className={styles.ContainerFooter}>
+                <FooterPrincipal/>
+            </footer>
+        </body>
+        </>
     )
 }
