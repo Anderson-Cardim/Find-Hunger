@@ -8,7 +8,10 @@ import { Step2 } from './pages/Step2/Step2'
 import { CadProduto } from './pages/cadastrarProdutos/cadProduto'
 import { FooterPrincipal } from './components/FooterPrincipal/FooterPrincipal';
 import { HeaderPrincipal } from './components/HeaderPrincipal/HeaderPrincipal';
+
 import { PerfilCliente } from './pages/PerfilCliente/PerfilCliente';
+
+import { MapaEmpresa } from './components/MapaEmpresa/MapaEmpresa'
 
 function App() {
 
