@@ -6,15 +6,19 @@ import styles from "./Step3.module.css"
 export function Step3() {
   return (
     <>
+    <body>
       <header>
         <HeaderPrincipal />
       </header>
+      
       <main className={styles.corpo}>
         <InputPesquisar />
       </main>
+
       <footer>
         <FooterPrincipal />
       </footer>
+    </body>
     </>
   )
 }
