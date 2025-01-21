@@ -9,10 +9,10 @@ import { Link } from 'react-router-dom'
 export function FooterPrincipal() {         
   return (
     <footer className={styles.rodape}>
-        <Link to="/Home/PaginaPrincipal">
+        <Link to="/PaginaPrincipal">
           <i className={styles.House}><House size={32} /></i>
         </Link>
-        <Link to="/Home/PaginaSecundaria">
+        <Link to="/PaginaSecundaria">
           <i className={styles.Lupa}><MagnifyingGlass size={32} /></i>
         </Link>
         <Link to="#">
@@ -21,7 +21,7 @@ export function FooterPrincipal() {
         <Link to="#">
           <i className={styles.Colum}><TextColumns size={32} /></i>
         </Link>
-        <Link to="#">
+        <Link to="/PerfilCliente">
           <i className={styles.User}><User size={32} /></i>
         </Link>
     </footer>

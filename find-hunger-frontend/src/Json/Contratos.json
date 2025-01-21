@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "Foto": "../assets/Profissional-c1.png",
+    "Nome": "Marcio",
+    "Profissao": "Mestre de Obras",
+    "Descricao": "Profissional especializado em reformas, gesso, pinturas, parte eletrica e hidraulica, impermeabilização",
+    "Preco": "Valor a Combinar",
+    "Localizacao": "Eunápolis",
+    "ImgObras": {
+      "Img1": "../assets/ImagemDeObra1.png",
+      "Img2": "../assets/ImagemDeObra2.png",
+      "Img3": "../assets/ImagemDeObra3.png",
+      "Img4": "../assets/ImagemDeObra4.png",
+      "Img5": "../assets/ImagemDeObra5.png"
+    }
+  },
+  {
+    "id": 2,
+    "Foto": "../assets/Profissional-c2.png",
+    "Nome": "João",
+    "Profissao": "Mestre de Obras",
+    "Descricao": "Profissional especializado em reformas, gesso, pinturas, parte eletrica e hidraulica, impermeabilização",
+    "Preco": "200R$",
+    "Localizacao": "Eunápolis",
+    "ImgObras": {
+      "Img1": "../assets/ImagemDeObra1.png",
+      "Img2": "../assets/ImagemDeObra2.png",
+      "Img3": "../assets/ImagemDeObra3.png",
+      "Img4": "../assets/ImagemDeObra4.png",
+      "Img5": "../assets/ImagemDeObra5.png"
+    }
+  },
+  {
+    "id": 3,
+    "Foto": "../assets/Profissional-c1.png",
+    "Nome": "Marcos",
+    "Profissao": "Mestre de Obras",
+    "Descricao": "Profissional especializado em reformas, gesso, pinturas, parte eletrica e hidraulica, impermeabilização",
+    "Preco": "200R$",
+    "Localizacao": "Eunápolis",
+    "ImgObras": {
+      "Img1": "../assets/ImagemDeObra1.png",
+      "Img2": "../assets/ImagemDeObra2.png",
+      "Img3": "../assets/ImagemDeObra3.png",
+      "Img4": "../assets/ImagemDeObra4.png",
+      "Img5": "../assets/ImagemDeObra5.png"
+    }
+  }
+]

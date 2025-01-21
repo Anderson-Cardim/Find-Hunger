@@ -13,6 +13,7 @@ import { PerfilCliente } from './pages/PerfilCliente/PerfilCliente';
 
 import { MapaEmpresa } from './components/MapaEmpresa/MapaEmpresa'
 import { Step3 } from './pages/Step3/Step3'
+import { Teste } from './components/teste'
 
 function App() {
 
@@ -20,15 +21,15 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/TelaLogin' element={<TelaLogin />} />
-          <Route path='/ComercianteCliente' element={<Step1 />} />
-          <Route path='/CadastroCliente' element={<CadastroCliente />} />
-          <Route path='/CadastroComerciante' element={<CadastroComerciante />} />
-          <Route path='/CadProduto' element={<CadProduto />} />
-          <Route path='/Footer' element={<FooterPrincipal />} />
-          <Route path='/Banner' element={<HeaderPrincipal />} />
-          <Route path='/PerfilCliente' element={<PerfilCliente />} />
-          <Route path='/Home'>
+          <Route path='/'>
+            <Route path='TelaLogin' element={<TelaLogin />} />
+            <Route path='ComercianteCliente' element={<Step1 />} />
+            <Route path='CadastroCliente' element={<CadastroCliente />} />
+            <Route path='CadastroComerciante' element={<CadastroComerciante />} />
+            <Route path='CadProduto' element={<CadProduto />} />
+            <Route path='Footer' element={<FooterPrincipal />} />
+            <Route path='Banner' element={<HeaderPrincipal />} />
+            <Route path='PerfilCliente' element={<PerfilCliente />} />
             <Route path='PaginaPrincipal' element={<Step2 />} />
             <Route path='PaginaSecundaria' element={<Step3 />} />
           </Route>

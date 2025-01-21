@@ -1,0 +1,131 @@
+body {
+  background-color: var(--cinza);
+}
+
+.container {
+  width: 90vw;
+  height: 240px;
+  margin: auto;
+  margin-top: 5vh;
+  background-color: var(--branco);
+  border-radius: 14px;
+}
+
+.divCabeca {
+  height: 80px;
+  display: flex;
+}
+
+.blocoPerfil {
+  padding-left: 10px;
+  display: flex;
+}
+
+.imagemPerfil {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.perfilnome {
+  width: 85px;
+  text-align: left;
+  padding-left: 5px;
+  padding-top: 10px;
+}
+
+.profissao {
+  font-weight: 500;
+  font-size: 9px;
+}
+
+.titulo {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.blocodois {
+  padding-top: 11px;
+  padding-left: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.descricao {
+  font-size: 8.4px;
+  text-align: left;
+  height: 40px;
+}
+
+.vl {
+  display: flex;
+  padding-top: 10px;
+}
+
+.preco {
+  font-size: 11px;
+  height: 20px;
+  color: var(--laranja-fraco);
+  margin-right: 6vw;
+}
+
+.divlocalizacao {
+  display: flex;
+}
+
+.localizacao {
+  font-size: 9px;
+  height: 20px;
+}
+
+.imgObras {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  object-fit: cover;
+  display: flex;
+  border-radius: 0 0 14px 14px;
+}
+
+.imagemPrincipal {
+  width: 40%;
+  height: 160px;
+  margin: 0;
+  border-radius: 0;
+}
+
+.imagemPrincipal img {
+  width: 155px;
+  height: 100%;
+  margin: 0;
+  border-radius: 0;
+}
+
+.bloco2 {
+  width: 30%;
+  height: 160px;
+  flex-direction: column;
+}
+
+.bloco2 img {
+  width: 116px;
+  height: 50%;
+  border-radius: 0;
+  margin: 0;
+  display: block;
+}
+
+.bloco3 {
+  width: 30%;
+  height: 160px;
+  flex-direction: column;
+}
+
+.bloco3 img {
+  width: 116px;
+  height: 50%;
+  border-radius: 0;
+  margin: 0;
+  display: block;
+}
