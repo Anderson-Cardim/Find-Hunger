@@ -13,6 +13,12 @@ body {
     padding: 30px;
 }
 
+.blocoimgsair {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
 .Picture {
     width: 28vw;
     height: 12vh;
@@ -33,24 +39,35 @@ body {
     display: none;
 }
 
+.ContainerDivButton {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
 .ContainerDivButton button {
-    width: 70px;
-    height: 30px;
+    width: 80px;
+    height: 40px;
     color: var(--branco);
-    background-color: var(--laranja);
+    background-color: var(--laranja-claro);
     border: none;
     border-radius: 80px;
+    font-size: 16px;
 }
 
 .ContainerDivButtonSair button{
+    position: absolute;
     width: 70px;
     height: 30px;
+    right: -135px;
+    top: 0;
     color: var(--preto);
     border: none;
     background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 16px;
 }
 
 
