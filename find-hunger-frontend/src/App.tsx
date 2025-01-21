@@ -16,7 +16,6 @@ import { ListaProdutos } from './pages/ListaDeProdutos/ListaProdutos';
 import { PerfilProfissional } from './pages/PerfilDoProfissional/PerfilProfissional';
 import { Teste } from './components/teste'
 
-
 function App() {
 
   return (
