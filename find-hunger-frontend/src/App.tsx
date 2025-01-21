@@ -9,10 +9,12 @@ import { CadProduto } from './pages/cadastrarProdutos/cadProduto'
 import { FooterPrincipal } from './components/FooterPrincipal/FooterPrincipal';
 import { HeaderPrincipal } from './components/HeaderPrincipal/HeaderPrincipal';
 
-import { PerfilCliente } from './pages/PerfilCliente/PerfilCliente';
+import { PerfilCadastroProfissional } from './pages/PerfilCadastroProfissional/PerfilCadastroProfissional';
 
-import { MapaEmpresa } from './components/MapaEmpresa/MapaEmpresa'
-import { Step3 } from './pages/Step3/Step3'
+import { MapaEmpresa } from './components/MapaEmpresa/MapaEmpresa';
+import { Step3 } from './pages/Step3/Step3';
+import { ListaProdutos } from './pages/ListaDeProdutos/ListaProdutos';
+import { PerfilProfissional } from './pages/PerfilDoProfissional/PerfilProfissional';
 
 function App() {
 
@@ -27,11 +29,13 @@ function App() {
           <Route path='/CadProduto' element={<CadProduto />} />
           <Route path='/Footer' element={<FooterPrincipal />} />
           <Route path='/Banner' element={<HeaderPrincipal />} />
-          <Route path='/PerfilCliente' element={<PerfilCliente />} />
+          <Route path='/PerfilCadastroProfissional' element={<PerfilCadastroProfissional />} />
           <Route path='/Home'>
             <Route path='PaginaPrincipal' element={<Step2 />} />
             <Route path='PaginaSecundaria' element={<Step3 />} />
           </Route>
+          <Route path='/ListaProdutos' element={<ListaProdutos/>} />
+          <Route path='/PerfilProfissional' element={<PerfilProfissional/>} />
         </Routes>
       </BrowserRouter>
     </>

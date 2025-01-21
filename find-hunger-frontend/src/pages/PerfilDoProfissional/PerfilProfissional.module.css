@@ -1,0 +1,57 @@
+.corpo {
+    flex:  1 1 0;
+    background: var(--cinza);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.corpo h2 {
+    padding-top: 10px;
+}
+
+i {
+    margin: 0; 
+    text-align: left;
+}
+
+.IconiImagem {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    position: sticky;
+    top: 0;
+}
+  
+footer { 
+    position: fixed; 
+    bottom: 0;
+}
+
+.Picture {
+    width: 28vw;
+    height: 12vh;
+    aspect-ratio: 16/9;
+    background: var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    box-shadow: inset 0 0 0 2px var(--laranja);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out, outline 300ms ease-in-out;
+}
+
+
+
+.BioDoPerfil {
+    padding: 20px;
+}
+
+.BioDoPerfil h2 {
+    padding-bottom: 8px;
+}

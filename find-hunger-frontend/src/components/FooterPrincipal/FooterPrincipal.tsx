@@ -15,13 +15,13 @@ export function FooterPrincipal() {
         <Link to="/Home/PaginaSecundaria">
           <i className={styles.Lupa}><MagnifyingGlass size={32} /></i>
         </Link>
-        <Link to="#">
+        <Link to="/CadProduto">
           <i className={styles.Plus}><Plus size={32} /></i>
         </Link>
-        <Link to="#">
+        <Link to="/ListaProdutos">
           <i className={styles.Colum}><TextColumns size={32} /></i>
         </Link>
-        <Link to="#">
+        <Link to="/PerfilCadastroProfissional">
           <i className={styles.User}><User size={32} /></i>
         </Link>
     </footer>

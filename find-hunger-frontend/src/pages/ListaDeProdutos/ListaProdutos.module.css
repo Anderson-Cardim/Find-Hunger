@@ -1,0 +1,10 @@
+.corpo {
+    flex:  1 1 0;
+    background: var(--cinza);
+    display: flex;
+    justify-content: center;
+}
+
+.corpo h1 {
+    padding-top: 20px;
+}

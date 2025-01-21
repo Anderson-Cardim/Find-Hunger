@@ -1,10 +1,10 @@
-import styles from './PerfilCliente.module.css'
+import styles from './PerfilCadastroProfissional.module.css'
 import { HeaderPrincipal } from '../../components/HeaderPrincipal/HeaderPrincipal'
 import { FooterPrincipal } from '../../components/FooterPrincipal/FooterPrincipal'
 import { Camera } from 'phosphor-react'
 import { ArrowFatLinesRight } from '@phosphor-icons/react'
 
-export function PerfilCliente() {
+export function PerfilCadastroProfissional() {
     return (
         <>
         <body>
