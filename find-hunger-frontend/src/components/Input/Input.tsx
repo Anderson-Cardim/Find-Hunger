@@ -17,5 +17,5 @@ export function Input({
           <input placeholder={placeholder} type={type}/>
         <i>{icons}</i>
       </div>
-  );
+   );
 }

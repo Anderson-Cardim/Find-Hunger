@@ -15,7 +15,6 @@ import { Step3 } from './pages/Step3/Step3';
 import { ListaProdutos } from './pages/ListaDeProdutos/ListaProdutos';
 import { PerfilProfissional } from './pages/PerfilDoProfissional/PerfilProfissional';
 
-
 function App() {
 
   return (
