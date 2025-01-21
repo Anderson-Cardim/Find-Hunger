@@ -9,7 +9,7 @@ header {
 }
 
 .corpo {
-  background-color: var(--cinza);
+  background: var(--cinza);
   flex: 1 1 0;
 }
 

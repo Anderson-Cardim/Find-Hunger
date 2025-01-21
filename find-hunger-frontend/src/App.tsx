@@ -11,10 +11,10 @@ import { HeaderPrincipal } from './components/HeaderPrincipal/HeaderPrincipal';
 
 import { PerfilCadastroProfissional } from './pages/PerfilCadastroProfissional/PerfilCadastroProfissional';
 
-import { MapaEmpresa } from './components/MapaEmpresa/MapaEmpresa';
 import { Step3 } from './pages/Step3/Step3';
 import { ListaProdutos } from './pages/ListaDeProdutos/ListaProdutos';
 import { PerfilProfissional } from './pages/PerfilDoProfissional/PerfilProfissional';
+
 
 function App() {
 
@@ -22,6 +22,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
+
           <Route path='/TelaLogin' element={<TelaLogin />} />
           <Route path='/ComercianteCliente' element={<Step1 />} />
           <Route path='/CadastroCliente' element={<CadastroCliente />} />
@@ -30,12 +31,20 @@ function App() {
           <Route path='/Footer' element={<FooterPrincipal />} />
           <Route path='/Banner' element={<HeaderPrincipal />} />
           <Route path='/PerfilCadastroProfissional' element={<PerfilCadastroProfissional />} />
-          <Route path='/Home'>
+
+          <Route path='/'>
+            <Route path='TelaLogin' element={<TelaLogin />} />
+            <Route path='ComercianteCliente' element={<Step1 />} />
+            <Route path='CadastroCliente' element={<CadastroCliente />} />
+            <Route path='CadastroComerciante' element={<CadastroComerciante />} />
+            <Route path='CadProduto' element={<CadProduto />} />
+            <Route path='Footer' element={<FooterPrincipal />} />
+            <Route path='Banner' element={<HeaderPrincipal />} />
             <Route path='PaginaPrincipal' element={<Step2 />} />
             <Route path='PaginaSecundaria' element={<Step3 />} />
+            <Route path='ListaProdutos' element={<ListaProdutos/>} />
+            <Route path='PerfilProfissional' element={<PerfilProfissional/>} />
           </Route>
-          <Route path='/ListaProdutos' element={<ListaProdutos/>} />
-          <Route path='/PerfilProfissional' element={<PerfilProfissional/>} />
         </Routes>
       </BrowserRouter>
     </>
