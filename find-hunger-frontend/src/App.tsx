@@ -14,7 +14,6 @@ import { PerfilCadastroProfissional } from './pages/PerfilCadastroProfissional/P
 import { Step3 } from './pages/Step3/Step3';
 import { ListaProdutos } from './pages/ListaDeProdutos/ListaProdutos';
 import { PerfilProfissional } from './pages/PerfilDoProfissional/PerfilProfissional';
-import { Teste } from './components/teste'
 
 function App() {
 
@@ -44,7 +43,6 @@ function App() {
             <Route path='PaginaSecundaria' element={<Step3 />} />
             <Route path='ListaProdutos' element={<ListaProdutos/>} />
             <Route path='PerfilProfissional' element={<PerfilProfissional/>} />
-            <Route path='/Teste' element={<Teste />}/>
           </Route>
         </Routes>
       </BrowserRouter>
