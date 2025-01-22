@@ -2,9 +2,30 @@
     flex:  1 1 0;
     background: var(--cinza);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .corpo h1 {
-    padding-top: 20px;
+    padding-top: 3.5vh;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.selectT {
+    margin-top: 4vh;
+}
+
+.selectP {
+    height: 40px;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5vh;
+    background: var(--cinza);
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    font-size: 20px;
+    font-weight: 500;
 }
