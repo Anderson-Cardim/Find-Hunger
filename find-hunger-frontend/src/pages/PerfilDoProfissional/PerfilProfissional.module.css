@@ -5,15 +5,18 @@
     flex-direction: column;
     align-items: center;
     padding-top: 30px;
+    position: relative;
 }
 
 .corpo h2 {
     padding-top: 10px;
 }
 
-i {
+.Iconi {
     margin: 0; 
     text-align: left;
+    position: absolute;
+    left: 15px;
 }
 
 .IconiImagem {
@@ -44,6 +47,15 @@ footer {
     border-radius: 8px;
     cursor: pointer;
     transition: color 300ms ease-in-out, background 300ms ease-in-out, outline 300ms ease-in-out;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.imagemPerfil {
+    width: 96%;
+    height: 96%;
+    margin: 0;
+    border-radius: 6px;
 }
 
 
@@ -55,3 +67,67 @@ footer {
 .BioDoPerfil h2 {
     padding-bottom: 8px;
 }
+
+
+
+
+
+
+
+.ContainerInputsImagens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.PictureGaleria {
+    width: 45vw;
+    height: 18vh;
+    aspect-ratio: 16/9;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    box-shadow: inset 0 0 0 2px var(--laranja);
+    /* border: 2px solid var(--laranja); */
+    cursor: pointer;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out, outline 300ms ease-in-out;
+    /* outline: 2px solid #fff; */
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.imagemGaleriaG {
+    margin: 0;
+    border-radius: 0;
+    width: 98%;
+    height: 98%;
+}
+
+.PictureMenor {
+    width: 45vw;
+    height: 9vh;
+    aspect-ratio: 16/9;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    box-shadow: inset 0 0 0 2px var(--laranja);
+    /* border: 2px solid var(--laranja); */
+    cursor: pointer;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out, outline 300ms ease-in-out;
+    /* outline: 2px solid #fff; */
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.imagemGaleriaM {
+    margin: 0;
+    width: 98%;
+    height: 98%;
+    border-radius: 0;
+}
+

@@ -1,0 +1,22 @@
+.tabela {
+    width: 100vw;
+    background-color: var(--branco);
+    margin-top: 2.8vh;
+}
+
+.tabela th {
+    text-align: left;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 1vh;
+    padding-left: 5vw;
+}
+
+.dias {
+    padding-left: 4vw;
+}
+
+.hora {
+    padding-left: 25vw;
+    font-weight: 600;
+}
