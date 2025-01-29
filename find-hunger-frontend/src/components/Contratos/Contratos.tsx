@@ -11,6 +11,7 @@ import ImgObra5 from '../../assets/ImagemDeObra5.png';
 
 import styles from './Contratos.module.css'
 import { MapPin } from 'phosphor-react';
+import { Link } from 'react-router-dom';
 
 interface CardProps {
   foto: string;
@@ -50,42 +51,45 @@ const Card: React.FC<CardProps> = ({
   imgObras
 }) => (
   <div className={styles.container}>
-    <div className={styles.divCabeca}>
-      <div className={styles.blocoPerfil}>
-        <img
-          className={styles.imagemPerfil}
-          src={foto}
-          alt='Perfil'
-        />
-        <div className={styles.perfilnome}>
-          <h5 className={styles.profissao}>{profissao}</h5>
-          <h2 className={styles.titulo}>{nome}</h2>
+    <Link to={'/PerfilProfissional'}>
+
+      <div className={styles.divCabeca}>
+        <div className={styles.blocoPerfil}>
+          <img
+            className={styles.imagemPerfil}
+            src={foto}
+            alt='Perfil'
+          />
+          <div className={styles.perfilnome}>
+            <h5 className={styles.profissao}>{profissao}</h5>
+            <h2 className={styles.titulo}>{nome}</h2>
+          </div>
         </div>
-      </div>
-      <div className={styles.blocodois}>
-        <p className={styles.descricao}>{descricao}</p>
-        <div className={styles.vl}>
-          <h5 className={styles.preco}>{preco}</h5>
-          <div className={styles.divlocalizacao}>
-            <MapPin className={styles.logo} size={10} />
-            <p className={styles.localizacao}>{localizacao}</p>
+        <div className={styles.blocodois}>
+          <p className={styles.descricao}>{descricao}</p>
+          <div className={styles.vl}>
+            <h5 className={styles.preco}>{preco}</h5>
+            <div className={styles.divlocalizacao}>
+              <MapPin className={styles.logo} size={10} />
+              <p className={styles.localizacao}>{localizacao}</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div className={styles.imgObras}>
-      <div className={styles.imagemPrincipal}>
-        <img src={imgObras.Img1} alt="Obra 1" />
+      <div className={styles.imgObras}>
+        <div className={styles.imagemPrincipal}>
+          <img src={imgObras.Img1} alt="Obra 1" />
+        </div>
+        <div className={styles.bloco2}>
+          <img src={imgObras.Img2} alt="Obra 2" />
+          <img src={imgObras.Img3} alt="Obra 3" />
+        </div>
+        <div className={styles.bloco3}>
+          <img src={imgObras.Img4} alt="Obra 4" />
+          <img src={imgObras.Img5} alt="Obra 5" />
+        </div>
       </div>
-      <div className={styles.bloco2}>
-        <img src={imgObras.Img2} alt="Obra 2" />
-        <img src={imgObras.Img3} alt="Obra 3" />
-      </div>
-      <div className={styles.bloco3}>
-        <img src={imgObras.Img4} alt="Obra 4" />
-        <img src={imgObras.Img5} alt="Obra 5" />
-      </div>
-    </div>
+    </Link>
   </div>
 );
 
