@@ -11,10 +11,19 @@
   top: 0;
 }
 
+.divimglogo {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .imagemLogo {
-  width: 100px;
-  height: 100px;
-  margin-top: auto;
+  object-fit: cover;
+  width: 140%;
+  height: 140%;
 }
 
 
