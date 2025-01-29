@@ -1,4 +1,4 @@
-import ImgBanner from '../../assets/Banner2.png'
+import ImgBanner from '../../assets/banner01.jpeg'
 
 import styles from './BannerPrincipal2.module.css'
 
