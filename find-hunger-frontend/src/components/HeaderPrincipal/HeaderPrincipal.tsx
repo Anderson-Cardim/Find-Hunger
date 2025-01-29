@@ -1,5 +1,5 @@
 import styles from './HeaderPrincipal.module.css'
-import ImagemLogo from '../../assets//Logo.png'
+import ImagemLogo from '../../assets//LogoPrincipal.png'
 
 export function HeaderPrincipal() {
   return (

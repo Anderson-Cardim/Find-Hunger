@@ -131,3 +131,8 @@ footer {
     border-radius: 0;
 }
 
+.LinkIconi {
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+}

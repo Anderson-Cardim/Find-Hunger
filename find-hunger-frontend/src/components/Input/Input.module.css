@@ -1,3 +1,4 @@
+
 .InputBox {
     position: relative;
     width: 100%;
@@ -30,5 +31,5 @@
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 20px;
+    font-size: 20px;
 }

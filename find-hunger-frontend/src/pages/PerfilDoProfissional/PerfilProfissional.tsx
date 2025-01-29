@@ -16,9 +16,9 @@ export function PerfilProfissional() {
         <header>
           <HeaderPrincipal />
         </header>
-
+ 
         <main className={styles.corpo}>
-        <Link to="/Step2">
+        <Link to="/PaginaSecundaria" className={styles.LinkIconi}>
           <i className={styles.Iconi}><CaretLeft size={32} /></i>
         </Link>
           <label className={styles.Picture}>
