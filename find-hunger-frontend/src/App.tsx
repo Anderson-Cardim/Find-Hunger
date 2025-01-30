@@ -43,7 +43,7 @@ function App() {
             <Route path='PaginaPrincipal' element={<Step2 />} />
             <Route path='PaginaSecundaria' element={<Step3 />} />
             <Route path='ListaProdutos' element={<ListaProdutos/>} />
-            <Route path='PerfilProfissional' element={<PerfilProfissional/>} />
+            <Route path='PerfilProfissional/:id' element={<PerfilProfissional />} />
           </Route>
         </Routes>
       </BrowserRouter>

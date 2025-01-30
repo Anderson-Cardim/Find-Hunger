@@ -1,0 +1,18 @@
+{
+  "comerciantes": [
+    {
+      "id": "1",
+      "urlImagem": "https://unsplash.com/photos/1.jpg",
+      "nome": "Anderson"
+    }
+  ],
+  "produtos": [
+    {
+      "id": "1",
+      "urlImagem": "https://unsplash.com/photos/1.jpg",
+      "nome": "Coca-Cola",
+      "preco": "5.00",
+      "comerciante": "Anderson"
+    }
+  ]
+}
