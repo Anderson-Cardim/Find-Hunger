@@ -31,7 +31,7 @@ function App() {
           <Route path='/Banner' element={<HeaderPrincipal />} />
           <Route path='/PerfilCadastroProfissional' element={<PerfilCadastroProfissional />} />
 
-          
+        
           <Route path='/'>
             <Route path='TelaLogin' element={<TelaLogin />} />
             <Route path='ComercianteCliente' element={<Step1 />} />
