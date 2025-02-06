@@ -13,7 +13,7 @@ export function MapaEmpresa() {
       </div>
       <div className={styles.descricao}>
         <h5 className={styles.subtitulo}>Endereço</h5>
-        <p className={styles.paragrafo}>Bahia, Eunápolis, Centro, Av Duque de caxias, 1124</p>
+        <p className={styles.paragrafo}>Clique em ver mapa!</p>
       </div>
     </div>
   )
