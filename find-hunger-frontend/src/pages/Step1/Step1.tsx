@@ -7,7 +7,7 @@ export function Step1() {
     <>
       <header className={styles.cabecalho}>
         <h2 className={styles.titulo}>Bem-Vindo</h2>
-        <p className={styles.subTitulo}>Para obter uma melhor experiência no <br /> EunaService, nós queremos saber um <br /> pouco sobre você!</p>
+        <p className={styles.subTitulo}>Para obter uma melhor experiência no <br /> Find-Hunger, nós queremos saber um <br /> pouco sobre você!</p>
       </header>
       <main>
         <div className={styles.ContainerComercianteCliente}>

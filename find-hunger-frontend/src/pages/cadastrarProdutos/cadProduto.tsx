@@ -55,7 +55,7 @@ export function CadProduto() {
                     </div>
                 </div>
               </div>
-
+  
               <div className={styles.ContainerPagamento}>
                 <div className={styles.ContainerTextoInput}>
                   <p>Pagamento</p>

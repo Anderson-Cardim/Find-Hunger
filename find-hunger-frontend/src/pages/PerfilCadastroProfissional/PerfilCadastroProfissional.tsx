@@ -30,7 +30,7 @@ export function PerfilCadastroProfissional() {
                     <form action="">
                         <div className={styles.ContainerInput}>
                             <div className={styles.ContainerTextoInput}>
-                                <p>Nome do produto</p>
+                                <p>Nome</p>
                                 <input type="text" placeholder='adicione aqui' />
                             </div>
                             <div className={styles.ContainerLinha}>
@@ -40,7 +40,7 @@ export function PerfilCadastroProfissional() {
 
                         <div className={styles.ContainerInput}>
                             <div className={styles.ContainerTextoInput}>
-                                <p>Nome do produto</p>
+                                <p>Produto</p>
                                 <input type="text" placeholder='adicione aqui' />
                             </div>
                             <div className={styles.ContainerLinha}>
@@ -60,7 +60,7 @@ export function PerfilCadastroProfissional() {
 
                         <div className={styles.ContainerInput}>
                             <div className={styles.ContainerTextoInput}>
-                                <p>Nome do produto</p>
+                                <p>Telefone</p>
                                 <input type="text" placeholder='adicione aqui' />
                             </div>
                             <div className={styles.ContainerLinha}>

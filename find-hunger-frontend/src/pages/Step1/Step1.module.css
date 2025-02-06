@@ -30,7 +30,7 @@
   height: 110px;
   border-radius: 50%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -54,8 +54,18 @@
   height: 110px;
   border-radius: 50%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+}
+
+.ImagemProfissional img {
+  width: 75px;
+  height: 75px;
+}
+
+.ImagemCliente img {
+  width: 75px;
+  height: 75px;
 }
 
 img {

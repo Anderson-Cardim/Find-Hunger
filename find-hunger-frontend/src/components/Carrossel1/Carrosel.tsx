@@ -18,7 +18,7 @@ export function Carrosel() {
   };
   return (
     <div className={styles.slidercontainer}>
-      <h3 className={styles.titulo}> Serviços Populares </h3>
+      <h3 className={styles.titulo}> Comerciantes Populares </h3>
       <div className={styles.divSlides}
         style={{
           display: display ? "block" : "flex",
