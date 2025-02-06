@@ -1,8 +1,8 @@
-import styles from "./Step1.module.css"
+import styles from "./ComercianteCliente.module.css"
 import imagemCliente from "../../assets/client 1.png"
 import imagemProfissional from "../../assets/market 1.png"
 
-export function Step1() {
+export function ComercianteCliente() {
   return (
     <>
       <header className={styles.cabecalho}>

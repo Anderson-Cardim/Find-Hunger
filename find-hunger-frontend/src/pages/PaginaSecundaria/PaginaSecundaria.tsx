@@ -3,9 +3,9 @@ import { Contratos } from "../../components/Contratos/Contratos"
 import { FooterPrincipal } from "../../components/FooterPrincipal/FooterPrincipal"
 import { HeaderPrincipal } from "../../components/HeaderPrincipal/HeaderPrincipal"
 import { InputPesquisar } from "../../components/InputPesquisar/InputPesquisar"
-import styles from "./Step3.module.css"
+import styles from "./PaginaSecundaria.module.css"
 
-export function Step3() {
+export function PaginaSecundaria() {
   return (
     <>
     <body>

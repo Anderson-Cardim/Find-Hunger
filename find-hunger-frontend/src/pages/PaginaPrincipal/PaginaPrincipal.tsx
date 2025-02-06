@@ -4,11 +4,11 @@ import { HeaderPrincipal } from '../../components/HeaderPrincipal/HeaderPrincipa
 import { InputPesquisar } from '../../components/InputPesquisar/InputPesquisar'
 import ImagemPrincipalBanner from '../../assets/BannerPrincipal1-temporario.png'
 
-import styles from './Step2.module.css'
+import styles from './PaginaPrincipal.module.css'
 import { Carrosel } from '../../components/Carrossel1/Carrosel'
 import { MapaEmpresa } from '../../components/MapaEmpresa/MapaEmpresa'
 
-export function Step2() {
+export function PaginaPrincipal() {
   return (
     <>
     <body>
