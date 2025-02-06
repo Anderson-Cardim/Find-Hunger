@@ -14,7 +14,6 @@ import { PerfilCadastroProfissional } from './pages/PerfilCadastroProfissional/P
 import { Step3 } from './pages/Step3/Step3';
 import { ListaProdutos } from './pages/ListaDeProdutos/ListaProdutos';
 import { PerfilProfissional } from './pages/PerfilDoProfissional/PerfilProfissional';
-import { Produtos } from './components/Produtos/Produtos'
 
 
 function App() {
