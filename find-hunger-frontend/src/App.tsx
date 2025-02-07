@@ -3,7 +3,6 @@ import { CadastroComerciante } from './pages/CadastroComerciante'
 import { TelaLogin } from './pages/Login/TelaLogin'
 import { CadastroCliente } from './pages/CadastroCliente'
 
-import { CadProduto } from './pages/cadastrarProdutos/cadProduto'
 import { FooterPrincipal } from './components/FooterPrincipal/FooterPrincipal';
 import { HeaderPrincipal } from './components/HeaderPrincipal/HeaderPrincipal';
 
@@ -14,6 +13,7 @@ import { PerfilProfissional } from './pages/PerfilDoProfissional/PerfilProfissio
 import { ComercianteCliente } from './pages/ComercianteCliente/ComercianteCliente'
 import { PaginaPrincipal } from './pages/PaginaPrincipal/PaginaPrincipal'
 import { PaginaSecundaria } from './pages/PaginaSecundaria/PaginaSecundaria'
+import { CadProduto } from './pages/cadastrarProdutos/cadProduto';
 
 
 function App() {
