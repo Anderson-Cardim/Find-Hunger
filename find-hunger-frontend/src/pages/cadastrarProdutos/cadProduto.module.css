@@ -64,6 +64,33 @@
     padding-top: 20px;
 }
 
+.divPagamento {
+    display: flex;
+}
+
+.botao {
+    display: flex;
+    align-items: center;
+    border: none;
+    margin-top: 7px;
+    padding-left: 2vw;
+    padding-top: 2px;
+    padding-right: 2vw;
+    padding-bottom: 2px;
+}
+
+.icones {
+    padding-right: 2px;
+}
+
+.botaopix {
+    margin-right: 2.5vw;
+}
+
+.botaodinheiro {
+    margin-right: 2.5vw;
+}
+
 .ContainerQuantidade {
     padding-top: 10px;
 }
