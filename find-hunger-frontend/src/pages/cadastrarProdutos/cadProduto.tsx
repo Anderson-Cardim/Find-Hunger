@@ -6,17 +6,21 @@ import { ChangeEvent, useState } from 'react';
 import { PixLogo } from '@phosphor-icons/react';
 
 export function CadProduto() {
-
   const [valor, setValor] = useState<string>('');
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-    let valorInput = e.target.value.replace(/[^\d,]/g, ''); // Remove caracteres não numéricos
+    let valorInput = e.target.value.replace(/[^\d]/g, ''); // Apenas números
 
     if (valorInput.length > 0) {
-      setValor(`R$ ${valorInput}`);
+      const valorFormatado = (parseFloat(valorInput) / 100).toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+      });
+      setValor(valorFormatado);
     } else {
-      setValor(valorInput);
+      setValor('');
     }
+  };
 
   return (
     <>
@@ -30,16 +34,17 @@ export function CadProduto() {
             <div className={styles.ContainerInput}>
               <div className={styles.ContainerTextoInput}>
                 <p>Nome do produto</p>
-                <input type="text" placeholder='adicione aqui' />
+                <input type="text" placeholder="adicione aqui" />
               </div>
               <div className={styles.ContainerLinha}>
                 <hr />
               </div>
             </div>
+
             <div className={styles.ContainerInput}>
               <div className={styles.ContainerTextoInput}>
-                <p>Descrição do produto seu produto</p>
-                <input type="text" placeholder='Descrição do produto...' />
+                <p>Descrição do produto</p>
+                <input type="text" placeholder="Descrição do produto..." />
               </div>
               <div className={styles.ContainerLinha}>
                 <hr />
@@ -56,7 +61,7 @@ export function CadProduto() {
                       <input
                         type="text"
                         id="valor"
-                        placeholder='R$ 00,00'
+                        placeholder="R$ 0,00"
                         value={valor}
                         onChange={handleInputChange}
                       />
@@ -68,7 +73,7 @@ export function CadProduto() {
                   <div className={styles.ContainerDesconto}>
                     <div className={styles.ContainerTextoInput}>
                       <p>Desconto (%)</p>
-                      <input type="number" placeholder='10%' />
+                      <input type="number" placeholder="10%" />
                     </div>
                     <div className={styles.ContainerLinhaLinha}>
                       <hr />
@@ -82,21 +87,15 @@ export function CadProduto() {
                     <div className={styles.divPagamento}>
                       <button className={`${styles.botaopix} ${styles.botao}`}>
                         <PixLogo className={styles.icones} size={32} />
-                        <p>
-                          PIX
-                        </p>
+                        <p>PIX</p>
                       </button>
                       <button className={`${styles.botaodinheiro} ${styles.botao}`}>
                         <CreditCard className={styles.icones} size={32} />
-                        <p>
-                          Dinheiro
-                        </p>
+                        <p>Dinheiro</p>
                       </button>
                       <button className={`${styles.botaocartao} ${styles.botao}`}>
                         <Money className={styles.icones} size={32} />
-                        <p>
-                          Cartão C/D
-                        </p>
+                        <p>Cartão C/D</p>
                       </button>
                     </div>
                   </div>
@@ -104,13 +103,12 @@ export function CadProduto() {
               </div>
             </div>
 
-
             <div className={styles.ContainerSecundario}>
               <h2>Adicionar quantidade</h2>
               <div className={styles.ContainerQuantidade}>
                 <div className={styles.ContainerTextoInput}>
                   <p>Quantidade</p>
-                  <input type="number" placeholder='adicione aqui' />
+                  <input type="number" placeholder="adicione aqui" />
                 </div>
                 <div className={styles.ContainerLinha}>
                   <hr />
@@ -119,28 +117,34 @@ export function CadProduto() {
             </div>
 
             <div className={`${styles.ContainerSecundario} ${styles.ContainerTodasImagens}`}>
-              <h2>Adicionar quantidade</h2>
+              <h2>Adicionar imagens</h2>
               <div className={styles.ContainerInputsImagens}>
                 <label className={styles.Picture}>
                   <div className={styles.ContainerIconiTexto}>
-                    <input type="file" accept='imagem/*' className={styles.PictureInput} />
-                    <i><Plus size={22} color="#ff4900" /></i>
-                    <span className={styles.PictureImagem}>Adiciona nova imagem</span>
+                    <input type="file" accept="image/*" className={styles.PictureInput} />
+                    <i>
+                      <Plus size={22} color="#ff4900" />
+                    </i>
+                    <span className={styles.PictureImagem}>Adicionar nova imagem</span>
                   </div>
                 </label>
                 <div>
                   <label className={styles.PictureMenor}>
-                    <input type="file" accept='imagem/*' className={styles.PictureInput} />
+                    <input type="file" accept="image/*" className={styles.PictureInput} />
                     <div className={styles.ContainerIconiTexto}>
-                      <i><Plus size={22} color="#ff4900" /></i>
-                      <span className={styles.PictureImagem}>Adiciona nova imagem</span>
+                      <i>
+                        <Plus size={22} color="#ff4900" />
+                      </i>
+                      <span className={styles.PictureImagem}>Adicionar nova imagem</span>
                     </div>
                   </label>
                   <label className={styles.PictureMenor}>
-                    <input type="file" accept='imagem/*' className={styles.PictureInput} />
+                    <input type="file" accept="image/*" className={styles.PictureInput} />
                     <div className={styles.ContainerIconiTexto}>
-                      <i><Plus size={22} color="#ff4900" /></i>
-                      <span className={styles.PictureImagem}>Adiciona nova imagem</span>
+                      <i>
+                        <Plus size={22} color="#ff4900" />
+                      </i>
+                      <span className={styles.PictureImagem}>Adicionar nova imagem</span>
                     </div>
                   </label>
                 </div>
@@ -150,7 +154,6 @@ export function CadProduto() {
             <div className={styles.ContainerFinalizar}>
               <button>Finalizar</button>
             </div>
-
           </form>
         </div>
       </main>
@@ -159,5 +162,4 @@ export function CadProduto() {
       </footer>
     </>
   );
-}
 }
