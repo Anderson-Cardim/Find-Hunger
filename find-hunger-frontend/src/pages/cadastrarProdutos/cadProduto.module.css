@@ -2,6 +2,7 @@
     background-color: var(--cinza);
     padding-top: 20px;
 }
+
 .containerCadastro h3 {
     display: flex;
     justify-content: center;
@@ -10,13 +11,13 @@
 
 }
 
-.ContainerInput input{
+.ContainerInput input {
     background-color: transparent;
     border: none;
     outline: none;
 }
 
-.ContainerTextoInput input{
+.ContainerTextoInput input {
     background-color: transparent;
     border: none;
     outline: none;
@@ -28,10 +29,10 @@
 }
 
 .ContainerTextoInput {
-    padding-left: 30px;
+    padding-left: 35px;
 }
 
-.ContainerLinha  {
+.ContainerLinha {
     width: 400px;
     padding-left: 25px;
 }
@@ -42,7 +43,7 @@
 
 .ContainerSecundario {
     padding-top: 18px;
-   
+
 }
 
 .ContainerFinal {
@@ -64,19 +65,58 @@
     padding-top: 20px;
 }
 
+.containerPagamento {
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    background: transparent;
+}
+
+.titulo {
+    position: absolute;
+    top: -14%;
+    padding: 0 10px;
+    white-space: nowrap;
+    background: #E9E9E9;
+}
+
 .divPagamento {
     display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .botao {
     display: flex;
     align-items: center;
     border: none;
-    margin-top: 7px;
     padding-left: 2vw;
     padding-top: 2px;
     padding-right: 2vw;
     padding-bottom: 2px;
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.botaopix:hover {
+    transition: 0.3s;
+    background: #4ABFAA;
+    color: var(--branco);
+}
+
+.botaodinheiro:hover {
+    transition: 0.3s;
+    background: #4ABFAA;
+    color: var(--branco);
+}
+
+.botaocartao:hover {
+    transition: 0.3s;
+    background: linear-gradient(to right, #49BEA8, #810DD1);
+    color: var(--branco);
 }
 
 .icones {
@@ -164,7 +204,7 @@
     padding-top: 10px;
 }
 
-.ContainerGeralImagens h2{
+.ContainerGeralImagens h2 {
     padding-top: 20px;
     padding-left: 30px;
 }
@@ -180,8 +220,8 @@
     align-items: center;
 }
 
-.ContainerFooter{
-    position: fixed; 
+.ContainerFooter {
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -191,7 +231,7 @@
     top: 0;
 }
 
-.ContainerFinalizar button{
+.ContainerFinalizar button {
     width: 85vw;
     height: 40px;
     margin-bottom: 2vw;

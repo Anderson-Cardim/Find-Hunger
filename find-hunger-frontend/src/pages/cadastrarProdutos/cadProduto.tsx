@@ -7,6 +7,7 @@ import { PixLogo } from '@phosphor-icons/react';
 
 export function CadProduto() {
   const [valor, setValor] = useState<string>('');
+  const [desconto, setDesconto] = useState<string>('');
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     let valorInput = e.target.value.replace(/[^\d]/g, ''); // Apenas números
@@ -19,6 +20,24 @@ export function CadProduto() {
       setValor(valorFormatado);
     } else {
       setValor('');
+    }
+  };
+
+
+  const handleInputChangeDesconto = (e: ChangeEvent<HTMLInputElement>) => {
+    let descontoInput = e.target.value.replace(/[^\d,]/g, '');
+
+    descontoInput = descontoInput.replace('%', '');
+
+    const descontoNumber = parseFloat(descontoInput);
+
+    if (!isNaN(descontoNumber) && descontoNumber > 100) {
+      descontoInput = '100';
+    }
+    if (descontoInput.length > 0) {
+      setDesconto(`${descontoInput}%`);
+    } else {
+      setDesconto('');
     }
   };
 
@@ -73,7 +92,13 @@ export function CadProduto() {
                   <div className={styles.ContainerDesconto}>
                     <div className={styles.ContainerTextoInput}>
                       <p>Desconto (%)</p>
-                      <input type="number" placeholder="10%" />
+                      <input
+                        type="text"
+                        id="desconto"
+                        placeholder='10%'
+                        value={desconto}
+                        onChange={handleInputChangeDesconto}
+                      />
                     </div>
                     <div className={styles.ContainerLinhaLinha}>
                       <hr />
@@ -83,20 +108,26 @@ export function CadProduto() {
 
                 <div className={styles.ContainerPagamento}>
                   <div className={styles.ContainerTextoInput}>
-                    <p>Pagamento</p>
-                    <div className={styles.divPagamento}>
-                      <button className={`${styles.botaopix} ${styles.botao}`}>
-                        <PixLogo className={styles.icones} size={32} />
-                        <p>PIX</p>
-                      </button>
-                      <button className={`${styles.botaodinheiro} ${styles.botao}`}>
-                        <CreditCard className={styles.icones} size={32} />
-                        <p>Dinheiro</p>
-                      </button>
-                      <button className={`${styles.botaocartao} ${styles.botao}`}>
-                        <Money className={styles.icones} size={32} />
-                        <p>Cartão C/D</p>
-                      </button>
+                    <div className={styles.containerPagamento}>
+                      <div className={styles.containerTitulo}>
+                        <div className={styles.linha}></div>
+                        <p className={styles.titulo}>Pagamento</p>
+                        <div className={styles.linha}></div>
+                      </div>
+                      <div className={styles.divPagamento}>
+                        <button className={`${styles.botaopix} ${styles.botao}`}>
+                          <PixLogo className={styles.icones} size={32} />
+                          <p>PIX</p>
+                        </button>
+                        <button className={`${styles.botaodinheiro} ${styles.botao}`}>
+                          <Money className={styles.icones} size={32} />
+                          <p>Dinheiro</p>
+                        </button>
+                        <button className={`${styles.botaocartao} ${styles.botao}`}>
+                          <CreditCard className={styles.icones} size={32} />
+                          <p>Cartão C/D</p>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
