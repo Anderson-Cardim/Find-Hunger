@@ -1,18 +1,7 @@
 import React, { useState } from 'react';
 import Slider from "react-slick";
-import ImgHamburguer from "../../assets/ImgHamburguer2.png"
-import ImgPizza from "../../assets/imgPizza1.png"
-import ImgBatatafrita from "../../assets/ImgBatataFrita3.png"
-import ImgRefrigerantes from "../../assets/ImgRefrigerante4.png"
 
 import styles from './Carrosel.module.css'
-
-// const data = [
-//   {nome: 'Hamburguer', image: ImgHamburguer},
-//   {nome: 'Pizza', image: ImgPizza},
-//   {nome: 'Batatas', image: ImgBatatafrita},
-//   {nome: 'Bebidas', image: ImgRefrigerantes},
-// ]
 
 interface CarroselProps {
   data: {
