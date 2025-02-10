@@ -13,6 +13,7 @@ header {
 .corpo {
   background-color: var(--cinza);
   flex: 1 1 0;
+  padding-bottom: 60px;
 }
 
 footer { 

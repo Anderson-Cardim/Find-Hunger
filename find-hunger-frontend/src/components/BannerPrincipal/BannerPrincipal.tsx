@@ -28,7 +28,6 @@ export function BannerPrincipal() {
       <Swiper
         slidesPerView={1}
         pagination={{ clickable: true }}
-        navigation
         modules={[Autoplay]}
         autoplay={{ delay: 3000 }} 
         loop={true} 

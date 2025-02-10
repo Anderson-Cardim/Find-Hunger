@@ -8,9 +8,11 @@ interface CarroselProps {
     nome: string;
     image: string;
   }[];
+
+  titulo: string;
 }
 
-export function Carrosel({data}: CarroselProps) {
+export function Carrosel({data, titulo}: CarroselProps) {
   const [display, setDisplay] = useState(true);
   const [width, setWidth] = useState(600);
 
@@ -22,7 +24,8 @@ export function Carrosel({data}: CarroselProps) {
 
   return (
     <div className={styles.slidercontainer}>
-      <h3 className={styles.titulo}> Categoria de produtos </h3>
+      
+      <h3 className={styles.titulo}> {titulo} </h3>
       <div className={styles.divSlides}
         style={{
           display: display ? "block" : "flex",
