@@ -39,7 +39,7 @@ export function PerfilComerciante() {
             <button>Salvar</button>
           </div>
         </div>
-
+        
         <div className="InputInput">
           <div className="ContainerAlterarSenha">
             <button className="botoes">Alterar Senha</button>

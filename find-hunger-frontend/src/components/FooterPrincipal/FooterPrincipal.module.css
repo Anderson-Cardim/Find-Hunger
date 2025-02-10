@@ -1,11 +1,10 @@
 .rodape {
-  display: grid;
   width: 100%;
   max-width: 650px;
   height: 60px;
   border-radius: 12px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   background-color: #fff;
   position: fixed; 
   bottom: 0;
