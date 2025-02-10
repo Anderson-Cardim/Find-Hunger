@@ -4,6 +4,11 @@ import ImgHamburguer from "../../assets/ImgHamburguer2.png"
 import ImgPizza from "../../assets/imgPizza1.png"
 import ImgBatatafrita from "../../assets/ImgBatataFrita3.png"
 import ImgRefrigerantes from "../../assets/ImgRefrigerante4.png"
+import ImgSobremesa from "../../assets/ImgSobremesa.jpg"
+import ImgComidaJaponesa from "../../assets/ImgComidaJaponesa5.png"
+import ImgMassas from "../../assets/ImgMassa8.png"
+import ImgCafe from "../../assets/ImgCafé7 (1).png"
+import ImgSalada from "../../assets/ImgSalada9 (1).jpg"
 
 import styles from './Carrosel.module.css'
 
@@ -14,11 +19,11 @@ export function Carrosel() {
   const settings = {
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 3
+    slidesToScroll: 2
   };
   return (
     <div className={styles.slidercontainer}>
-      <h3 className={styles.titulo}> Tópicos populares </h3>
+      <h3 className={styles.titulo}> Cardápios populares </h3>
       <div className={styles.divSlides}
         style={{
           display: display ? "block" : "flex",
@@ -55,6 +60,46 @@ export function Carrosel() {
                 <img className={styles.img} src={ImgRefrigerantes} alt="" />
               </div>
               <span className={styles.paragrafoCarrosel}>Bebidas</span>
+            </div>
+          </div>
+          <div>
+            <div className={styles.divSecIcon}>
+              <div className={styles.divIcon}>
+                <img className={styles.img} src={ImgSobremesa} alt="" />
+              </div>
+              <span className={styles.paragrafoCarrosel}>Sobremesas</span>
+            </div>
+          </div>
+          <div>
+            <div className={styles.divSecIcon}>
+              <div className={styles.divIcon}>
+                <img className={styles.img} src={ImgComidaJaponesa} alt="" />
+              </div>
+              <span className={styles.paragrafoCarrosel}>Japonesa</span>
+            </div>
+          </div>
+          <div>
+            <div className={styles.divSecIcon}>
+              <div className={styles.divIcon}>
+                <img className={styles.img} src={ImgMassas} alt="" />
+              </div>
+              <span className={styles.paragrafoCarrosel}>Massas</span>
+            </div>
+          </div>
+          <div>
+            <div className={styles.divSecIcon}>
+              <div className={styles.divIcon}>
+                <img className={styles.img} src={ImgCafe} alt="" />
+              </div>
+              <span className={styles.paragrafoCarrosel}>Café</span>
+            </div>
+          </div>
+          <div>
+            <div className={styles.divSecIcon}>
+              <div className={styles.divIcon}>
+                <img className={styles.img} src={ImgSalada} alt="" />
+              </div>
+              <span className={styles.paragrafoCarrosel}>Saladas</span>
             </div>
           </div>
         </Slider>
