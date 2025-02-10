@@ -10,5 +10,17 @@
       "title": "Tarefa 02",
       "isCompleted": false
     }
+  ],
+  "login": [
+    {
+      "usuario": "comerciante",
+      "senha": "123456",
+      "tipo": "comerciante"
+    },
+    {
+      "usuario": "cliente",
+      "senha": "123456",
+      "tipo": "cliente"
+    }
   ]
 }
