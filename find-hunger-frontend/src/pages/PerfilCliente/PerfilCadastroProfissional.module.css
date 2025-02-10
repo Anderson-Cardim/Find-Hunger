@@ -1,0 +1,129 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.ContainerMain {
+    flex: 1 1 0;
+    background-color: var(--cinza);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.blocoimgsair {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.Picture {
+    width: 28vw;
+    height: 12vh;
+    aspect-ratio: 16/9;
+    background: var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    box-shadow: inset 0 0 0 2px var(--laranja);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out, outline 300ms ease-in-out;
+}
+
+
+.PictureInput {
+    display: none;
+}
+
+.ContainerDivButton {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.ContainerDivButton button {
+    width: 80px;
+    height: 40px;
+    color: var(--branco);
+    background-color: var(--laranja-claro);
+    border: none;
+    border-radius: 80px;
+    font-size: 16px;
+}
+
+.ContainerDivButtonSair button{
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    right: -135px;
+    top: 0;
+    color: var(--preto);
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+
+.ContainerInput input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.ContainerTextoInput input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.ContainerAdicionarNovoProduto button{
+    width: 85vw;
+    height: 40px;
+    background-color: transparent;
+    color: var(--laranja);
+    border: 2px solid var(--laranja);
+    border-radius: 8px;
+}
+
+.ContainerSalvar button{
+    width: 85vw;
+    height: 40px;
+    margin-bottom: 2vw;
+    background-color: var(--verde);
+    color: var(--branco);
+    border-radius: 18px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--verde);
+}
+
+.ContainerSalvar {
+    padding-top: 25px;
+}
+
+.ContainerButtons {
+    padding-top: 100px;
+}
+
+.ContainerInput {
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.ContainerTextoInput {
+    padding-left: 30px;
+}
+
+.ContainerLinha  {
+    width: 400px;
+    padding-left: 25px;
+}
