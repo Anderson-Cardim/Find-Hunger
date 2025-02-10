@@ -8,7 +8,7 @@ export const login = async (data: {
     "senha": string;
     "tipo": string;
   } | null> => {
-  try {
+  try { 
     const result: {
         "usuario": string;
         "senha": string;

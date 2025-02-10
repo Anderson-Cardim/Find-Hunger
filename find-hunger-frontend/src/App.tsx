@@ -13,6 +13,7 @@ import { PerfilCadastroProfissional } from "./pages/PerfilCadastroDoProfissional
 import { useContext } from "react";
 import { AuthContext } from "./context/authContext";
 
+
 function App() {
   const { usuario } = useContext(AuthContext);
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/TelaLogin" element={<TelaLogin />} />
           <Route path="/ComercianteCliente" element={<ComercianteCliente />} />
           <Route path="/CadastroCliente" element={<CadastroCliente />} />
+          
           <Route
             path="/CadastroComerciante"
             element={<CadastroComerciante />}
