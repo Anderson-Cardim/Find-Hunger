@@ -17,7 +17,7 @@ export function Carrosel({data}: CarroselProps) {
   const settings = {
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 3
+    slidesToScroll: 2
   };
 
   return (
