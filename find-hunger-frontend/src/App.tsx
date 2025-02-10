@@ -14,7 +14,7 @@ import { ComercianteCliente } from './pages/ComercianteCliente/ComercianteClient
 import { PaginaPrincipal } from './pages/PaginaPrincipal/PaginaPrincipal'
 import { PaginaSecundaria } from './pages/PaginaSecundaria/PaginaSecundaria'
 import { CadProduto } from './pages/cadastrarProdutos/cadProduto';
-
+import { Teste } from './components/teste';
 
 function App() {
 
@@ -44,6 +44,7 @@ function App() {
             <Route path='PaginaSecundaria' element={<PaginaSecundaria />} />
             <Route path='ListaProdutos' element={<ListaProdutos/>} />
             <Route path='PerfilProfissional' element={<PerfilProfissional/>} />
+            <Route path='Teste' element={<Teste />} />
           </Route>
         </Routes>
       </BrowserRouter>

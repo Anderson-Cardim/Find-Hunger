@@ -1,4 +1,4 @@
-import { BannerPrincipal2 } from "../../components/BannerPrincipal2/BannerPrincipal2"
+import { BannerPrincipal } from "../../components/BannerPrincipal/BannerPrincipal"
 import { Contratos } from "../../components/Contratos/Contratos"
 import { FooterPrincipal } from "../../components/FooterPrincipal/FooterPrincipal"
 import { HeaderPrincipal } from "../../components/HeaderPrincipal/HeaderPrincipal"
@@ -15,7 +15,7 @@ export function PaginaSecundaria() {
       
       <main className={styles.corpo}>
         <InputPesquisar />
-        <BannerPrincipal2 />
+        <BannerPrincipal />
         <Contratos />
       </main>
 
