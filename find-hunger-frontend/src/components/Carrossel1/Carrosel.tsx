@@ -7,6 +7,7 @@ import ImgMaquiagem from "../../assets/Maquiagem.jpeg"
 
 import styles from './Carrosel.module.css'
 
+
 export function Carrosel() {
   const [display, setDisplay] = useState(true);
   const [width, setWidth] = useState(600);
@@ -16,9 +17,10 @@ export function Carrosel() {
     slidesToShow: 4,
     slidesToScroll: 3
   };
+
   return (
     <div className={styles.slidercontainer}>
-      <h3 className={styles.titulo}> Comerciantes Populares </h3>
+      <h3 className={styles.titulo}> Categoria de produtos </h3>
       <div className={styles.divSlides}
         style={{
           display: display ? "block" : "flex",

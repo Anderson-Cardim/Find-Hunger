@@ -6,7 +6,7 @@ import imgemPerfil from "../../assets/Profissional-c1.png";
 import imgGaleria1 from "../../assets/imagemDeObra2.png";
 import imgGaleria2 from "../../assets/ImagemDeObra4.png";
 import imgGaleria3 from "../../assets/ImagemDeObra5.png";
-import { Tabela } from "../../components/Tabela/Tabela";
+// import { Tabela } from "../../components/Tabela/Tabela";
 import { Link } from "react-router-dom";
 
 export function PerfilProfissional() {
@@ -56,7 +56,7 @@ export function PerfilProfissional() {
             </div>
           </div>
 
-          <Tabela/>
+          {/* <Tabela/> */}
         </main>
 
         <footer>
