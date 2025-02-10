@@ -9,8 +9,9 @@
 }
 
 .container {
-  width: 100vw;
-  height: 22vh;
+  margin: auto;
+  width: 90vw;
+  height: 20vh;
   margin-bottom: 6vh;
   position: relative;
   z-index: 1;
@@ -21,4 +22,5 @@
   height: 100%;
   position: relative;
   object-fit: cover;
+  border-radius: 12px;
 }

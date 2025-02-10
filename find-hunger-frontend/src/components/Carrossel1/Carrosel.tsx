@@ -1,14 +1,27 @@
 import React, { useState } from 'react';
 import Slider from "react-slick";
-import ImgEletrcista from "../../assets/Eletricista.jpeg"
-import ImgPintor from "../../assets/Pintor.jpeg"
-import ImgTecnico from "../../assets/Tecnico.jpeg"
-import ImgMaquiagem from "../../assets/Maquiagem.jpeg"
+import ImgHamburguer from "../../assets/ImgHamburguer2.png"
+import ImgPizza from "../../assets/imgPizza1.png"
+import ImgBatatafrita from "../../assets/ImgBatataFrita3.png"
+import ImgRefrigerantes from "../../assets/ImgRefrigerante4.png"
 
 import styles from './Carrosel.module.css'
 
+// const data = [
+//   {nome: 'Hamburguer', image: ImgHamburguer},
+//   {nome: 'Pizza', image: ImgPizza},
+//   {nome: 'Batatas', image: ImgBatatafrita},
+//   {nome: 'Bebidas', image: ImgRefrigerantes},
+// ]
 
-export function Carrosel() {
+interface CarroselProps {
+  data: {
+    nome: string;
+    image: string;
+  }[];
+}
+
+export function Carrosel({data}: CarroselProps) {
   const [display, setDisplay] = useState(true);
   const [width, setWidth] = useState(600);
 
@@ -26,39 +39,19 @@ export function Carrosel() {
           display: display ? "block" : "flex",
           width: "100vw",
         }}>
+          
         <Slider {...settings}>
-          <div>
+          {data.map((item, index) => (
+          <div key={index}>
             <div className={styles.divSecIcon}>
               <div className={styles.divIcon}>
-                <img className={styles.img} src={ImgEletrcista} alt="" />
+              <img className={styles.img} src={item.image} alt={item.nome} />
               </div>
-              <span className={styles.paragrafoCarrosel}>Eletricista</span>
-            </div>
-          </div>
-          <div>
-            <div className={styles.divSecIcon}>
-              <div className={styles.divIcon}>
-                <img className={styles.img} src={ImgPintor} alt="" />
+              <span className={styles.paragrafoCarrosel}>{item.nome}</span>
               </div>
-              <span className={`${styles.paragrafoCarrosel} ${styles.paragrafoEspecial}`}>Pintor</span>
-            </div>
           </div>
-          <div>
-            <div className={styles.divSecIcon}>
-              <div className={styles.divIcon}>
-                <img className={styles.img} src={ImgTecnico} alt="" />
-              </div>
-              <span className={`${styles.paragrafoCarrosel} ${styles.paragrafoEspecial}`}>Técnico</span>
-            </div>
-          </div>
-          <div>
-            <div className={styles.divSecIcon}>
-              <div className={styles.divIcon}>
-                <img className={styles.img} src={ImgMaquiagem} alt="" />
-              </div>
-              <span className={styles.paragrafoCarrosel}>Maquiagem</span>
-            </div>
-          </div>
+          ))}
+          
         </Slider>
       </div>
     </div>
