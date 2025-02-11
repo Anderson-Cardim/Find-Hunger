@@ -1,5 +1,5 @@
-import { FooterPrincipal } from "../../components/FooterPrincipal/FooterPrincipal";
-import { HeaderPrincipal } from "../../components/HeaderPrincipal/HeaderPrincipal";
+import { FooterPrincipal } from "../../components/footerPrincipal/FooterPrincipal";
+import { HeaderPrincipal } from "../../components/headerPrincipal/HeaderPrincipal";
 import styles from "./PerfilProfissional.module.css";
 import { CaretLeft } from "phosphor-react";
 import imgemPerfil from "../../assets/Profissional-c1.png";

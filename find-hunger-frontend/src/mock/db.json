@@ -25,13 +25,6 @@
       "id": "f498"
     },
     {
-      "id": "b7f0",
-      "nome": "Anderson",
-      "senha": "123456",
-      "usuario": "anderson10cardim@gmail.com/",
-      "tipo": "cliente"
-    },
-    {
       "id": "de2d",
       "cpf": "123456789",
       "estabelecimento": "cardim",
@@ -39,6 +32,13 @@
       "senha": "123456",
       "usuario": "andersoncardim@gmail.com",
       "tipo": "comerciante"
+    },
+    {
+      "id": "ec9e",
+      "nome": "Anderson Cardim",
+      "senha": "159753",
+      "usuario": "anderson10cardim@gmail.com",
+      "tipo": "cliente"
     }
   ]
 }
