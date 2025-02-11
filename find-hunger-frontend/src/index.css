@@ -11,6 +11,7 @@
     --laranja: #FF4900;
     --laranja-claro:#fa6e36;
     --laranja-fraco: #FF7900;
+    --dourado: #FCC207;
     --preto-claro: #282828;
     --branco: #FFF;
     --branco-cinza: #D9D9D9;
@@ -21,6 +22,9 @@
     --branco-neutro: #ccc;
     --azul-marinho:#03081F;
     --verde: #058733;
+    --verde-claro: #35A19B;
+    --Roxo: #421D52;
+    --Roxo-escuro: #692E82;
 }
 
 body{
