@@ -1,7 +1,7 @@
 import styles from "./cadProduto.module.css";
-import { HeaderPrincipal } from "../../components/headerPrincipal/HeaderPrincipal";
+import { HeaderPrincipal } from "../../components/HeaderPrincipal/HeaderPrincipal";
 import { CreditCard, Money, Plus } from "phosphor-react";
-import { FooterPrincipal } from "../../components/footerPrincipal/FooterPrincipal";
+import { FooterPrincipal } from "../../components/FooterPrincipal/FooterPrincipal";
 import { ChangeEvent, useState } from "react";
 import { PixLogo } from "@phosphor-icons/react";
 

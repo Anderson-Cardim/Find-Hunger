@@ -1,12 +1,12 @@
-import { FooterPrincipal } from "../../components/footerPrincipal/FooterPrincipal";
-import { HeaderPrincipal } from "../../components/headerPrincipal/HeaderPrincipal";
+import { FooterPrincipal } from "../../components/FooterPrincipal/FooterPrincipal";
+import { HeaderPrincipal } from "../../components/HeaderPrincipal/HeaderPrincipal";
 import styles from "./PerfilProfissional.module.css";
 import { CaretLeft } from "phosphor-react";
 import imgemPerfil from "../../assets/Profissional-c1.png";
 import imgGaleria1 from "../../assets/imagemDeObra2.png";
 import imgGaleria2 from "../../assets/ImagemDeObra4.png";
 import imgGaleria3 from "../../assets/ImagemDeObra5.png";
-// import { Tabela } from "../../components/Tabela/Tabela";
+
 import { Link } from "react-router-dom";
 
 export function PerfilProfissional() {

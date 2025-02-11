@@ -13,12 +13,12 @@
   ],
   "login": [
     {
-      "usuario": "comerciante",
+      "usuario": "comerciante@gmail.com",
       "senha": "123456",
       "tipo": "comerciante"
     },
     {
-      "usuario": "cliente",
+      "usuario": "cliente@gmail.com",
       "senha": "123456",
       "tipo": "cliente"
     }
