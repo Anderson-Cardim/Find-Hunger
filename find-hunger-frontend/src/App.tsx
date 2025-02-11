@@ -1,15 +1,15 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { CadastroComerciante } from "./pages/cadastroComerciante";
-import { TelaLogin } from "./pages/login/TelaLogin";
-import { CadastroCliente } from "./pages/cadastroCliente";
+import { CadastroComerciante } from "./pages/CadastroComerciante";
+import { TelaLogin } from "./pages/Login/TelaLogin";
+import { CadastroCliente } from "./pages/CadastroCliente";
 
-import { PerfilProfissional } from "./pages/perfilDoProfissional/PerfilProfissional";
-import { ComercianteCliente } from "./pages/comercianteCliente/ComercianteCliente";
-import { PaginaPrincipal } from "./pages/paginaPrincipal/PaginaPrincipal";
-import { PaginaSecundaria } from "./pages/paginaSecundaria/PaginaSecundaria";
+import { PerfilProfissional } from "./pages/PerfilDoProfissional/PerfilProfissional";
+import { ComercianteCliente } from "./pages/ComercianteCliente/ComercianteCliente";
+import { PaginaPrincipal } from "./pages/PaginaPrincipal/PaginaPrincipal";
+import { PaginaSecundaria } from "./pages/PaginaSecundaria/PaginaSecundaria";
 import { CadProduto } from "./pages/cadastrarProdutos/cadProduto";
-import { PerfilCadastroDoCliente } from "./pages/perfilCadastroDoCliente/PerfilCadastroDoCliente";
-import { PerfilCadastroProfissional } from "./pages/perfilCadastroDoProfissional/PerfilCadastroProfissional";
+import { PerfilCadastroDoCliente } from "./pages/PerfilCadastroDoCliente/PerfilCadastroDoCliente";
+import { PerfilCadastroProfissional } from "./pages/PerfilCadastroDoProfissional/PerfilCadastroProfissional";
 import { useContext } from "react";
 import { AuthContext } from "./context/authContext";
 
