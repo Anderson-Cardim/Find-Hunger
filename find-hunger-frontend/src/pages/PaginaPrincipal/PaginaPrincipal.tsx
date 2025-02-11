@@ -4,7 +4,7 @@ import { InputPesquisar } from "../../components/inputPesquisar/InputPesquisar";
 
 import styles from "./PaginaPrincipal.module.css";
 import { Carrosel } from "../../components/carrossel/Carrosel";
-import { MapaEmpresa } from "../../components/papaEmpresa/MapaEmpresa";
+import { MapaEmpresa } from "../../components/mapaEmpresa/MapaEmpresa";
 import { BannerPrincipal } from "../../components/bannerPrincipal/BannerPrincipal";
 
 import ImgHamburger from "../../assets/ImgHamburguer2.png";

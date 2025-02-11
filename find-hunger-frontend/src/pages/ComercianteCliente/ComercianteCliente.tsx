@@ -1,8 +1,10 @@
 import styles from "./ComercianteCliente.module.css"
 import imagemCliente from "../../assets/client 1.png"
 import imagemProfissional from "../../assets/market 1.png"
+import { useNavigate } from "react-router-dom";
 
 export function ComercianteCliente() {
+  const navigate = useNavigate();
   return (
     <>
       <header className={styles.cabecalho}>
@@ -11,13 +13,13 @@ export function ComercianteCliente() {
       </header>
       <main>
         <div className={styles.ContainerComercianteCliente}>
-          <div className={styles.DivImagemCliente}>
+          <div className={styles.DivImagemCliente} onClick={() => navigate("/CadastroCliente")}>
             <div className={styles.ImagemCliente}>
               <img src={imagemCliente} alt="" />
             </div>
             <p className={styles.paragrafoCliente}>Sou Cliente</p>
           </div>
-          <div className={styles.DivImagemDoProfissional}>
+          <div className={styles.DivImagemDoProfissional} onClick={() => navigate("/CadastroComerciante")}>
             <div className={styles.ImagemProfissional}>
               <img src={imagemProfissional} alt="" />
             </div>
@@ -28,7 +30,7 @@ export function ComercianteCliente() {
           <button className={styles.BotaoProximo}>
             Próximo
           </button>
-          <button className={styles.BotaoVoltar}>
+          <button className={styles.BotaoVoltar} onClick={() => navigate("/TelaLogin")}>
             Voltar
           </button>
         </div>

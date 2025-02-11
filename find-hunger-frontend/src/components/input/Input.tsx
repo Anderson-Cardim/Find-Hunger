@@ -11,10 +11,17 @@ export function Input({
     type,
     placeholder,
     icons,
+    value,
+    onChange,
   }: InputProps) {
     return (
         <div className={styles.InputBox}>
-            <input placeholder={placeholder} type={type}/>
+            <input 
+              placeholder={placeholder} 
+              type={type}
+              value={value}
+              onChange={onChange}        
+            />
           <i>{icons}</i>
         </div>
     );

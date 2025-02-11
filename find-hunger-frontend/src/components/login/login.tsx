@@ -4,11 +4,14 @@ import { Lock } from "phosphor-react";
 import { login } from "../../services/login";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../context/authContext";
+import { useNavigate } from "react-router-dom";
 
 export function Login() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const { handleUsuario } = useContext(AuthContext);
+
+  const navigate = useNavigate();
 
   async function getLogin() {
     try {
@@ -41,7 +44,7 @@ export function Login() {
             onChange={(event) => {
               setEmail(event.target.value);
             }}
-          />
+          />                     
           <i>
             <User />
           </i>
@@ -70,7 +73,7 @@ export function Login() {
         <button className={styles.login} type="submit" onClick={getLogin}>
           Login
         </button>
-        <button className={styles.login} type="submit">
+        <button className={styles.login} type="button" onClick={() => navigate("/ComercianteCliente")}>
           Cadastre-se
         </button>
       </form>

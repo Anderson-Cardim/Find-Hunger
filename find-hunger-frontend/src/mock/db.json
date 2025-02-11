@@ -15,12 +15,30 @@
     {
       "usuario": "comerciante",
       "senha": "123456",
-      "tipo": "comerciante"
+      "tipo": "comerciante",
+      "id": "2ed6"
     },
     {
       "usuario": "cliente",
       "senha": "123456",
+      "tipo": "cliente",
+      "id": "f498"
+    },
+    {
+      "id": "b7f0",
+      "nome": "Anderson",
+      "senha": "123456",
+      "usuario": "anderson10cardim@gmail.com/",
       "tipo": "cliente"
+    },
+    {
+      "id": "de2d",
+      "cpf": "123456789",
+      "estabelecimento": "cardim",
+      "numero": "40028922",
+      "senha": "123456",
+      "usuario": "andersoncardim@gmail.com",
+      "tipo": "comerciante"
     }
   ]
 }

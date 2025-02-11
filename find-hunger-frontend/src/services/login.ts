@@ -25,6 +25,7 @@ export const login = async (data: {
 }
 
 export const postLogin = async (data: {
+    nome: string;
     usuario: string;
     senha: string;
     tipo: "comerciante" | "cliente"
@@ -38,4 +39,24 @@ export const postLogin = async (data: {
     console.log(error);
   }
   return false;
+}
+
+
+export const postLoginComerciante = async (data: {
+  cpf: string;
+  estabelecimento: string;
+  numero: string;
+  usuario: string;
+  senha: string;
+  tipo: "comerciante" | "cliente"
+}): Promise<boolean> => {
+try {
+  const result = await api.post("/login", data).then((res) => res.data);
+
+
+  return !!result;
+} catch (error) {
+  console.log(error);
+}
+return false;
 }
