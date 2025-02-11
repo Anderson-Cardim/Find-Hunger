@@ -11,9 +11,22 @@ import ImgTemporariaLogo from '../../assets/ImgTemporariaLogo.jpg'
 import { Bank, CaretRight, Clock, Info } from "@phosphor-icons/react";
 import { MdOutlinePhonelinkRing } from "react-icons/md";
 
-export function PerfilProfissional() {
+const Modal: React.FC<{ showModal: boolean, onClose: () => void }> = ({ showModal, onClose }) => {
+  return (
+    <div className={`${styles.modal} ${showModal ? styles.show : ''}`}>
+      <div className={`${styles.modalContent} ${styles.corpoModal}`}>
+        <p>Este é um modal que aparece na parte inferior do site.</p>
+        <button className={styles.closeButton} onClick={onClose}>
+          fechar
+        </button>
+      </div>
+    </div>
+  );
+};
 
+export function PerfilProfissional() {
   const [empresas, setEmpresas] = useState<Empresa[]>([]);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const loadImages = () => {
@@ -27,6 +40,10 @@ export function PerfilProfissional() {
 
     loadImages();
   }, []);
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
 
   return (
     <>
@@ -72,7 +89,7 @@ export function PerfilProfissional() {
                     </div>
                     <p>Minutos</p>
                   </div>
-                  <div className={styles.DivPagamentos}>
+                  <div className={styles.DivPagamentos} onClick={toggleModal}>
                     <div className={styles.cabecaPagamento}>
                       <MdOutlinePhonelinkRing className={styles.logoCelular} size={20} />
                       <Bank className={styles.logoBank} size={20} />
@@ -83,6 +100,7 @@ export function PerfilProfissional() {
               </div>
             ))}
           </div>
+          <Modal showModal={showModal} onClose={toggleModal} />
         </main>
 
         <footer>
