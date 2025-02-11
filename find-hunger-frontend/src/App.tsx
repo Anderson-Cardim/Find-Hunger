@@ -1,15 +1,15 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { CadastroComerciante } from "./pages/CadastroComerciante";
-import { TelaLogin } from "./pages/Login/TelaLogin";
-import { CadastroCliente } from "./pages/CadastroCliente";
+import { CadastroComerciante } from "./pages/cadastroComerciante";
+import { TelaLogin } from "./pages/login/TelaLogin";
+import { CadastroCliente } from "./pages/cadastroCliente";
 
-import { PerfilProfissional } from "./pages/PerfilDoProfissional/PerfilProfissional";
-import { ComercianteCliente } from "./pages/ComercianteCliente/ComercianteCliente";
-import { PaginaPrincipal } from "./pages/PaginaPrincipal/PaginaPrincipal";
-import { PaginaSecundaria } from "./pages/PaginaSecundaria/PaginaSecundaria";
+import { PerfilProfissional } from "./pages/perfilDoProfissional/PerfilProfissional";
+import { ComercianteCliente } from "./pages/comercianteCliente/ComercianteCliente";
+import { PaginaPrincipal } from "./pages/paginaPrincipal/PaginaPrincipal";
+import { PaginaSecundaria } from "./pages/paginaSecundaria/PaginaSecundaria";
 import { CadProduto } from "./pages/cadastrarProdutos/cadProduto";
-import { PerfilCadastroDoCliente } from "./pages/PerfilCadastroDoCliente/PerfilCadastroDoCliente";
-import { PerfilCadastroProfissional } from "./pages/PerfilCadastroDoProfissional/PerfilCadastroProfissional";
+import { PerfilCadastroDoCliente } from "./pages/perfilCadastroDoCliente/PerfilCadastroDoCliente";
+import { PerfilCadastroProfissional } from "./pages/perfilCadastroDoProfissional/PerfilCadastroProfissional";
 import { useContext } from "react";
 import { AuthContext } from "./context/authContext";
 
@@ -25,7 +25,12 @@ function App() {
           <Route path="/TelaLogin" element={<TelaLogin />} />
           <Route path="/ComercianteCliente" element={<ComercianteCliente />} />
           <Route path="/CadastroCliente" element={<CadastroCliente />} />
-          
+
+          <Route
+                path="PerfilProfissional"
+                element={<PerfilProfissional />}
+              />
+
           <Route
             path="/CadastroComerciante"
             element={<CadastroComerciante />}
@@ -37,8 +42,8 @@ function App() {
                 path="PerfilProfissional"
                 element={<PerfilProfissional />}
               />
-              <Route path="PaginaPrincipal" element={<PaginaPrincipal />} />
-              <Route path="PaginaSecundaria" element={<PaginaSecundaria />} />
+              <Route path="/PaginaPrincipal" element={<PaginaPrincipal />} />
+              <Route path="/PaginaSecundaria" element={<PaginaSecundaria />} />
 
               {/* COMERCIANTE */}
               {usuario.tipo === "comerciante" && (

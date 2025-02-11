@@ -1,5 +1,5 @@
-import { FooterPrincipal } from "../../components/FooterPrincipal/FooterPrincipal";
-import { HeaderPrincipal } from "../../components/HeaderPrincipal/HeaderPrincipal";
+import { FooterPrincipal } from "../../components/footerPrincipal/FooterPrincipal";
+import { HeaderPrincipal } from "../../components/headerPrincipal/HeaderPrincipal";
 import styles from "./PerfilProfissional.module.css";
 import { CaretLeft } from "phosphor-react";
 import imgemPerfil from "../../assets/Profissional-c1.png";
@@ -16,11 +16,13 @@ export function PerfilProfissional() {
         <header>
           <HeaderPrincipal />
         </header>
- 
+
         <main className={styles.corpo}>
-        <Link to="/PaginaSecundaria" className={styles.LinkIconi}>
-          <i className={styles.Iconi}><CaretLeft size={32} /></i>
-        </Link>
+          <Link to="/PaginaSecundaria" className={styles.LinkIconi}>
+            <i className={styles.Iconi}>
+              <CaretLeft size={32} />
+            </i>
+          </Link>
           <label className={styles.Picture}>
             <img className={styles.imagemPerfil} src={imgemPerfil} alt="" />
           </label>

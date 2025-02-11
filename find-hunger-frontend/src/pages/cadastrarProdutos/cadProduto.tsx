@@ -1,43 +1,45 @@
-import styles from './cadProduto.module.css';
-import { HeaderPrincipal } from '../../components/HeaderPrincipal/HeaderPrincipal';
-import { CreditCard, Money, Plus } from 'phosphor-react';
-import { FooterPrincipal } from '../../components/FooterPrincipal/FooterPrincipal';
-import { ChangeEvent, useState } from 'react';
-import { PixLogo } from '@phosphor-icons/react';
+import styles from "./cadProduto.module.css";
+import { HeaderPrincipal } from "../../components/headerPrincipal/HeaderPrincipal";
+import { CreditCard, Money, Plus } from "phosphor-react";
+import { FooterPrincipal } from "../../components/footerPrincipal/FooterPrincipal";
+import { ChangeEvent, useState } from "react";
+import { PixLogo } from "@phosphor-icons/react";
 
 export function CadProduto() {
-  const [valor, setValor] = useState<string>('');
-  const [desconto, setDesconto] = useState<string>('');
+  const [valor, setValor] = useState<string>("");
+  const [desconto, setDesconto] = useState<string>("");
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-    let valorInput = e.target.value.replace(/[^\d]/g, ''); // Apenas números
+    let valorInput = e.target.value.replace(/[^\d]/g, ""); // Apenas números
 
     if (valorInput.length > 0) {
-      const valorFormatado = (parseFloat(valorInput) / 100).toLocaleString('pt-BR', {
-        style: 'currency',
-        currency: 'BRL',
-      });
+      const valorFormatado = (parseFloat(valorInput) / 100).toLocaleString(
+        "pt-BR",
+        {
+          style: "currency",
+          currency: "BRL",
+        }
+      );
       setValor(valorFormatado);
     } else {
-      setValor('');
+      setValor("");
     }
   };
 
-
   const handleInputChangeDesconto = (e: ChangeEvent<HTMLInputElement>) => {
-    let descontoInput = e.target.value.replace(/[^\d,]/g, '');
+    let descontoInput = e.target.value.replace(/[^\d,]/g, "");
 
-    descontoInput = descontoInput.replace('%', '');
+    descontoInput = descontoInput.replace("%", "");
 
     const descontoNumber = parseFloat(descontoInput);
 
     if (!isNaN(descontoNumber) && descontoNumber > 100) {
-      descontoInput = '100';
+      descontoInput = "100";
     }
     if (descontoInput.length > 0) {
       setDesconto(`${descontoInput}%`);
     } else {
-      setDesconto('');
+      setDesconto("");
     }
   };
 
@@ -49,7 +51,10 @@ export function CadProduto() {
       <main className={styles.ContainerPrincipal}>
         <div className={styles.containerCadastro}>
           <h3>Cadastre seu produto</h3>
-          <form className={`${styles.containerForm} ${styles.ContainerFinal}`} action="">
+          <form
+            className={`${styles.containerForm} ${styles.ContainerFinal}`}
+            action=""
+          >
             <div className={styles.ContainerInput}>
               <div className={styles.ContainerTextoInput}>
                 <p>Nome do produto</p>
@@ -95,7 +100,7 @@ export function CadProduto() {
                       <input
                         type="text"
                         id="desconto"
-                        placeholder='10%'
+                        placeholder="10%"
                         value={desconto}
                         onChange={handleInputChangeDesconto}
                       />
@@ -115,15 +120,21 @@ export function CadProduto() {
                         <div className={styles.linha}></div>
                       </div>
                       <div className={styles.divPagamento}>
-                        <button className={`${styles.botaopix} ${styles.botao}`}>
+                        <button
+                          className={`${styles.botaopix} ${styles.botao}`}
+                        >
                           <PixLogo className={styles.icones} size={32} />
                           <p>PIX</p>
                         </button>
-                        <button className={`${styles.botaodinheiro} ${styles.botao}`}>
+                        <button
+                          className={`${styles.botaodinheiro} ${styles.botao}`}
+                        >
                           <Money className={styles.icones} size={32} />
                           <p>Dinheiro</p>
                         </button>
-                        <button className={`${styles.botaocartao} ${styles.botao}`}>
+                        <button
+                          className={`${styles.botaocartao} ${styles.botao}`}
+                        >
                           <CreditCard className={styles.icones} size={32} />
                           <p>Cartão C/D</p>
                         </button>
@@ -147,35 +158,55 @@ export function CadProduto() {
               </div>
             </div>
 
-            <div className={`${styles.ContainerSecundario} ${styles.ContainerTodasImagens}`}>
+            <div
+              className={`${styles.ContainerSecundario} ${styles.ContainerTodasImagens}`}
+            >
               <h2>Adicionar imagens</h2>
               <div className={styles.ContainerInputsImagens}>
                 <label className={styles.Picture}>
                   <div className={styles.ContainerIconiTexto}>
-                    <input type="file" accept="image/*" className={styles.PictureInput} />
+                    <input
+                      type="file"
+                      accept="image/*"
+                      className={styles.PictureInput}
+                    />
                     <i>
                       <Plus size={22} color="#ff4900" />
                     </i>
-                    <span className={styles.PictureImagem}>Adicionar nova imagem</span>
+                    <span className={styles.PictureImagem}>
+                      Adicionar nova imagem
+                    </span>
                   </div>
                 </label>
                 <div>
                   <label className={styles.PictureMenor}>
-                    <input type="file" accept="image/*" className={styles.PictureInput} />
+                    <input
+                      type="file"
+                      accept="image/*"
+                      className={styles.PictureInput}
+                    />
                     <div className={styles.ContainerIconiTexto}>
                       <i>
                         <Plus size={22} color="#ff4900" />
                       </i>
-                      <span className={styles.PictureImagem}>Adicionar nova imagem</span>
+                      <span className={styles.PictureImagem}>
+                        Adicionar nova imagem
+                      </span>
                     </div>
                   </label>
                   <label className={styles.PictureMenor}>
-                    <input type="file" accept="image/*" className={styles.PictureInput} />
+                    <input
+                      type="file"
+                      accept="image/*"
+                      className={styles.PictureInput}
+                    />
                     <div className={styles.ContainerIconiTexto}>
                       <i>
                         <Plus size={22} color="#ff4900" />
                       </i>
-                      <span className={styles.PictureImagem}>Adicionar nova imagem</span>
+                      <span className={styles.PictureImagem}>
+                        Adicionar nova imagem
+                      </span>
                     </div>
                   </label>
                 </div>

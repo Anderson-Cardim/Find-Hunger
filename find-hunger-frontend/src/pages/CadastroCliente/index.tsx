@@ -1,4 +1,4 @@
-import { Input } from "../../components/Input/Input02";
+import { Input } from "../../components/input/Input";
 import styles from "./cadClient.module.css";
 import { User } from "phosphor-react";
 import { EnvelopeSimple } from "phosphor-react";

@@ -1,5 +1,5 @@
 import styles from "./cadClient.module.css";
-import { Input } from "../../components/Input/Input02";
+import { Input } from "../../components/input/Input";
 import { User } from "phosphor-react";
 import { Storefront } from "phosphor-react";
 import { Phone } from "phosphor-react";
