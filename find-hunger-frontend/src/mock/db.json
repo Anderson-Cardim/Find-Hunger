@@ -19,92 +19,11 @@
       "id": "2ed6"
     },
     {
-      "usuario": "cliente@gmail.com",
-      "senha": "123456",
-      "tipo": "cliente",
-      "id": "f498"
-    },
-    {
-      "id": "de2d",
-      "cpf": "123456789",
-      "estabelecimento": "cardim",
-      "numero": "40028922",
-      "senha": "123456",
-      "usuario": "andersoncardim@gmail.com",
-      "tipo": "comerciante"
-    },
-    {
-      "id": "02de",
-      "nome": "Anderson Cardim",
-      "senha": "159753",
-      "usuario": "anderson10cardim@gmail.com",
-      "tipo": "cliente"
-    },
-    {
-      "id": "0caf",
-      "cpf": "117365897",
-      "estabelecimento": "cardim",
-      "numero": "008922",
-      "senha": "123456",
-      "usuario": "emerso10cardim@gmail.com",
-      "tipo": "comerciante"
-    },
-    {
-      "id": "eeec",
-      "cpf": "98745634",
-      "estabelecimento": "ImaosDev",
-      "numero": "40028922",
-      "senha": "159753",
-      "usuario": "miltoncardim123@gmail.com",
-      "tipo": "comerciante"
-    },
-    {
-      "id": "4f81",
+      "id": "0835",
       "nome": "Anderson",
-      "senha": "123456",
-      "usuario": "anderson10cardim@gmai.com",
-      "tipo": "cliente"
-    },
-    {
-      "id": "c0e6",
-      "cpf": "09874663",
-      "estabelecimento": "Cardim",
-      "numero": "40028922",
-      "senha": "159753",
-      "usuario": "emersson@gmail.com",
-      "tipo": "comerciante"
-    },
-    {
-      "id": "d252",
-      "cpf": "123345",
-      "estabelecimento": "wwdwd",
-      "numero": "23445",
       "senha": "123",
       "usuario": "anderson@gmail.com",
-      "tipo": "comerciante"
-    },
-    {
-      "id": "b884",
-      "cpf": "987.654.345-56",
-      "estabelecimento": "DoceriaCardim",
-      "numero": "40028922",
-      "senha": "123",
-      "usuario": "anderson@cardim",
-      "endereco": "Rua dois de julho",
-      "descricao": "Doces de diversos tipos",
-      "tipo": "comerciante"
-    },
-    {
-      "id": "cc39",
-      "cpf": "987.567.345-23",
-      "estabelecimento": "CardimJobs",
-      "numero": "40028922",
-      "senha": "123",
-      "usuario": "emerson@gmail.com",
-      "endereco": "Rua dois de julho",
-      "descricao": "Loja bolos personalizados",
-      "nome": "Emerson Cardim",
-      "tipo": "comerciante"
+      "tipo": "cliente"
     }
   ]
 }

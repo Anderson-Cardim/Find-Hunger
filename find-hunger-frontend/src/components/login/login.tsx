@@ -32,6 +32,7 @@ export function Login() {
         endereco: result.endereco,
         estabelecimento: result.estabelecimento,
         numero: result.numero,
+        nome: result.nome,
         descricao: result.descricao
       });
 

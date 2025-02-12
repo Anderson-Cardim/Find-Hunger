@@ -47,7 +47,6 @@ export const postLoginComerciante = async (data: {
 try {
   const result = await api.post("/login", data).then((res) => res.data);
 
-
   return !!result;
 } catch (error) {
   console.log(error);

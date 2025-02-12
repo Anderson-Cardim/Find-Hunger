@@ -16,6 +16,7 @@ export function PerfilCadastroProfissional() {
           <HeaderPrincipal />
         </header>
         <main className={styles.ContainerMain}>
+          
           <div className={styles.blocoimgsair}>
             <label className={styles.Picture}>
               <input
@@ -29,7 +30,23 @@ export function PerfilCadastroProfissional() {
                 </i>
               </div>
             </label>
+          </div>    
+
+          <div className={styles.blocoimgsair01}>
+            <label className={styles.Picture01}>
+              <input
+                type="file"
+                accept="imagem/*"
+                className={styles.PictureInput}
+              />
+              <div className={styles.ContainerIconiTexto}>
+                <i>
+                  <Camera size={40} color="#ff4900" />
+                </i>
+              </div>
+            </label>
           </div>
+
 
           <form action="">
             <h3 className={styles.Titulos}>Informações Pessoais</h3>

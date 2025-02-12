@@ -11,7 +11,7 @@ export function CadProduto() {
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     let valorInput = e.target.value.replace(/[^\d]/g, ""); // Apenas números
-
+ 
     if (valorInput.length > 0) {
       const valorFormatado = (parseFloat(valorInput) / 100).toLocaleString(
         "pt-BR",

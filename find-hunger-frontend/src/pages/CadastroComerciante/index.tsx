@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { postLoginComerciante } from "../../services/login";
 import { MapPin } from "@phosphor-icons/react";
+import { BookOpenText } from "@phosphor-icons/react/dist/ssr";
 
 export function CadastroComerciante() {
   const [nome, setNome] = useState("");
@@ -136,7 +137,7 @@ export function CadastroComerciante() {
             <Input
               type="text"
               placeholder="Descrição do negócio:"
-              icons={<Storefront/>}
+              icons={<BookOpenText size={24} />}
               value={descricao}
               onChange={(event) => {
                 setDescricao(event.target.value);

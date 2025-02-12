@@ -1,7 +1,6 @@
-
 import { useEffect, useRef, useState } from "react";
-import { FooterPrincipal } from "../../components/footerPrincipal/FooterPrincipal";
 import { HeaderPrincipal } from "../../components/headerPrincipal/HeaderPrincipal";
+import { FooterPrincipal } from "../../components/footerPrincipal/FooterPrincipal";
 import styles from "./PerfilProfissional.module.css";
 import data from "../../Json/PerfilProfissional.json";
 import { Empresa } from "../../Interfaces/ITypesProfissional";
@@ -119,7 +118,7 @@ export function PerfilProfissional() {
                     <img className={styles.fotoPerfil} src={item.FotoPerfil} alt="Perfil" />
                     <p className={styles.paragrafoHora}>Abre as {item.HorarioAberto}</p>
                   </div>
-                </div>
+              </div>
                 <div className={styles.divComplemento}>
                   <div className={styles.Entrega}>
                     <div className={styles.cabecaEntrega}>

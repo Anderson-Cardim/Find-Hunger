@@ -127,3 +127,10 @@ body {
     width: 400px;
     padding-left: 25px;
 }
+
+
+.Titulos {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
