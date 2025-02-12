@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "FotoBanner": "ImgTemporariaBolo",
+    "FotoBanner": "https://img.freepik.com/fotos-premium/um-bolo-de-chocolate-com-morangos-em-cima-dele-senta-se-em-uma-mesa_1099697-234.jpg?w=996",
     "Avaliacao": "4.8",
-    "FotoPerfil": "ImgTemporariaLogo",
+    "FotoPerfil": "https://img.freepik.com/vetores-gratis/design-de-logotipo-de-comida-saborosa-de-restaurante_460848-10307.jpg?t=st=1739385147~exp=1739388747~hmac=29fc2504f54ca7243854d6e5b8652efbf9f6ce5419add308f05776c001e74f4c&w=996",
     "NomeDaEmpresa": "Quero Bolo Confeitaria",
     "HorarioAberto": "11:00",
     "Entrega": "R$ 7,00",

@@ -1,11 +1,11 @@
-import { FooterPrincipal } from "../../components/footerPrincipal/FooterPrincipal";
-import { HeaderPrincipal } from "../../components/headerPrincipal/HeaderPrincipal";
-import { InputPesquisar } from "../../components/inputPesquisar/InputPesquisar";
+import { FooterPrincipal } from "../../components/FooterPrincipal/FooterPrincipal";
+import { HeaderPrincipal } from "../../components/HeaderPrincipal/HeaderPrincipal";
+import { InputPesquisar } from "../../components/InputPesquisar/InputPesquisar";
 
 import styles from "./PaginaPrincipal.module.css";
 import { Carrosel } from "../../components/carrossel/Carrosel";
 import { MapaEmpresa } from "../../components/mapaEmpresa/MapaEmpresa";
-import { BannerPrincipal } from "../../components/bannerPrincipal/BannerPrincipal";
+import { BannerPrincipal } from "../../components/BannerPrincipal/BannerPrincipal";
 
 
 import ImgHamburger from "../../assets/ImgHamburguer2.png";

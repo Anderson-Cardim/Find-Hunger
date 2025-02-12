@@ -28,3 +28,22 @@ section {
   height: 20px;
 }
 
+.resultadosLista {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  list-style-type: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.resultadoItem {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.resultadoItem:hover {
+  background-color: var(--cinza);
+}
