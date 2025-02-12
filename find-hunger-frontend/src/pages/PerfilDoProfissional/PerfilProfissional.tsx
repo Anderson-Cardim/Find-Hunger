@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
-import { HeaderPrincipal } from "../../components/headerPrincipal/HeaderPrincipal";
+
+import { useEffect, useRef, useState } from "react";
 import { FooterPrincipal } from "../../components/footerPrincipal/FooterPrincipal";
+import { HeaderPrincipal } from "../../components/headerPrincipal/HeaderPrincipal";
 import styles from "./PerfilProfissional.module.css";
 import data from "../../Json/PerfilProfissional.json";
 import { Empresa } from "../../Interfaces/ITypesProfissional";
@@ -8,14 +9,58 @@ import { FaMotorcycle, FaStar } from "react-icons/fa";
 
 import ImgTemporariaBolo from '../../assets/ImgTemporariaBolo.jpg';
 import ImgTemporariaLogo from '../../assets/ImgTemporariaLogo.jpg'
-import { Bank, CaretRight, Clock, Info } from "@phosphor-icons/react";
+import { Bank, CaretRight, Clock, CreditCard, Info } from "@phosphor-icons/react";
 import { MdOutlinePhonelinkRing } from "react-icons/md";
+import { SiNubank } from "react-icons/si";
+import { FaPix } from "react-icons/fa6";
+import { PiMoneyBold } from "react-icons/pi";
 
 const Modal: React.FC<{ showModal: boolean, onClose: () => void }> = ({ showModal, onClose }) => {
+  const startY = useRef(0);
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    startY.current = e.touches[0].clientY;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    const currentY = e.touches[0].clientY;
+    if (currentY - startY.current > 50) {
+      onClose();
+    }
+  };
+
   return (
-    <div className={`${styles.modal} ${showModal ? styles.show : ''}`}>
-      <div className={`${styles.modalContent} ${styles.corpoModal}`}>
-        <p>Este é um modal que aparece na parte inferior do site.</p>
+    <div
+      className={`${styles.modal} ${showModal ? styles.show : ''}`}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+    >
+      <div className={styles.modalContent}>
+        <div className={styles.barraModal}></div>
+        <h3 className={styles.tituloModal}>formas de pagamento</h3>
+        <div className={styles.formasDePagamento}>
+          <div className={styles.formaPeloApp}>
+            <h3 className={styles.subTitulo}>A pagar</h3>
+            <div className={styles.pagamentos}>
+              <div className={styles.divNubank}>
+                <SiNubank className={styles.logoNubank} />
+                <p>Nubank</p>
+              </div>
+              <div className={styles.divPix}>
+                <FaPix className={styles.logoPix} />
+                <p>Pix</p>
+              </div>
+              <div className={styles.divPagamentoOnline}>
+                <CreditCard size={24} color="#6b2691" className={styles.logoPagamentoOnline} />
+                <p>Cartão Crédito/Debito</p>
+              </div>
+              <div className={styles.divDinheiro}>
+                <PiMoneyBold className={styles.logoDinheiro} />
+                <p>Dinheiro</p>
+              </div>
+            </div>
+          </div>
+        </div>
         <button className={styles.closeButton} onClick={onClose}>
           fechar
         </button>
@@ -23,6 +68,7 @@ const Modal: React.FC<{ showModal: boolean, onClose: () => void }> = ({ showModa
     </div>
   );
 };
+
 
 export function PerfilProfissional() {
   const [empresas, setEmpresas] = useState<Empresa[]>([]);
