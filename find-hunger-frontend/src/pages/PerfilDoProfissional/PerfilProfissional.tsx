@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { FooterPrincipal } from "../../components/FooterPrincipal/FooterPrincipal";
-import { HeaderPrincipal } from "../../components/HeaderPrincipal/HeaderPrincipal";
+import { HeaderPrincipal } from "../../components/headerPrincipal/HeaderPrincipal";
+import { FooterPrincipal } from "../../components/footerPrincipal/FooterPrincipal";
 import styles from "./PerfilProfissional.module.css";
 import data from "../../Json/PerfilProfissional.json";
 import { Empresa } from "../../Interfaces/ITypesProfissional";

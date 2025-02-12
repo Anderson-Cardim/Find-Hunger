@@ -16,7 +16,8 @@
     align-items: center;
     background-color: var(--laranja);
     width: 340px;
-    height: 600px;
+    /* height: 600px; */
+    height: 680px;
     border-radius: 15px;
 }
 
@@ -57,7 +58,9 @@
 }
 
 .containerBotoes {
-    padding-top: 100px;
+    /* padding-top: 100px; */
+    padding-top: 40px;
+
 }
 
 .containerCadastrar button{

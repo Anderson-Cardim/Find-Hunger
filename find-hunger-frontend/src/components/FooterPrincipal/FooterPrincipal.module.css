@@ -3,8 +3,11 @@
   max-width: 650px;
   height: 60px;
   border-radius: 12px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* display: grid; */
+  /* grid-template-columns: repeat(4, 1fr); */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   background-color: #fff;
   position: fixed; 
   bottom: 0;

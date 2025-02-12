@@ -1,8 +1,14 @@
 import { createContext, ReactNode, useState } from "react";
 
 export type UserLogin = {
+  cpf: string;
+  estabelecimento: string;
+  numero: string;
   usuario: string;
   senha: string;
+  endereco: string;
+  descricao: string;
+  nome: string;
   tipo: "comerciante" | "cliente";
 };
 

@@ -28,6 +28,11 @@ export function Login() {
         usuario: result.usuario,
         senha: result.senha,
         tipo: result.tipo as "comerciante" | "cliente",
+        cpf: result.cpf,
+        endereco: result.endereco,
+        estabelecimento: result.estabelecimento,
+        numero: result.numero,
+        descricao: result.descricao
       });
 
       // Redireciona para a página correta baseado no tipo de usuário
@@ -41,7 +46,6 @@ export function Login() {
     console.log("Erro no login:", error);
   }
 }
-
 
   return (
     <div className={styles.container}>
