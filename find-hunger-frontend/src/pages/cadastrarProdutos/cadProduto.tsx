@@ -16,7 +16,7 @@ export function CadProduto() {
 
   async function handleCadastro(event) {
     event.preventDefault();
-    
+
     console.log("Nome:", nome);
     console.log("descricao:", descricao);
     console.log("quantidade:", quantidade);
