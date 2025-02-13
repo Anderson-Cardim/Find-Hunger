@@ -1,5 +1,5 @@
-import { FooterPrincipal } from "../../components/FooterPrincipal/FooterPrincipal";
-import { HeaderPrincipal } from "../../components/HeaderPrincipal/HeaderPrincipal";
+import { FooterPrincipal } from "../../components/footerPrincipal/FooterPrincipal";
+import { HeaderPrincipal } from "../../components/headerPrincipal/HeaderPrincipal";
 import { InputPesquisar } from "../../components/InputPesquisar/InputPesquisar";
 
 import styles from "./PaginaPrincipal.module.css";

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './InputPesquisar.module.css'
 import { MagnifyingGlass } from '@phosphor-icons/react/dist/ssr'
 import data from '../../Json/PerfilProfissional.json'
@@ -28,30 +28,32 @@ export function InputPesquisar() {
   };
 
   return (
-    <div className={styles.Search}>
-      <label htmlFor='searchInput'>
-        <span className={styles.MaterialSymbolsOutlined}> <MagnifyingGlass /> </span>
-      </label>
-      <input
-        type="text"
-        className={styles.searchInput}
-        placeholder='Pesquisar'
-        value={termoDePesquisa}
-        onChange={handleInputChange}
-      />
-      {resultados.length > 0 && (
-        <ul className={styles.resultadosLista}>
-          {resultados.map((item) => (
-            <li
-              key={item.id}
-              onClick={() => handleResultadoClick(item.id)}
-              className={styles.resultadoItem}
-            >
-              {item.NomeDaEmpresa}
-            </li>
-          ))}
-        </ul>
-      )}
+    <div className={styles.searchContainer}>
+      <div className={styles.Search}>
+        <label htmlFor='searchInput'>
+          <span className={styles.MaterialSymbolsOutlined}> <MagnifyingGlass /> </span>
+        </label>
+        <input
+          type="text"
+          className={styles.searchInput}
+          placeholder='Pesquisar'
+          value={termoDePesquisa}
+          onChange={handleInputChange}
+        />
+        {resultados.length > 0 && (
+          <ul className={styles.resultadosLista}>
+            {resultados.map((item) => (
+              <li
+                key={item.id}
+                onClick={() => handleResultadoClick(item.id)}
+                className={styles.resultadoItem}
+              >
+                {item.NomeDaEmpresa}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   )
 }
