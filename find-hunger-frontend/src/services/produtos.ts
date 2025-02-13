@@ -2,36 +2,31 @@
 import { api } from "./api";
 
 interface Produto {
-  quantidade: string;
+  quantidade: number;
   descricao: string;
   nome: string;
-  preco: string;
-//   imagens: File[]; // Agora permite várias imagens
+  preco: number;
+  imagens: string[];
 }
 
 export const postCadastroProduto = async (data: Produto): Promise<boolean> => {
   try {
-    if (!data.nome || !data.descricao || !data.quantidade) {
+    if (!data.nome || !data.descricao || !data.quantidade || !data.preco) {
       console.warn("Erro: Nome, descrição e quantidade são obrigatórios.");
       return false;
     }
 
-    const formData = new FormData();
-    formData.append("preco", data.preco);
-    formData.append("quantidade", data.quantidade);
-    formData.append("descricao", data.descricao);
-    formData.append("nome", data.nome);
+    if (isNaN(data.preco) || isNaN(data.quantidade)) {
+      console.warn("Erro: Preço e quantidade devem ser números válidos.");
+      return false;
+    }
 
-    // Adicionando múltiplas imagens ao FormData
-    // data.imagens.forEach((imagem) => {
-    //   formData.append(`imagens`, imagem); // O backend deve aceitar múltiplas imagens no mesmo campo
-    // });
+    if (data.imagens.length === 0) {
+      console.warn("Erro: Pelo menos uma imagem é necessária.");
+      return false;
+    }
 
-    const response = await api.post("/produtosCadastrados", formData, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    });
+    const response = await api.post("/produtosCadastrados", data);
     console.log(response)
 
     if (response.status === 201) {

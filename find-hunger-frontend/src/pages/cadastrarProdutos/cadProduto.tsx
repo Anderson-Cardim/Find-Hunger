@@ -4,15 +4,15 @@ import { CreditCard, Money, Plus } from "phosphor-react";
 import { FooterPrincipal } from "../../components/footerPrincipal/FooterPrincipal";
 import { useState } from "react";
 import { PixLogo } from "@phosphor-icons/react";
+import { convertFilesToBase64 } from "../../utils/converterFileBase64";
 import { postCadastroProduto } from "../../services/produtos";
 
 export function CadProduto() {
-  
   const [nome, setNome] = useState("");
   const [descricao, setDescricao] = useState("");
-  const [quantidade, setQuantidade] = useState("");
-  const [preco, setPreco] = useState("");
-  // const [imagens, setImagens] = useState<File[]>([]);
+  const [quantidade, setQuantidade] = useState(0);
+  const [preco, setPreco] = useState(0);
+  const [imagens, setImagens] = useState<File[]>([]);
 
   async function handleCadastro(event) {
     event.preventDefault();
@@ -20,7 +20,7 @@ export function CadProduto() {
     console.log("Nome:", nome);
     console.log("descricao:", descricao);
     console.log("quantidade:", quantidade);
-    // console.log("imagem:", imagens);
+    console.log("imagem:", imagens);
 
     if (!nome || !descricao || !quantidade || !preco) {
       alert("Preencha todos os campos!");
@@ -28,21 +28,30 @@ export function CadProduto() {
     }
 
     try {
-          const result = await postCadastroProduto({
-            nome: nome,
-            descricao: descricao,
-            preco: preco,
-            // imagens: imagens,
-            quantidade: quantidade,
-          });
-          if (result) {
-            console.log("Produto cadastrado:", { nome, preco, quantidade });
-          }
-        } catch (error) {
-          console.error("Erro ao cadastrar produto:", error);
-        }
+      const base64Array = await convertFilesToBase64(imagens);
+      console.log("Base64 dos arquivos:", base64Array);
+      const result = await postCadastroProduto({
+        nome: nome,
+        descricao: descricao,
+        preco: preco,
+        imagens: base64Array,
+        quantidade: quantidade,
+      });
+      if (result) {
+        console.log("Produto cadastrado:", { nome, preco, quantidade });
+      }
+    } catch (error) {
+      console.error("Erro ao cadastrar produto:", error);
+    }
   }
 
+  function handleFileChange(event: React.ChangeEvent<HTMLInputElement>) {
+    const files = event.target.files;
+
+    if (files) {
+      setImagens((prevImagens) => [...prevImagens, ...Array.from(files)]);
+    }
+  }
   return (
     <>
       <header className={styles.ContainerHeader}>
@@ -58,9 +67,9 @@ export function CadProduto() {
             <div className={styles.ContainerInput}>
               <div className={styles.ContainerTextoInput}>
                 <p>Nome do produto</p>
-                <input 
-                  type="text" 
-                  placeholder="adicione aqui" 
+                <input
+                  type="text"
+                  placeholder="adicione aqui"
                   onChange={(event) => {
                     setNome(event.target.value);
                   }}
@@ -74,9 +83,9 @@ export function CadProduto() {
             <div className={styles.ContainerInput}>
               <div className={styles.ContainerTextoInput}>
                 <p>Descrição do produto</p>
-                <input 
-                  type="text" 
-                  placeholder="Descrição do produto..." 
+                <input
+                  type="text"
+                  placeholder="Descrição do produto..."
                   onChange={(event) => {
                     setDescricao(event.target.value);
                   }}
@@ -95,12 +104,12 @@ export function CadProduto() {
                     <div className={styles.ContainerTextoInput}>
                       <p>Valor (R$)</p>
                       <input
-                        type="text"
+                        type="number"
                         id="valor"
                         placeholder="R$ 0,00"
                         value={preco}
                         onChange={(event) => {
-                          setPreco(event.target.value);
+                          setPreco(Number(event.target.value));
                         }}
                       />
                     </div>
@@ -149,9 +158,11 @@ export function CadProduto() {
               <div className={styles.ContainerQuantidade}>
                 <div className={styles.ContainerTextoInput}>
                   <p>Quantidade</p>
-                  <input type="number" placeholder="adicione aqui" 
+                  <input
+                    type="number"
+                    placeholder="adicione aqui"
                     onChange={(event) => {
-                      setQuantidade(event.target.value);
+                      setQuantidade(Number(event.target.value));
                     }}
                   />
                 </div>
@@ -172,10 +183,7 @@ export function CadProduto() {
                       type="file"
                       accept="image/*"
                       className={styles.PictureInput}
-                      // onChange={(event) => {
-                      //   const files = Array.from(event.target.files);
-                      //   setImagens(files);
-                      // }}
+                      onChange={handleFileChange}
                     />
                     <i>
                       <Plus size={22} color="#ff4900" />
@@ -191,10 +199,7 @@ export function CadProduto() {
                       type="file"
                       accept="image/*"
                       className={styles.PictureInput}
-                      // onChange={(event) => {
-                      //   const files = Array.from(event.target.files);
-                      //   setImagens(files);
-                      // }}
+                      onChange={handleFileChange}
                     />
                     <div className={styles.ContainerIconiTexto}>
                       <i>
@@ -210,10 +215,7 @@ export function CadProduto() {
                       type="file"
                       accept="image/*"
                       className={styles.PictureInput}
-                      // onChange={(event) => {
-                      //   const files = Array.from(event.target.files);
-                      //   setImagens(files);
-                      // }}
+                      onChange={handleFileChange}
                     />
                     <div className={styles.ContainerIconiTexto}>
                       <i>
@@ -229,7 +231,7 @@ export function CadProduto() {
             </div>
 
             <div className={styles.ContainerFinalizar}>
-              <button onClick={handleCadastro}>Finalizar</button>
+              <button onClick={handleCadastro}>Cadastrar</button>
             </div>
           </form>
         </div>
