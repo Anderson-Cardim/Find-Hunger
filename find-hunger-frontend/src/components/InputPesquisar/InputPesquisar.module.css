@@ -28,3 +28,21 @@ section {
   height: 20px;
 }
 
+.resultadosLista {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  list-style-type: none;
+  padding: 0;
+  overflow-y: auto;
+  height: 50px;
+}
+
+.resultadoItem {
+  cursor: pointer;
+  color: var(--Roxo);
+}
+
+.resultadoItem:hover {
+  background-color: var(--cinza);
+}

@@ -1,18 +1,24 @@
-import { useEffect, useRef, useState } from "react";
-import { HeaderPrincipal } from "../../components/headerPrincipal/HeaderPrincipal";
-import { FooterPrincipal } from "../../components/footerPrincipal/FooterPrincipal";
+import { useRef, useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { FooterPrincipal } from "../../components/FooterPrincipal/FooterPrincipal";
+import { HeaderPrincipal } from "../../components/HeaderPrincipal/HeaderPrincipal";
 import styles from "./PerfilProfissional.module.css";
 import data from "../../Json/PerfilProfissional.json";
 import { Empresa } from "../../Interfaces/ITypesProfissional";
 import { FaMotorcycle, FaStar } from "react-icons/fa";
 
-import ImgTemporariaBolo from '../../assets/ImgTemporariaBolo.jpg';
-import ImgTemporariaLogo from '../../assets/ImgTemporariaLogo.jpg'
 import { Bank, CaretRight, Clock, CreditCard, Info } from "@phosphor-icons/react";
 import { MdOutlinePhonelinkRing } from "react-icons/md";
 import { SiNubank } from "react-icons/si";
 import { FaPix } from "react-icons/fa6";
 import { PiMoneyBold } from "react-icons/pi";
+
+import ImgTemporariaBolo from '../../assets/bolotemporario.png';
+import ImgTemporariaLogo from '../../assets/ImgTemporariaLogo.jpg';
+
+type ParamTypes = {
+  id: string;
+}
 
 const Modal: React.FC<{ showModal: boolean, onClose: () => void }> = ({ showModal, onClose }) => {
   const startY = useRef(0);
@@ -39,7 +45,10 @@ const Modal: React.FC<{ showModal: boolean, onClose: () => void }> = ({ showModa
         <h3 className={styles.tituloModal}>formas de pagamento</h3>
         <div className={styles.formasDePagamento}>
           <div className={styles.formaPeloApp}>
-            <h3 className={styles.subTitulo}>A pagar</h3>
+            <div className={styles.divAPagar}>
+              <MdOutlinePhonelinkRing className={styles.logoAPagar} />
+              <h3 className={styles.subTitulo}>A pagar</h3>
+            </div>
             <div className={styles.pagamentos}>
               <div className={styles.divNubank}>
                 <SiNubank className={styles.logoNubank} />
@@ -70,91 +79,101 @@ const Modal: React.FC<{ showModal: boolean, onClose: () => void }> = ({ showModa
 
 
 export function PerfilProfissional() {
-  const [empresas, setEmpresas] = useState<Empresa[]>([]);
   const [showModal, setShowModal] = useState(false);
+  const { id } = useParams<ParamTypes>();
+  const [empresa, setEmpresa] = useState<Empresa | null>(null);
+
+  // useEffect(() => {
+  //   const loadImages = () => {
+  //     const updatedData: Empresa[] = data.map((empresa) => {
+  //       const FotoBanner = empresa.FotoBanner ? require(`../../assets/${empresa.FotoBanner}`).default : require(`../../assets/bolotemporario.png`).default;
+  //       const FotoPerfil = empresa.FotoPerfil ? require(`../../assets/${empresa.FotoPerfil}`).default : require(`../../assets/ImgTemporariaLogo.jpg`).default;
+  //       return { ...empresa, FotoBanner, FotoPerfil };
+  //     });
+  //     setEmpresas(updatedData);
+  //   };
+  //   loadImages()
+  // }, [])
 
   useEffect(() => {
-    const loadImages = () => {
-      const updatedData = data.map((item) => {
-        const FotoBanner = item.FotoBanner === "ImgTemporariaBolo" ? ImgTemporariaBolo : "";
-        const FotoPerfil = item.FotoPerfil === "ImgTemporariaLogo" ? ImgTemporariaLogo : "";
-        return { ...item, FotoBanner, FotoPerfil };
-      });
-      setEmpresas(updatedData);
-    };
+    if (id) {
+      const empresaId = parseInt(id, 10);
+      console.log(`Procurando empresa com ID: ${empresaId}`);
+      const empresaEncontrada = data.find((empresa) => empresa.id === empresaId);
+      if (empresaEncontrada) {
+        console.log(`Empresa encontrada: ${JSON.stringify(empresaEncontrada)}`);
+        setEmpresa(empresaEncontrada);
+      } else {
+        console.log("Empresa não encontrada");
+        setEmpresa(null);
+      }
+    }
+  }, [id]);
 
-    loadImages();
-  }, []);
 
   const toggleModal = () => {
     setShowModal(!showModal);
   };
 
+  if (!empresa) {
+    return <p>Perfil não encontrado...</p>;
+  }
+
   return (
-    <>
-      <body>
-        <header>
-          <HeaderPrincipal />
-        </header>
+    <body>
+      <header>
+        <HeaderPrincipal />
+      </header>
 
-        <main className={styles.corpo}>
-          <div>
-            {empresas.map((item) => (
-              <div key={item.id}>
-                <div className={styles.Banner}>
-                  <img className={`${styles.imgBanner}`} src={item.FotoBanner} alt="Banner..." />
-                </div>
-                <div className={styles.cabecaDaEmpresa}>
-                  <div className={styles.TituloAvaliacao}>
-                    <button className={styles.avaliacao}> <FaStar className={styles.estrela} /> {item.Avaliacao} <CaretRight className={styles.setaAvaliacao} size={18} color="#ffffff" /></button>
-                    <h3 className={styles.Titulo}>{item.NomeDaEmpresa}</h3>
-                    <div className={styles.divInfo}>
-                      <Info size={18} className={styles.LogoInfo} />
-                      <p className={styles.paragrafoInfo}>infos da loja</p>
-                      <CaretRight className={styles.setaInfo} />
-                    </div>
-                  </div>
-                  <div className={styles.divFotoPerfil}>
-                    <img className={styles.fotoPerfil} src={item.FotoPerfil} alt="Perfil" />
-                    <p className={styles.paragrafoHora}>Abre as {item.HorarioAberto}</p>
-                  </div>
-              </div>
-                <div className={styles.divComplemento}>
-                  <div className={styles.Entrega}>
-                    <div className={styles.cabecaEntrega}>
-                      <FaMotorcycle className={styles.logoMoto} />
-                      <h3 className={styles.tituloEntrega}>{item.Entrega}</h3>
-                    </div>
-                    <p>Entrega</p>
-                  </div>
-                  <div className={styles.Minuto}>
-                    <div className={styles.cabecaMinutosEntrega}>
-                      <Clock size={18} />
-                      <h3 className={styles.tituloMinutos}>{item.TempoDeEntrega}</h3>
-                    </div>
-                    <p>Minutos</p>
-                  </div>
-                  <div className={styles.DivPagamentos} onClick={toggleModal}>
-                    <div className={styles.cabecaPagamento}>
-                      <MdOutlinePhonelinkRing className={styles.logoCelular} size={20} />
-                      <Bank className={styles.logoBank} size={20} />
-                    </div>
-                    <p>Pagamento</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+      <main className={styles.corpo}>
+        <div className={styles.Banner}>
+          <img className={`${styles.imgBanner}`} src={empresa.FotoBanner} alt="Banner..." />
+        </div>
+        <div className={styles.cabecaDaEmpresa}>
+          <div className={styles.TituloAvaliacao}>
+            <button className={styles.avaliacao}> <FaStar className={styles.estrela} /> {empresa.Avaliacao} <CaretRight className={styles.setaAvaliacao} size={18} color="#ffffff" /></button>
+            <h3 className={styles.Titulo}>{empresa.NomeDaEmpresa}</h3>
+            <div className={styles.divInfo}>
+              <Info size={18} className={styles.LogoInfo} />
+              <p className={styles.paragrafoInfo}>infos da loja</p>
+              <CaretRight className={styles.setaInfo} />
+            </div>
           </div>
-          <Modal showModal={showModal} onClose={toggleModal} />
-        </main>
-
-        <footer>
-          <FooterPrincipal />
-        </footer>
-      </body>
-    </>
+          <div className={styles.divFotoPerfil}>
+            <img className={styles.fotoPerfil} src={empresa.FotoPerfil} alt="Perfil" />
+            <p className={styles.paragrafoHora}>Abre às {empresa.HorarioAberto}</p>
+          </div>
+        </div>
+        <div className={styles.divComplemento}>
+          <div className={styles.Entrega}>
+            <div className={styles.cabecaEntrega}>
+              <FaMotorcycle className={styles.logoMoto} />
+              <h3 className={styles.tituloEntrega}>{empresa.Entrega}</h3>
+            </div>
+            <p>Entrega</p>
+          </div>
+          <div className={styles.Minuto}>
+            <div className={styles.cabecaMinutosEntrega}>
+              <Clock size={18} />
+              <h3 className={styles.tituloMinutos}>{empresa.TempoDeEntrega}</h3>
+            </div>
+            <p>Minutos</p>
+          </div>
+          <div className={styles.DivPagamentos} onClick={toggleModal}>
+            <div className={styles.cabecaPagamento}>
+              <MdOutlinePhonelinkRing className={styles.logoCelular} size={20} />
+              <Bank className={styles.logoBank} size={20} />
+            </div>
+            <p>Pagamento</p>
+          </div>
+        </div>
+        <Modal showModal={showModal} onClose={toggleModal} />
+      </main >
+      <FooterPrincipal />
+    </body>
   );
 }
+
 
 {/* <Link to="/PaginaSecundaria" className={styles.LinkIconi}>
   <i className={styles.Iconi}>
