@@ -80,16 +80,15 @@ const Modal: React.FC<{ showModal: boolean, onClose: () => void }> = ({ showModa
 
 export function PerfilProfissional() {
   const [showModal, setShowModal] = useState(false);
-  const [empresas, setEmpresas] = useState<Empresa[]>([]);
   const { id } = useParams<ParamTypes>();
   const [empresa, setEmpresa] = useState<Empresa | null>(null);
 
   // useEffect(() => {
   //   const loadImages = () => {
-  //     const updatedData: Empresa[] = data.map((item) => {
-  //       const FotoBanner = item.FotoBanner ? require(`../../assets/${item.FotoBanner}`).default : require(`../../assets/bolotemporario.png`).default;
-  //       const FotoPerfil = item.FotoPerfil ? require(`../../assets/${item.FotoPerfil}`).default : require(`../../assets/ImgTemporariaLogo.jpg`).default;
-  //       return { ...item, FotoBanner, FotoPerfil };
+  //     const updatedData: Empresa[] = data.map((empresa) => {
+  //       const FotoBanner = empresa.FotoBanner ? require(`../../assets/${empresa.FotoBanner}`).default : require(`../../assets/bolotemporario.png`).default;
+  //       const FotoPerfil = empresa.FotoPerfil ? require(`../../assets/${empresa.FotoPerfil}`).default : require(`../../assets/ImgTemporariaLogo.jpg`).default;
+  //       return { ...empresa, FotoBanner, FotoPerfil };
   //     });
   //     setEmpresas(updatedData);
   //   };
@@ -100,7 +99,7 @@ export function PerfilProfissional() {
     if (id) {
       const empresaId = parseInt(id, 10);
       console.log(`Procurando empresa com ID: ${empresaId}`);
-      const empresaEncontrada = data.find((item) => item.id === empresaId);
+      const empresaEncontrada = data.find((empresa) => empresa.id === empresaId);
       if (empresaEncontrada) {
         console.log(`Empresa encontrada: ${JSON.stringify(empresaEncontrada)}`);
         setEmpresa(empresaEncontrada);
@@ -125,20 +124,18 @@ export function PerfilProfissional() {
       <header>
         <HeaderPrincipal />
       </header>
+
       <main className={styles.corpo}>
         <div className={styles.Banner}>
           <img className={`${styles.imgBanner}`} src={empresa.FotoBanner} alt="Banner..." />
         </div>
         <div className={styles.cabecaDaEmpresa}>
           <div className={styles.TituloAvaliacao}>
-            <button className={styles.avaliacao}>
-              <FaStar className={styles.estrela} /> {empresa.Avaliacao}
-              <CaretRight className={styles.setaAvaliacao} size={18} color="#ffffff" />
-            </button>
+            <button className={styles.avaliacao}> <FaStar className={styles.estrela} /> {empresa.Avaliacao} <CaretRight className={styles.setaAvaliacao} size={18} color="#ffffff" /></button>
             <h3 className={styles.Titulo}>{empresa.NomeDaEmpresa}</h3>
             <div className={styles.divInfo}>
               <Info size={18} className={styles.LogoInfo} />
-              <p className={styles.paragrafoInfo}>Infos da loja</p>
+              <p className={styles.paragrafoInfo}>infos da loja</p>
               <CaretRight className={styles.setaInfo} />
             </div>
           </div>
@@ -171,11 +168,12 @@ export function PerfilProfissional() {
           </div>
         </div>
         <Modal showModal={showModal} onClose={toggleModal} />
-      </main>
+      </main >
       <FooterPrincipal />
     </body>
   );
 }
+
 
 {/* <Link to="/PaginaSecundaria" className={styles.LinkIconi}>
   <i className={styles.Iconi}>

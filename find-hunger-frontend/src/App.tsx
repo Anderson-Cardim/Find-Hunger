@@ -26,6 +26,12 @@ function App() {
           <Route path="/PerfilProfissional/:id" element={<PerfilProfissional />} />
           <Route path="/CadastroComerciante" element={<CadastroComerciante />} />
 
+
+          <Route
+                    path="/PerfilCadastroProfissional"
+                    element={<PerfilCadastroProfissional />}
+                  />
+
           {/* ROTAS PRIVADAS */}
           {usuario && (
             <>

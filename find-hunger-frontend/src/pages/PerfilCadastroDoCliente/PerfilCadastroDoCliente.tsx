@@ -34,10 +34,11 @@ export function PerfilCadastroDoCliente() {
                         <button>Chat</button>
                     </div> */}
           <form action="">
+          <h3 className={styles.Titulos}>Informações Pessoais</h3>
             <div className={styles.ContainerInput}>
               <div className={styles.ContainerTextoInput}>
-                <p>Nome</p>
-                <input type="text" placeholder="adicione aqui" />
+                <h4>Nome completo</h4>
+                {/* <p>{usuario?.nome}</p> */}
               </div>
               <div className={styles.ContainerLinha}>
                 <hr />
@@ -46,39 +47,17 @@ export function PerfilCadastroDoCliente() {
 
             <div className={styles.ContainerInput}>
               <div className={styles.ContainerTextoInput}>
-                <p>Produto</p>
-                <input type="text" placeholder="adicione aqui" />
+                <h4>Email</h4>
+                {/* <p>{usuario?.usuario}</p> */}
               </div>
               <div className={styles.ContainerLinha}>
                 <hr />
               </div>
             </div>
 
-            <div className={styles.ContainerInput}>
-              <div className={styles.ContainerTextoInput}>
-                <p>Descrição do produto seu produto</p>
-                <input type="text" placeholder="Descrição do produto..." />
-              </div>
-              <div className={styles.ContainerLinha}>
-                <hr />
-              </div>
-            </div>
-
-            <div className={styles.ContainerInput}>
-              <div className={styles.ContainerTextoInput}>
-                <p>Telefone</p>
-                <input type="text" placeholder="adicione aqui" />
-              </div>
-              <div className={styles.ContainerLinha}>
-                <hr />
-              </div>
-            </div>
           </form>
 
           <div className={styles.ContainerButtons}>
-            {/* <div className={styles.ContainerAdicionarNovoProduto}>
-                            <button>Adicionar novo produto</button>
-                        </div> */}
 
             <div className={styles.ContainerSalvar}>
               <button>Salvar</button>
@@ -93,3 +72,6 @@ export function PerfilCadastroDoCliente() {
     </>
   );
 }
+
+
+

@@ -9,6 +9,8 @@ import { TrademarkRegistered } from "phosphor-react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { postLoginComerciante } from "../../services/login";
+import { MapPin } from "@phosphor-icons/react";
+import { BookOpenText } from "@phosphor-icons/react/dist/ssr";
 
 export function CadastroComerciante() {
   const [nome, setNome] = useState("");
@@ -18,6 +20,9 @@ export function CadastroComerciante() {
   const [numero, setNumero] = useState("");
   const [senha, setSenha] = useState("");
   const [confirmarSenha, setConfirmarSenha] = useState("");
+  const [endereco, setEndereco] = useState("");
+  const [descricao, setDescricao] = useState("");
+
 
   const navigate = useNavigate();
 
@@ -30,8 +35,10 @@ export function CadastroComerciante() {
       console.log("Estabelecimeto:", estabelecimento);
       console.log("cpf:", cpf);
       console.log("numero:", numero);
-  
-      if (!nome || !email || !senha || !confirmarSenha || !cpf || !numero || !estabelecimento) {
+      console.log("descricao:", descricao);
+      console.log("endereco:", endereco);
+
+      if (!nome || !email || !senha || !confirmarSenha || !cpf || !numero || !estabelecimento || !descricao || !endereco) {
         alert("Preencha todos os campos!");
         return;
       }
@@ -48,6 +55,9 @@ export function CadastroComerciante() {
           numero: numero,
           senha: senha,
           usuario: email,
+          endereco: endereco,
+          descricao: descricao,
+          nome: nome,
           tipo: "comerciante",
         });
   
@@ -82,28 +92,6 @@ export function CadastroComerciante() {
           <div className={styles.InputInput}>
             <Input
               type="text"
-              placeholder="Estabelecimento:"
-              icons={<Storefront/>}
-              value={estabelecimento}
-              onChange={(event) => {
-                setEstabelecimento(event.target.value);
-              }}
-            />
-          </div>
-          <div className={styles.InputInput}>
-            <Input 
-              type="email" 
-              placeholder="Email:" 
-              icons={<EnvelopeSimple />} 
-              value={email}
-              onChange={(event) => {
-                setEmail(event.target.value);
-              }}
-            />
-          </div>
-          <div className={styles.InputInput}>
-            <Input
-              type="text"
               placeholder="CPF ou CNPJ:"
               icons={<TrademarkRegistered />}
               value={cpf}
@@ -123,6 +111,52 @@ export function CadastroComerciante() {
               }}
             />
           </div>
+          <div className={styles.InputInput}>
+            <Input 
+              type="email" 
+              placeholder="Email:" 
+              icons={<EnvelopeSimple />} 
+              value={email}
+              onChange={(event) => {
+                setEmail(event.target.value);
+              }}
+            />
+          </div>
+          <div className={styles.InputInput}>
+            <Input
+              type="text"
+              placeholder="Nome da Loja:"
+              icons={<Storefront/>}
+              value={estabelecimento}
+              onChange={(event) => {
+                setEstabelecimento(event.target.value);
+              }}
+            />
+          </div>
+          <div className={styles.InputInput}>
+            <Input
+              type="text"
+              placeholder="Descrição do negócio:"
+              icons={<BookOpenText size={24} />}
+              value={descricao}
+              onChange={(event) => {
+                setDescricao(event.target.value);
+              }}
+            />
+          </div>
+          <div className={styles.InputInput}>
+            <Input
+              type="text"
+              placeholder="Endereço:"
+              icons={<MapPin size={24} />}
+              value={endereco}
+              onChange={(event) => {
+                setEndereco(event.target.value);
+              }}
+            />
+          </div>
+
+
           <div className={styles.InputInput}>
             <Input
               type="password"

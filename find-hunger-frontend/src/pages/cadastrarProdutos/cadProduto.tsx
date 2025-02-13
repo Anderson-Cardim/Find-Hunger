@@ -1,7 +1,7 @@
 import styles from "./cadProduto.module.css";
-import { HeaderPrincipal } from "../../components/HeaderPrincipal/HeaderPrincipal";
+import { HeaderPrincipal } from "../../components/headerPrincipal/HeaderPrincipal";
 import { CreditCard, Money, Plus } from "phosphor-react";
-import { FooterPrincipal } from "../../components/FooterPrincipal/FooterPrincipal";
+import { FooterPrincipal } from "../../components/footerPrincipal/FooterPrincipal";
 import { ChangeEvent, useState } from "react";
 import { PixLogo } from "@phosphor-icons/react";
 
@@ -11,7 +11,7 @@ export function CadProduto() {
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     let valorInput = e.target.value.replace(/[^\d]/g, ""); // Apenas números
-
+ 
     if (valorInput.length > 0) {
       const valorFormatado = (parseFloat(valorInput) / 100).toLocaleString(
         "pt-BR",
