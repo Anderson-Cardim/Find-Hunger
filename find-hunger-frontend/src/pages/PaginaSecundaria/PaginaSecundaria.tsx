@@ -1,8 +1,9 @@
-import { BannerPrincipal } from "../../components/bannerPrincipal/BannerPrincipal";
+
+import { BannerPrincipal } from "../../components/BannerPrincipal/BannerPrincipal";
 import { Contratos } from "../../components/contratos/Contratos";
 import { FooterPrincipal } from "../../components/footerPrincipal/FooterPrincipal";
 import { HeaderPrincipal } from "../../components/headerPrincipal/HeaderPrincipal";
-import { InputPesquisar } from "../../components/inputPesquisar/InputPesquisar";
+import { InputPesquisar } from "../../components/InputPesquisar/InputPesquisar";
 import styles from "./PaginaSecundaria.module.css";
 
 export function PaginaSecundaria() {

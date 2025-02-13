@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { FooterPrincipal } from "../../components/FooterPrincipal/FooterPrincipal";
-import { HeaderPrincipal } from "../../components/HeaderPrincipal/HeaderPrincipal";
+import { FooterPrincipal } from "../../components/footerPrincipal/FooterPrincipal";
+import { HeaderPrincipal } from "../../components/headerPrincipal/HeaderPrincipal";
 import styles from "./PerfilProfissional.module.css";
 import data from "../../Json/PerfilProfissional.json";
 import { Empresa } from "../../Interfaces/ITypesProfissional";
