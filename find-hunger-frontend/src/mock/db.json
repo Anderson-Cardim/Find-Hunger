@@ -11,19 +11,35 @@
       "isCompleted": false
     }
   ],
+  
   "login": [
-    {
-      "usuario": "comerciante@gmail.com",
-      "senha": "123456",
-      "tipo": "comerciante",
-      "id": "2ed6"
-    },
     {
       "id": "0835",
       "nome": "Anderson",
       "senha": "123",
       "usuario": "anderson@gmail.com",
       "tipo": "cliente"
+    },
+    {
+      "id": "8e1b",
+      "cpf": "234.567.345-65",
+      "estabelecimento": "CardimDoces",
+      "numero": "(73)9922-4723",
+      "senha": "159",
+      "usuario": "emerson@gmail.com",
+      "endereco": "Rua dois de julho",
+      "descricao": "Lojas de todos os tipos de doces",
+      "nome": "Emerson Cardim",
+      "tipo": "comerciante"
+    }
+  ],
+  "produtosCadastrados": [
+    {
+      "id": "9955",
+      "quantidade": "10",
+      "descricao": "Bolo de chocolate",
+      "nome": "Bolo",
+      "preco": "10"
     }
   ]
 }

@@ -126,7 +126,7 @@ export function PerfilCadastroProfissional() {
 
             {/* Métodos de Pagamento Aceitos */}
             <h3 className={styles.Titulos}>Métodos de Pagamento Aceitos</h3>
-
+          
             {/* Horário de Funcionamento */}
             <h3 className={styles.Titulos}>Horário de Funcionamento</h3>
             <div className={styles.ContainerInput}>
