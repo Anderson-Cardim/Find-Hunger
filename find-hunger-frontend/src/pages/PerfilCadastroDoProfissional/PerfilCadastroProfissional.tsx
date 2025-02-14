@@ -33,26 +33,40 @@ export function PerfilCadastroProfissional() {
   //   }
   // };
 
-  const handleImageChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
+  // const handleImageChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   const file = event.target.files?.[0];
+  //   if (file && usuario) {
+  //     const [novaImagemBase64] = await convertFilesToBase64([file]);
+  
+  //     // Verifica se já existe uma imagem01 e transforma em array
+  //     const imagensAtuais = Array.isArray(usuario.imagem01) ? usuario.imagem01 : [usuario.imagem01];
+  
+  //     const novasImagens = [...imagensAtuais, novaImagemBase64]; // Adiciona a nova imagem
+  
+  //     setImagemPerfil(novaImagemBase64);
+  
+  //     await putLoginComerciante(usuario?.id, {
+  //       ...usuario,
+  //       imagem01: novasImagens, // Salva como um array
+  //     });
+  //   }
+  // };
+
+  const handleImageChange = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     const file = event.target.files?.[0];
     if (file && usuario) {
-      const [novaImagemBase64] = await convertFilesToBase64([file]);
-  
-      // Verifica se já existe uma imagem01 e transforma em array
-      const imagensAtuais = Array.isArray(usuario.imagem01) ? usuario.imagem01 : [usuario.imagem01];
-  
-      const novasImagens = [...imagensAtuais, novaImagemBase64]; // Adiciona a nova imagem
-  
-      setImagemPerfil(novaImagemBase64);
-  
+      const [imagemBase64] = await convertFilesToBase64([file]);
+      setImagemPerfil(imagemBase64);
       await putLoginComerciante(usuario?.id, {
         ...usuario,
-        imagem01: novasImagens, // Salva como um array
+        imagem01: imagemBase64,
       });
     }
   };
-  
 
+  
   const handleImage02Change = async (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
