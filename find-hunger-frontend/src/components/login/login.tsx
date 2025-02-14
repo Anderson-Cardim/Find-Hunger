@@ -21,7 +21,7 @@ export function Login() {
         usuario: email,
         senha: senha,
       });
-
+      
       if (result) {
         handleUsuario({
           id: result.id,
@@ -36,6 +36,7 @@ export function Login() {
           descricao: result.descricao,
           imagem01: result.imagem01,
           imagem02: result.imagem02,
+          imagem03: result.imagem03,
         });
 
         // Redireciona para a página correta baseado no tipo de usuário

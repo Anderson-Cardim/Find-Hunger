@@ -13,6 +13,7 @@ export type UserLogin = {
   tipo: "comerciante" | "cliente";
   imagem01: string;
   imagem02: string;
+  imagem03: string;
 };
 
 export interface AuthContextProps {
@@ -44,3 +45,39 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     </AuthContext.Provider>
   );
 };
+
+
+// export type UserContrato = {
+//   id: string;
+//   cpf: string;
+//   estabelecimento: string;
+//   numero: string;
+//   usuario: string;
+//   senha: string;
+//   endereco: string;
+//   descricao: string;
+//   nome: string;
+//   tipo: "comerciante" | "cliente";
+//   imagem01: string;
+//   imagem02: string;
+//   imagem03: string;
+// };
+
+// export const AuthProviderContrato = ({ children }: AuthProviderProps) => {
+//   const [usuario, setUsuario] = useState<UserLogin | null>(null);
+
+//   const handleUsuario = (data: UserLogin) => {
+//     setUsuario(data);
+//   };
+
+//   return (
+//     <AuthContext.Provider
+//       value={{
+//         usuario,
+//         handleUsuario,
+//       }}
+//     >
+//       {children}
+//     </AuthContext.Provider>
+//   );
+// };

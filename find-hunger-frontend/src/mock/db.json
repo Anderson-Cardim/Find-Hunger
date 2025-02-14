@@ -1,13 +1,19 @@
 {
   "login": [
     {
-      "id": "d472",
-      "nome": "Anderson Cardim",
-      "senha": "123",
-      "usuario": "anderson@gmail.com",
-      "tipo": "cliente"
+      "id": "61df",
+      "cpf": "000.000.000-00",
+      "estabelecimento": "CardimMota",
+      "numero": "(73)99224723",
+      "senha": "159",
+      "usuario": "emerson@gmail.com",
+      "endereco": "Rua dois de julho",
+      "descricao": "Vendemos bolos de todos os tipos",
+      "nome": "Emerson Cardim",
+      "imgBanner": "",
+      "imgPerfil": "",
+      "tipo": "comerciante"
     }
   ],
-  "produtosCadastrados": [
-  ]
+  "produtosCadastrados": []
 }

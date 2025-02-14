@@ -37,6 +37,7 @@ export function CadastroCliente() {
         nome: nome,
         senha: senha,
         usuario: email,
+        imgPerfil: "",
         tipo: "cliente",
       });
 

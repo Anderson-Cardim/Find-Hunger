@@ -2,32 +2,30 @@ import styles from "./PerfilCadastroDoCliente.module.css";
 import { HeaderPrincipal } from "../../components/headerPrincipal/HeaderPrincipal";
 import { FooterPrincipal } from "../../components/footerPrincipal/FooterPrincipal";
 import { Camera } from "phosphor-react";
-import { useState, useRef } from "react";
+import { useState, useRef, useContext } from "react";
+import { convertFilesToBase64 } from "../../utils/converterFileBase64";
+import { AuthContext } from "../../context/authContext";
+import { putLoginCliente } from "../../services/login";
 
 export function PerfilCadastroDoCliente() {
+    const { usuario } = useContext(AuthContext);
+  
   const [imagemPerfil, setImagemPerfil] = useState<string | null>(null);
   const inputPerfilRef = useRef<HTMLInputElement>(null);
-
-  // Função para converter um arquivo em base64
-  const convertFileToBase64 = (file: File, setImage: (base64: string | null) => void) => {
-    const reader = new FileReader();
-    reader.onloadend = () => {
-      setImage(reader.result as string);
+  
+  const handleImageChange = async (
+      event: React.ChangeEvent<HTMLInputElement>
+    ) => {
+      const file = event.target.files?.[0];
+      if (file && usuario) {
+        const [imagemBase64] = await convertFilesToBase64([file]);
+        setImagemPerfil(imagemBase64);
+        await putLoginCliente(usuario?.id, {
+          ...usuario,
+          imagem03: imagemBase64,
+        });
+      }
     };
-    reader.onerror = () => {
-      console.error("Erro ao carregar a imagem.");
-      setImage(null);
-    };
-    reader.readAsDataURL(file);
-  };
-
-  // Função para lidar com a seleção da imagem
-  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      convertFileToBase64(file, setImagemPerfil);
-    }
-  };
 
   return (
     <>
@@ -36,7 +34,8 @@ export function PerfilCadastroDoCliente() {
           <HeaderPrincipal />
         </header>
         <main className={styles.ContainerMain}>
-          <div className={styles.blocoimgsair}>
+          
+          {/* <div className={styles.blocoimgsair}>
             <label className={styles.Picture}>
               <input
                 type="file"
@@ -47,9 +46,35 @@ export function PerfilCadastroDoCliente() {
               />
               <div className={styles.ContainerIconiTexto}>
                 {imagemPerfil ? (
-                  <img src={imagemPerfil} alt="Imagem de perfil" className={styles.ImagemPreview} />
+                  <img 
+                  src={imagemPerfil} 
+                  alt="Imagem de perfil" 
+                  className={styles.ImagemPreview} />
                 ) : (
-                  <Camera size={40} color="#ff4900" />
+                  <Camera className={styles.iconi} size={40} color="#ff4900" />
+                )}
+              </div>
+            </label>
+          </div> */}
+
+          <div className={styles.blocoimgsair}>
+            <label className={styles.Picture}>
+              <input
+                type="file"
+                accept="image/*"
+                className={styles.PictureInput}
+                ref={inputPerfilRef}
+                onChange={(e) => handleImageChange(e)}
+              />
+              <div className={styles.ContainerIconiTexto}>
+                {imagemPerfil ? (
+                  <img
+                    src={imagemPerfil}
+                    alt="Imagem de capa"
+                    className={styles.ImagemPreview}
+                  />
+                ) : (
+                  <Camera className={styles.iconi} size={40} color="#ff4900" />
                 )}
               </div>
             </label>
@@ -61,6 +86,7 @@ export function PerfilCadastroDoCliente() {
             <div className={styles.ContainerInput}>
               <div className={styles.ContainerTextoInput}>
                 <h4>Nome completo</h4>
+                <p>{usuario?.nome}</p>
               </div>
               <div className={styles.ContainerLinha}>
                 <hr />
@@ -70,6 +96,7 @@ export function PerfilCadastroDoCliente() {
             <div className={styles.ContainerInput}>
               <div className={styles.ContainerTextoInput}>
                 <h4>Email</h4>
+                <p>{usuario?.usuario}</p>
               </div>
               <div className={styles.ContainerLinha}>
                 <hr />

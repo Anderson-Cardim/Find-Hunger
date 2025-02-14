@@ -20,9 +20,11 @@ export const login = async (data: {
 }
 
 export const postLogin = async (data: {
+    id?: string;
     nome: string;
     usuario: string;
     senha: string;
+    imgPerfil: string,
     tipo: "comerciante" | "cliente"
 }): Promise<boolean> => {
   try {
@@ -62,6 +64,26 @@ return false;
 
 
 export const putLoginComerciante = async (
+  id: string, // Adicionamos o ID como primeiro parâmetro
+  data: UserLogin
+): Promise<{ success: boolean; message?: string }> => {
+  try {
+    const response = await api.put(`/login/${id}`, data);
+    return { success: true, message: "Cadastro atualizado com sucesso!" };
+  } catch (error: any) {
+    console.error("Erro ao atualizar cadastro:", error);
+
+    let message = "Erro desconhecido ao atualizar cadastro.";
+    if (error.response && error.response.data && error.response.data.message) {
+      message = error.response.data.message;
+    }
+
+    return { success: false, message };
+  }
+};
+
+
+export const putLoginCliente = async (
   id: string, // Adicionamos o ID como primeiro parâmetro
   data: UserLogin
 ): Promise<{ success: boolean; message?: string }> => {

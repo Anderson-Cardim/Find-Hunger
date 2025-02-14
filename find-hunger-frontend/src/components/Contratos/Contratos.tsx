@@ -1,14 +1,11 @@
 import { Professional } from '../../Interfaces/IProfessional';
 import data from '../../Json/Contratos.json'
-
 import Foto1 from '../../assets/Profissional-c1.png';
 import Foto2 from '../../assets/Profissional-c2.png';
-import ImgObra1 from '../../assets/ImagemDeObra1.png';
-import ImgObra2 from '../../assets/ImagemDeObra2.png';
-import ImgObra3 from '../../assets/ImagemDeObra3.png';
-import ImgObra4 from '../../assets/ImagemDeObra4.png';
-import ImgObra5 from '../../assets/ImagemDeObra5.png';
+import imagemPipoca01 from '../../assets/imgPipoca01.jpg';
+import imagemPipoca02 from '../../assets/imgPipoca02.jpg';
 
+import imagemPipoca05 from '../../assets/imgPipoca05.jpg';
 import styles from './Contratos.module.css'
 import { MapPin } from 'phosphor-react';
 import { Link } from 'react-router-dom';
@@ -20,24 +17,44 @@ interface CardProps {
   descricao: string;
   preco: string;
   localizacao: string;
-  imgObras: {
+  img: {
     Img1: string;
-    Img2: string;
-    Img3: string;
-    Img4: string;
-    Img5: string;
+  Img2: string;
+  Img3: string;
+  Img4: string;
+  Img5: string;
+  Img6: string;
+  Img7: string;
+  Img8: string;
+  Img9: string;
+  Img10: string;
+  Img11: string;
+  Img12: string;
+  Img13: string;
+  Img14: string;
+  Img15: string;
   };
 }
 
 const updatedData = data.map(item => ({
   ...item,
   Foto: item.Foto.includes('Profissional-c1') ? Foto1 : Foto2,
-  ImgObras: {
-    Img1: ImgObra1,
-    Img2: ImgObra2,
-    Img3: ImgObra3,
-    Img4: ImgObra4,
-    Img5: ImgObra5,
+  Img: {
+    Img1: imagemPipoca01,
+    Img2: imagemPipoca02,
+    Img3: imagemPipoca02,
+    Img4: imagemPipoca02,
+    Img5: imagemPipoca05,
+    Img6: imagemPipoca05,
+    Img7: imagemPipoca05,
+    Img8: imagemPipoca05,
+    Img9: imagemPipoca05,
+    Img10: imagemPipoca05,
+    Img11: imagemPipoca05,
+    Img12: imagemPipoca05,
+    Img13: imagemPipoca05,
+    Img14: imagemPipoca05,
+    Img15: imagemPipoca05,
   }
 }));
 
@@ -48,7 +65,7 @@ const Card: React.FC<CardProps> = ({
   descricao,
   preco,
   localizacao,
-  imgObras
+  img
 }) => (
   <div className={styles.container}>
     <Link to={'/PerfilProfissional'}>
@@ -76,17 +93,17 @@ const Card: React.FC<CardProps> = ({
           </div>
         </div>
       </div>
-      <div className={styles.imgObras}>
+      <div className={styles.img}>
         <div className={styles.imagemPrincipal}>
-          <img src={imgObras.Img1} alt="Obra 1" />
+          <img src={img.Img1} alt="Obra 1" />
         </div>
         <div className={styles.bloco2}>
-          <img src={imgObras.Img2} alt="Obra 2" />
-          <img src={imgObras.Img3} alt="Obra 3" />
+          <img src={img.Img2} alt="Obra 2" />
+          <img src={img.Img3} alt="Obra 3" />
         </div>
         <div className={styles.bloco3}>
-          <img src={imgObras.Img4} alt="Obra 4" />
-          <img src={imgObras.Img5} alt="Obra 5" />
+          <img src={img.Img4} alt="Obra 4" />
+          <img src={img.Img5} alt="Obra 5" />
         </div>
       </div>
     </Link>
@@ -105,13 +122,14 @@ const CardList: React.FC = () => {
           descricao={item.Descricao}
           preco={item.Preco}
           localizacao={item.Localizacao}
-          imgObras={item.ImgObras}
+          img={item.Img}
         />
       ))}
     </div>
   );
 };
 export function Contratos() {
+  
   return (
     <CardList />
   )

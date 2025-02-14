@@ -18,40 +18,6 @@ export function PerfilCadastroProfissional() {
   const inputPerfilRef = useRef<HTMLInputElement>(null);
   const inputCapaRef = useRef<HTMLInputElement>(null);
 
-  // // Função para manipular mudança no input
-  // const handleImageChange = async (
-  //   event: React.ChangeEvent<HTMLInputElement>
-  // ) => {
-  //   const file = event.target.files?.[0];
-  //   if (file && usuario) {
-  //     const [imagemBase64] = await convertFilesToBase64([file]);
-  //     setImagemPerfil(imagemBase64);
-  //     await putLoginComerciante(usuario?.id, {
-  //       ...usuario,
-  //       imagem01: imagemBase64,
-  //     });
-  //   }
-  // };
-
-  // const handleImageChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
-  //   const file = event.target.files?.[0];
-  //   if (file && usuario) {
-  //     const [novaImagemBase64] = await convertFilesToBase64([file]);
-  
-  //     // Verifica se já existe uma imagem01 e transforma em array
-  //     const imagensAtuais = Array.isArray(usuario.imagem01) ? usuario.imagem01 : [usuario.imagem01];
-  
-  //     const novasImagens = [...imagensAtuais, novaImagemBase64]; // Adiciona a nova imagem
-  
-  //     setImagemPerfil(novaImagemBase64);
-  
-  //     await putLoginComerciante(usuario?.id, {
-  //       ...usuario,
-  //       imagem01: novasImagens, // Salva como um array
-  //     });
-  //   }
-  // };
-
   const handleImageChange = async (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
@@ -130,7 +96,7 @@ export function PerfilCadastroProfissional() {
                     className={styles.ImagemPreview}
                   />
                 ) : (
-                  <Camera size={40} color="#ff4900" />
+                  <Camera className={styles.iconi} size={40} color="#ff4900" />
                 )}
               </div>
             </label>
