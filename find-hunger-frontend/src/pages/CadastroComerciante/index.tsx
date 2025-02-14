@@ -23,52 +23,52 @@ export function CadastroComerciante() {
   const [endereco, setEndereco] = useState("");
   const [descricao, setDescricao] = useState("");
 
-
   const navigate = useNavigate();
 
   async function handleCadastro() {
-  
-      console.log("Nome:", nome);
-      console.log("Email:", email);
-      console.log("Senha:", senha);
-      console.log("Confirmar Senha:", confirmarSenha);
-      console.log("Estabelecimeto:", estabelecimento);
-      console.log("cpf:", cpf);
-      console.log("numero:", numero);
-      console.log("descricao:", descricao);
-      console.log("endereco:", endereco);
+    console.log("Nome:", nome);
+    console.log("Email:", email);
+    console.log("Senha:", senha);
+    console.log("Confirmar Senha:", confirmarSenha);
+    console.log("Estabelecimeto:", estabelecimento);
+    console.log("cpf:", cpf);
+    console.log("numero:", numero);
+    console.log("descricao:", descricao);
+    console.log("endereco:", endereco);
 
-      if (!nome || !email || !senha || !confirmarSenha || !cpf || !numero || !estabelecimento || !descricao || !endereco) {
-        alert("Preencha todos os campos!");
-        return;
-      }
-  
-      if (senha !== confirmarSenha) {
-        alert("As senhas não coincidem!");
-        return;
-      }
-  
-      try {
-        const result = await postLoginComerciante({
-          cpf: cpf,
-          estabelecimento: estabelecimento,
-          numero: numero,
-          senha: senha,
-          usuario: email,
-          endereco: endereco,
-          descricao: descricao,
-          nome: nome,
-          tipo: "comerciante",
-        });
-  
-        if (result) {
-          console.log("Usuário cadastrado:", { nome, email, senha });
-          navigate("/TelaLogin"); // Redirecionar após cadastro
-        }
-      } catch (error) {
-        console.error("Erro ao cadastrar usuário:", error);
-      }
+    if (!nome || !email || !senha || !confirmarSenha || !cpf || !numero || !estabelecimento || !descricao || !endereco) {
+      alert("Preencha todos os campos!");
+      return;
     }
+
+    if (senha !== confirmarSenha) {
+      alert("As senhas não coincidem!");
+      return;
+    }
+
+    try {
+      const result = await postLoginComerciante({
+        cpf: cpf,
+        estabelecimento: estabelecimento,
+        numero: numero,
+        senha: senha,
+        usuario: email,
+        endereco: endereco,
+        descricao: descricao,
+        nome: nome,
+        imgBanner: "",
+        imgPerfil: "",
+        tipo: "comerciante",
+      });
+
+      if (result) {
+        console.log("Usuário cadastrado:", { nome, email, senha });
+        navigate("/TelaLogin"); // Redirecionar após cadastro
+      }
+    } catch (error) {
+      console.error("Erro ao cadastrar usuário:", error);
+    }
+  }
 
   return (
     <header className={styles.ContainerClient}>
@@ -79,10 +79,10 @@ export function CadastroComerciante() {
         </div>
         <form className={styles.containerForm} action="">
           <div className={styles.InputInput}>
-            <Input 
-              type="text" 
-              placeholder="Nome completo:" 
-              icons={<User />} 
+            <Input
+              type="text"
+              placeholder="Nome completo:"
+              icons={<User />}
               value={nome}
               onChange={(event) => {
                 setNome(event.target.value);
@@ -101,10 +101,10 @@ export function CadastroComerciante() {
             />
           </div>
           <div className={styles.InputInput}>
-            <Input 
-              type="text" 
-              placeholder="Telefone:" 
-              icons={<Phone />} 
+            <Input
+              type="text"
+              placeholder="Telefone:"
+              icons={<Phone />}
               value={numero}
               onChange={(event) => {
                 setNumero(event.target.value);
@@ -112,10 +112,10 @@ export function CadastroComerciante() {
             />
           </div>
           <div className={styles.InputInput}>
-            <Input 
-              type="email" 
-              placeholder="Email:" 
-              icons={<EnvelopeSimple />} 
+            <Input
+              type="email"
+              placeholder="Email:"
+              icons={<EnvelopeSimple />}
               value={email}
               onChange={(event) => {
                 setEmail(event.target.value);
@@ -126,7 +126,7 @@ export function CadastroComerciante() {
             <Input
               type="text"
               placeholder="Nome da Loja:"
-              icons={<Storefront/>}
+              icons={<Storefront />}
               value={estabelecimento}
               onChange={(event) => {
                 setEstabelecimento(event.target.value);
@@ -155,7 +155,6 @@ export function CadastroComerciante() {
               }}
             />
           </div>
-
 
           <div className={styles.InputInput}>
             <Input
@@ -186,7 +185,9 @@ export function CadastroComerciante() {
           <button onClick={handleCadastro}>Cadastrar</button>
         </div>
         <div className={styles.containerVoltar}>
-          <button onClick={() => navigate("/ComercianteCliente")}>Voltar</button>
+          <button onClick={() => navigate("/ComercianteCliente")}>
+            Voltar
+          </button>
         </div>
       </div>
     </header>

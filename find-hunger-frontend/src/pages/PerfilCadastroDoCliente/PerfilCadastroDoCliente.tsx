@@ -2,9 +2,33 @@ import styles from "./PerfilCadastroDoCliente.module.css";
 import { HeaderPrincipal } from "../../components/headerPrincipal/HeaderPrincipal";
 import { FooterPrincipal } from "../../components/footerPrincipal/FooterPrincipal";
 import { Camera } from "phosphor-react";
-// import { ArrowFatLinesRight } from '@phosphor-icons/react'
+import { useState, useRef } from "react";
 
 export function PerfilCadastroDoCliente() {
+  const [imagemPerfil, setImagemPerfil] = useState<string | null>(null);
+  const inputPerfilRef = useRef<HTMLInputElement>(null);
+
+  // Função para converter um arquivo em base64
+  const convertFileToBase64 = (file: File, setImage: (base64: string | null) => void) => {
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setImage(reader.result as string);
+    };
+    reader.onerror = () => {
+      console.error("Erro ao carregar a imagem.");
+      setImage(null);
+    };
+    reader.readAsDataURL(file);
+  };
+
+  // Função para lidar com a seleção da imagem
+  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      convertFileToBase64(file, setImagemPerfil);
+    }
+  };
+
   return (
     <>
       <body>
@@ -16,29 +40,27 @@ export function PerfilCadastroDoCliente() {
             <label className={styles.Picture}>
               <input
                 type="file"
-                accept="imagem/*"
+                accept="image/*"
                 className={styles.PictureInput}
+                ref={inputPerfilRef}
+                onChange={handleImageChange}
               />
               <div className={styles.ContainerIconiTexto}>
-                <i>
+                {imagemPerfil ? (
+                  <img src={imagemPerfil} alt="Imagem de perfil" className={styles.ImagemPreview} />
+                ) : (
                   <Camera size={40} color="#ff4900" />
-                </i>
+                )}
               </div>
             </label>
-            {/* <div className={styles.ContainerDivButtonSair}>
-                            <button>Sair <ArrowFatLinesRight size={20} /></button>
-                        </div> */}
           </div>
 
-          {/* <div className={styles.ContainerDivButton}>
-                        <button>Chat</button>
-                    </div> */}
-          <form action="">
-          <h3 className={styles.Titulos}>Informações Pessoais</h3>
+          <form>
+            <h3 className={styles.Titulos}>Informações Pessoais</h3>
+
             <div className={styles.ContainerInput}>
               <div className={styles.ContainerTextoInput}>
                 <h4>Nome completo</h4>
-                {/* <p>{usuario?.nome}</p> */}
               </div>
               <div className={styles.ContainerLinha}>
                 <hr />
@@ -48,17 +70,14 @@ export function PerfilCadastroDoCliente() {
             <div className={styles.ContainerInput}>
               <div className={styles.ContainerTextoInput}>
                 <h4>Email</h4>
-                {/* <p>{usuario?.usuario}</p> */}
               </div>
               <div className={styles.ContainerLinha}>
                 <hr />
               </div>
             </div>
-
           </form>
 
           <div className={styles.ContainerButtons}>
-
             <div className={styles.ContainerSalvar}>
               <button>Salvar</button>
             </div>
@@ -72,6 +91,3 @@ export function PerfilCadastroDoCliente() {
     </>
   );
 }
-
-
-

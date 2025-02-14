@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { UserLogin } from "../context/authContext";
 import { api } from "./api";
 
@@ -34,6 +36,7 @@ export const postLogin = async (data: {
 }
 
 export const postLoginComerciante = async (data: {
+  id?: string;
   cpf: string;
   estabelecimento: string;
   numero: string;
@@ -41,7 +44,10 @@ export const postLoginComerciante = async (data: {
   senha: string;
   endereco: string;
   descricao: string;
+  imgBanner: string;
+  imgPerfil: string;
   nome: string;
+
   tipo: "comerciante" | "cliente"
 }): Promise<boolean> => {
 try {
@@ -53,3 +59,23 @@ try {
 }
 return false;
 }
+
+
+export const putLoginComerciante = async (
+  id: string, // Adicionamos o ID como primeiro parâmetro
+  data: UserLogin
+): Promise<{ success: boolean; message?: string }> => {
+  try {
+    const response = await api.put(`/login/${id}`, data);
+    return { success: true, message: "Cadastro atualizado com sucesso!" };
+  } catch (error: any) {
+    console.error("Erro ao atualizar cadastro:", error);
+
+    let message = "Erro desconhecido ao atualizar cadastro.";
+    if (error.response && error.response.data && error.response.data.message) {
+      message = error.response.data.message;
+    }
+
+    return { success: false, message };
+  }
+};

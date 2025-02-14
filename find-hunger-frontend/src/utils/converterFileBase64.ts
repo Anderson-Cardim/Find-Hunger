@@ -18,3 +18,4 @@ export function convertFilesToBase64(files: File[]): Promise<string[]> {
       )
     );
   }
+  

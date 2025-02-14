@@ -1,6 +1,7 @@
 import { createContext, ReactNode, useState } from "react";
 
 export type UserLogin = {
+  id: string;
   cpf: string;
   estabelecimento: string;
   numero: string;
@@ -10,6 +11,8 @@ export type UserLogin = {
   descricao: string;
   nome: string;
   tipo: "comerciante" | "cliente";
+  imagem01: string;
+  imagem02: string;
 };
 
 export interface AuthContextProps {
