@@ -2,12 +2,50 @@ import styles from "./PerfilCadastroProfissional.module.css";
 import { HeaderPrincipal } from "../../components/headerPrincipal/HeaderPrincipal";
 import { FooterPrincipal } from "../../components/footerPrincipal/FooterPrincipal";
 import { Camera } from "phosphor-react";
-import { useContext } from "react";
+import { useContext, useState, useRef } from "react";
 import { AuthContext } from "../../context/authContext";
-// import { ArrowFatLinesRight } from '@phosphor-icons/react'
+import { putLoginComerciante } from "../../services/login";
+import { convertFilesToBase64 } from "../../utils/converterFileBase64";
 
 export function PerfilCadastroProfissional() {
   const { usuario } = useContext(AuthContext);
+
+  // Estados para armazenar as imagens em base64
+  const [imagemPerfil, setImagemPerfil] = useState<string | null>(null);
+  const [imagemCapa, setImagemCapa] = useState<string | null>(null);
+
+  // Referências para os inputs de arquivo
+  const inputPerfilRef = useRef<HTMLInputElement>(null);
+  const inputCapaRef = useRef<HTMLInputElement>(null);
+
+  const handleImageChange = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const file = event.target.files?.[0];
+    if (file && usuario) {
+      const [imagemBase64] = await convertFilesToBase64([file]);
+      setImagemPerfil(imagemBase64);
+      await putLoginComerciante(usuario?.id, {
+        ...usuario,
+        imagem01: imagemBase64,
+      });
+    }
+  };
+
+  
+  const handleImage02Change = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const file = event.target.files?.[0];
+    if (file && usuario) {
+      const [imagemBase64] = await convertFilesToBase64([file]);
+      setImagemCapa(imagemBase64);
+      await putLoginComerciante(usuario?.id, {
+        ...usuario,
+        imagem02: imagemBase64,
+      });
+    }
+  };
 
   return (
     <>
@@ -16,38 +54,56 @@ export function PerfilCadastroProfissional() {
           <HeaderPrincipal />
         </header>
         <main className={styles.ContainerMain}>
-          
+          {/* Imagem de Perfil */}
           <div className={styles.blocoimgsair}>
             <label className={styles.Picture}>
               <input
                 type="file"
-                accept="imagem/*"
+                accept="image/*"
                 className={styles.PictureInput}
+                ref={inputPerfilRef}
+                onChange={(e) => handleImageChange(e)}
               />
               <div className={styles.ContainerIconiTexto}>
-                <i>
-                  <Camera size={40} color="#ff4900" />
-                </i>
+                {imagemPerfil ? (
+                  <img
+                    src={imagemPerfil}
+                    alt="Imagem de perfil"
+                    className={styles.ImagemPreviewPerfil}
+                  />
+                ) : (
+                  <Camera className={styles.iconi} size={40} color="#ff4900" />
+                )}
               </div>
             </label>
-          </div>    
+          </div>
 
+          {/* Imagem de Capa */}
           <div className={styles.blocoimgsair01}>
             <label className={styles.Picture01}>
               <input
                 type="file"
-                accept="imagem/*"
+                accept="image/*"
                 className={styles.PictureInput}
+                ref={inputCapaRef}
+                onChange={(e) => handleImage02Change(e)}
               />
               <div className={styles.ContainerIconiTexto}>
-                <i>
-                  <Camera size={40} color="#ff4900" />
-                </i>
+                {imagemCapa ? (
+                  <img
+                    src={imagemCapa}
+                    alt="Imagem de capa"
+                    className={styles.ImagemPreview}
+                  />
+                ) : (
+                  <Camera className={styles.iconi} size={40} color="#ff4900" />
+                )}
               </div>
             </label>
           </div>
 
 
+          {/* Informações Pessoais */}
           <form action="">
             <h3 className={styles.Titulos}>Informações Pessoais</h3>
             <div className={styles.ContainerInput}>
@@ -90,7 +146,6 @@ export function PerfilCadastroProfissional() {
               </div>
             </div>
 
-
             <h3 className={styles.Titulos}>Informações de Negócio</h3>
             <div className={styles.ContainerInput}>
               <div className={styles.ContainerTextoInput}>
@@ -124,10 +179,8 @@ export function PerfilCadastroProfissional() {
               </div>
             </div>
 
-            {/* Métodos de Pagamento Aceitos */}
             <h3 className={styles.Titulos}>Métodos de Pagamento Aceitos</h3>
-          
-            {/* Horário de Funcionamento */}
+
             <h3 className={styles.Titulos}>Horário de Funcionamento</h3>
             <div className={styles.ContainerInput}>
               <div className={styles.ContainerTextoInput}>

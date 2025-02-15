@@ -1,1 +1,0 @@
-import i from "../assets/bolotemporario.png"

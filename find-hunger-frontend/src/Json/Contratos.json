@@ -1,51 +1,58 @@
-[
-  {
-    "id": 1,
-    "Foto": "../assets/Profissional-c1.png",
-    "Nome": "Marcio",
-    "Profissao": "Mestre de Obras",
-    "Descricao": "Profissional especializado em reformas, gesso, pinturas, parte eletrica e hidraulica, impermeabilização",
-    "Preco": "Valor a Combinar",
-    "Localizacao": "Eunápolis",
-    "ImgObras": {
-      "Img1": "../assets/ImagemDeObra1.png",
-      "Img2": "../assets/ImagemDeObra2.png",
-      "Img3": "../assets/ImagemDeObra3.png",
-      "Img4": "../assets/ImagemDeObra4.png",
-      "Img5": "../assets/ImagemDeObra5.png"
+{
+  "contrato01": [
+    {
+      "id": 1,
+      "Foto": "../assets/Profissional-c1.png",
+      "Nome": "Marcio",
+      "Profissao": "Sabor na Rua",
+      "Descricao": "Sabor na Rua: Comida deliciosa, acessível e rápida para quem ama sabores autênticos na rua! 🚀🍔",
+      "Preco": "Centro",
+      "Localizacao": "Eunápolis",
+      "Img": {
+        "Img1": "",
+        "Img2": "",
+        "Img3": "",
+        "Img4": "",
+        "Img5": ""
+      }
     }
-  },
-  {
-    "id": 2,
+  ],
+  "contrato02": [
+    {
+      "id": 2,
     "Foto": "../assets/Profissional-c3.png",
     "Nome": "João",
-    "Profissao": "Mestre de Obras",
-    "Descricao": "Profissional especializado em reformas, gesso, pinturas, parte eletrica e hidraulica, impermeabilização",
-    "Preco": "200R$",
+    "Profissao": "Suco na Hora",
+    "Descricao": "Suco na Hora: Sucos naturais, frescos e feitos na hora para refrescar seu dia! 🥭🍊🍹",
+    "Preco": "Juca Rosa",
     "Localizacao": "Eunápolis",
-    "ImgObras": {
-      "Img1": "../assets/ImagemDeObra1.png",
-      "Img2": "../assets/ImagemDeObra2.png",
-      "Img3": "../assets/ImagemDeObra3.png",
-      "Img4": "../assets/ImagemDeObra4.png",
-      "Img5": "../assets/ImagemDeObra5.png"
+    "Img": {
+      "Img1": "",
+      "Img2": "",
+      "Img3": "",
+      "Img4": "",
+      "Img5": ""
+      }
     }
-  },
-  {
-    "id": 3,
+  ]
+  ,
+  "contrato03": [
+    {
+      "id": 3,
     "Foto": "../assets/Profissional-c1.png",
     "Nome": "Marcos",
-    "Profissao": "Mestre de Obras",
-    "Descricao": "Profissional especializado em reformas, gesso, pinturas, parte eletrica e hidraulica, impermeabilização",
-    "Preco": "200R$",
+    "Profissao": "Pipoca Gourmet",
+    "Descricao": "Pipoca Gourmet: Pipocas artesanais com sabores irresistíveis para todos os gostos! 🍿✨",
+    "Preco": "Dinah Borges",
     "Localizacao": "Eunápolis",
-    "ImgObras": {
-      "Img1": "../assets/ImagemDeObra1.png",
-      "Img2": "../assets/ImagemDeObra2.png",
-      "Img3": "../assets/ImagemDeObra3.png",
-      "Img4": "../assets/ImagemDeObra4.png",
-      "Img5": "../assets/ImagemDeObra5.png"
+    "Img": {
+      "Img1": "../assets/imgPipoca01",
+      "Img2": "../assets/imgPipoca02",
+      "Img3": "../assets/imgPipoca03",
+      "Img4": "../assets/imgPipoca04",
+      "Img5": "../assets/imgPipoca05"
+      }
     }
-  }
-]
+  ]
+}
 

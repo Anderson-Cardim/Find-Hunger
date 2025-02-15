@@ -37,7 +37,8 @@ body {
     border-radius: 8px;
     cursor: pointer;
     transition: color 300ms ease-in-out, background 300ms ease-in-out, outline 300ms ease-in-out;
-    box-shadow: inset 0 0 0 2px var(--laranja);
+    /* box-shadow: inset 0 0 0 2px var(--laranja); */
+    border: 3px solid var(--laranja);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -53,7 +54,8 @@ body {
     align-items: center;
     justify-content: center;
     color: #aaa;
-    box-shadow: inset 0 0 0 2px var(--laranja);
+    /* box-shadow: inset 0 0 0 2px var(--laranja); */
+    border: 3px solid var(--laranja);
     /* border-radius: 8px; */
     cursor: pointer;
     transition: color 300ms ease-in-out, background 300ms ease-in-out, outline 300ms ease-in-out;
@@ -160,8 +162,24 @@ body {
 }
 
 
+.ContainerIconiTexto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
 
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-
-
-
+.iconi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -10,7 +10,6 @@ import { Bank, CaretRight, CreditCard, Info } from "@phosphor-icons/react";
 import { MdOutlinePhonelinkRing } from "react-icons/md";
 import { FaPix } from "react-icons/fa6";
 import { PiMoneyBold } from "react-icons/pi";
-import { AuthContext } from "../../context/authContext";
 
 type ParamTypes = {
   id: string;

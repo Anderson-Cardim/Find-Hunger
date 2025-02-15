@@ -1,0 +1,126 @@
+body {
+    background-color: var(--cinza);
+  }
+  
+  .container {
+    width: 90vw;
+    height: 240px;
+    margin: auto;
+    margin-top: 5vh;
+    background-color: var(--branco);
+    border-radius: 14px; 
+  }
+  
+  a {
+    color: black;
+  }
+  
+  .divCabeca {
+    height: 80px;
+    display: flex;
+  }
+  
+  .blocoPerfil {
+    padding-left: 10px;
+    display: flex;
+  }
+  
+  .imagemPerfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  .perfilnome {
+    width: 85px;
+    text-align: left;
+    padding-left: 5px;
+    padding-top: 10px;
+  }
+  
+  .profissao {
+    font-weight: 500;
+    font-size: 9px;
+  }
+  
+  .titulo {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .blocodois {
+    padding-top: 11px;
+    padding-left: 6px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .descricao {
+    font-size: 8.4px;
+    text-align: left;
+    height: 40px;
+  }
+  
+  .vl {
+    display: flex;
+    padding-top: 10px;
+  }
+  
+  .preco {
+    font-size: 11px;
+    height: 20px;
+    color: var(--laranja-fraco);
+    margin-right: 6vw;
+  }
+  
+  .divlocalizacao {
+    display: flex;
+  }
+  
+  .localizacao {
+    font-size: 9px;
+    height: 20px;
+  }
+
+  .img {
+    display: flex;
+    overflow: hidden;
+    height: 80%;
+  }
+
+  .ImagemProdutos {
+    border-radius: 0px;
+  }
+
+  .imagemPrincipal {
+    width: 40%;
+    height: 83%;
+  }
+
+  .imagemPrincipal img {
+    height: 100%;
+    border-bottom-left-radius: 15px;
+  }
+
+  .bloco2 {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 83%;
+  }
+
+  .bloco3 {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 83%;
+  }
+
+  .bloco3 img {
+    height: 50%;
+  }
+
+  .imagemDireita {
+    border-bottom-right-radius: 15px;
+  }

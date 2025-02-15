@@ -7,7 +7,6 @@ import { AuthContext } from "../../context/authContext";
 import { useNavigate } from "react-router-dom";
 
 export function Login() {
-
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const { handleUsuario } = useContext(AuthContext);
@@ -15,38 +14,42 @@ export function Login() {
   const navigate = useNavigate();
 
   async function getLogin(event: React.FormEvent) {
-  event.preventDefault(); // Evita o reload da página
+    event.preventDefault(); // Evita o reload da página
 
-  try {
-    const result = await login({
-      usuario: email,
-      senha: senha,
-    });
-
-    if (result) {
-      handleUsuario({
-        usuario: result.usuario,
-        senha: result.senha,
-        tipo: result.tipo as "comerciante" | "cliente",
-        cpf: result.cpf,
-        endereco: result.endereco,
-        estabelecimento: result.estabelecimento,
-        numero: result.numero,
-        nome: result.nome,
-        descricao: result.descricao
+    try {
+      const result = await login({
+        usuario: email,
+        senha: senha,
       });
+      
+      if (result) {
+        handleUsuario({
+          id: result.id,
+          usuario: result.usuario,
+          senha: result.senha,
+          tipo: result.tipo as "comerciante" | "cliente",
+          cpf: result.cpf,
+          endereco: result.endereco,
+          estabelecimento: result.estabelecimento,
+          numero: result.numero,
+          nome: result.nome,
+          descricao: result.descricao,
+          imagem01: result.imagem01,
+          imagem02: result.imagem02,
+          imagem03: result.imagem03,
+        });
 
-      // Redireciona para a página correta baseado no tipo de usuário
-      if (result.tipo === "comerciante") {
-        navigate("/PaginaPrincipal"); 
-      } else if (result.tipo === "cliente") {
-        navigate("/PaginaPrincipal");
+        // Redireciona para a página correta baseado no tipo de usuário
+        if (result.tipo === "comerciante") {
+          navigate("/PaginaPrincipal");
+        } else if (result.tipo === "cliente") {
+          navigate("/PaginaPrincipal");
+        }
       }
+    } catch (error) {
+      console.log("Erro no login:", error);
     }
-  } catch (error) {
-    console.log("Erro no login:", error);
   }
-}
 
   return (
     <div className={styles.container}>
@@ -59,7 +62,7 @@ export function Login() {
             onChange={(event) => {
               setEmail(event.target.value);
             }}
-          />                     
+          />
           <i>
             <User />
           </i>
@@ -85,10 +88,14 @@ export function Login() {
           <a href="#">Esqueci a senha</a>
         </div>
 
-        <button className={styles.login} type="submit" onClick={getLogin} >
+        <button className={styles.login} type="submit" onClick={getLogin}>
           Login
         </button>
-        <button className={styles.login} type="button" onClick={() => navigate("/ComercianteCliente")}>
+        <button
+          className={styles.login}
+          type="button"
+          onClick={() => navigate("/ComercianteCliente")}
+        >
           Cadastre-se
         </button>
       </form>
