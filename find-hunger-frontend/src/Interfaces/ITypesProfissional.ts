@@ -5,6 +5,4 @@ export interface Empresa {
   FotoPerfil: string;
   NomeDaEmpresa: string;
   HorarioAberto: string;
-  Entrega: string;
-  TempoDeEntrega: string;
 }

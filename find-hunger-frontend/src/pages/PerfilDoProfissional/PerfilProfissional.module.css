@@ -258,17 +258,6 @@ footer {
     font-size: 22px;
 }
 
-.divNubank {
-    display: flex;
-}
-
-.logoNubank {
-    color: var(--Roxo);
-    font-size: 30px;
-    margin-right: 1vw;
-    padding-bottom: 5px;
-}
-
 .divPix {
     display: flex;
     align-items: center;
