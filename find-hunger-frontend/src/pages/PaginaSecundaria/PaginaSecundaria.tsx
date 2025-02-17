@@ -19,7 +19,7 @@ import imgSuco03 from '../../assets/imgSuco03.jpg';
 import imgSuco04 from '../../assets/imgSuco04.avif';
 import imgSuco05 from '../../assets/imgSuco05.jpg';
 
-import fotoPerfil03 from '../../assets/Profissional 1.png';
+import fotoPerfil03 from '../../assets/vendedor01.jpg';
 import imgSalgado from '../../assets/imgSalgado01.jpeg';
 import imgSalgado02 from '../../assets/imgSalgado02.jpg';
 import imgSalgado03 from '../../assets/imgSalgado03.jpg';
