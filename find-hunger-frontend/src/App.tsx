@@ -25,7 +25,7 @@ function App() {
           <Route path="/CadastroCliente" element={<CadastroCliente />} />
           <Route path="/PerfilProfissional/:id" element={<PerfilProfissional />} />
           <Route path="/CadastroComerciante" element={<CadastroComerciante />} />
-
+          
 
           <Route
                     path="/PerfilCadastroProfissional"

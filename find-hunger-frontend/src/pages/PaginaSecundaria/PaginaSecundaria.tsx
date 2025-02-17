@@ -27,6 +27,7 @@ import imgSalgado04 from '../../assets/imgSalgado04.jpeg';
 import imgSalgado05 from '../../assets/imgSalgado05.jpg';
 
 import imagemPipoca05 from '../../assets/imgPipoca05.jpg';
+import { Link } from "react-router-dom";
 
 export function PaginaSecundaria() {
   return (
@@ -40,6 +41,7 @@ export function PaginaSecundaria() {
           <InputPesquisar />
           <BannerPrincipal />
           {/* <Contratos /> */}
+          <Link to="/PerfilProfissional01">
           <Contrato01
             fotoPerfil={fotoPerfil03}
             nome="Marcio"
@@ -53,6 +55,7 @@ export function PaginaSecundaria() {
             img4={imgSalgado04}
             img5={imgSalgado05}
           />
+          </Link>
 
 <Contrato01
             fotoPerfil={fotoPerfil02}
